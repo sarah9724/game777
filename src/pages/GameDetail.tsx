@@ -12,6 +12,7 @@ const GameDetail: React.FC = () => {
   const [game, setGame] = useState<Game | null>(null);
   const [commentCount, setCommentCount] = useState(0);
   const [error, setError] = useState<string | null>(null);
+  const [showModal, setShowModal] = useState(true);
 
   useEffect(() => {
     if (!gameId) {
@@ -108,22 +109,6 @@ const GameDetail: React.FC = () => {
                   </div>
                 </div>
                 <p className="text-gray-600 mb-6">{game.description}</p>
-                <div className="space-y-4">
-                  <div className="flex items-center justify-between">
-                    <span className="text-gray-600">Category:</span>
-                    <span className="font-medium text-gray-900">{game.category}</span>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-gray-600">Platform:</span>
-                    <span className="font-medium text-gray-900">{game.playTime}</span>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-gray-600">Released:</span>
-                    <span className="font-medium text-gray-900">
-                      {new Date(game.createdAt).toLocaleDateString()}
-                    </span>
-                  </div>
-                </div>
 
                 {/* Rating System */}
                 <div className="mt-6 pt-6 border-t border-gray-200">
@@ -143,6 +128,50 @@ const GameDetail: React.FC = () => {
             <CommentSection gameId={game.id} />
           </div>
         </div>
+
+        {/* Game Tips Modal */}
+        {showModal && (
+          <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+            <div className="bg-pink-50/70 backdrop-blur-sm rounded-2xl p-8 max-w-lg mx-4 shadow-2xl transform transition-all border border-pink-100">
+              <div className="text-center mb-6">
+                <h2 className="text-3xl font-bold text-pink-600 mb-2">{game.title}</h2>
+                <div className="w-16 h-1 bg-pink-300 mx-auto rounded-full"></div>
+              </div>
+              <div className="flex items-start mb-6">
+                <div className="flex-shrink-0">
+                  <div className="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center">
+                    <svg className="h-6 w-6 text-pink-500" viewBox="0 0 20 20" fill="currentColor">
+                      <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                </div>
+                <div className="ml-4">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">Game Tip</h3>
+                  <div className="space-y-3">
+                    <p className="text-lg text-gray-700">
+                      Please wait patiently, game is loading.....
+                    </p>
+                    <p className="text-lg text-gray-700">
+                      Please choose <span className="font-bold text-2xl text-pink-600">Local save</span> to play the fun games!
+                    </p>
+                    <p className="text-lg text-gray-700 font-medium flex items-center">
+                      <span className="mr-2 animate-bounce">✨</span>
+                      <span className="animate-pulse">Enjoy!</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="mt-8">
+                <button
+                  onClick={() => setShowModal(false)}
+                  className="w-full px-6 py-3 bg-pink-500 text-white text-lg font-semibold rounded-xl hover:bg-pink-600 transition-colors duration-200 shadow-lg hover:shadow-xl"
+                >
+                  Got it
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </AppLayout>
   );
