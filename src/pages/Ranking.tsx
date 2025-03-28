@@ -148,7 +148,7 @@ const Ranking: React.FC = () => {
                     <span className="mx-2">•</span>
                     <span>{game.plays || 0} plays</span>
                     <span className="mx-2">•</span>
-                    <span className="text-indigo-600 font-medium">共 {gameComments[game.id] || 0} 条评论</span>
+                    <span className="text-indigo-600 font-medium">{gameComments[game.id] || 0} comments</span>
                     <span className="mx-2">•</span>
                     <span>Released: {new Date(game.createdAt).toLocaleDateString()}</span>
                   </div>
