@@ -1,4 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
+  --background: #ffffff;
+  --foreground: #171717;
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -24,10 +32,13 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
 }
 
 h1 {
@@ -65,4 +76,46 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+/* 自定义滚动条样式 */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* 渐变文字 */
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-600;
+}
+
+/* 卡片悬浮效果 */
+.hover-card-shadow {
+  @apply transition-all duration-300;
+}
+
+.hover-card-shadow:hover {
+  @apply shadow-lg transform -translate-y-1;
+}
+
+/* 按钮样式 */
+.btn-primary {
+  @apply px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-full 
+  font-medium hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-300;
+}
+
+.btn-secondary {
+  @apply px-4 py-2 bg-white text-gray-700 rounded-full font-medium border border-gray-200 
+  hover:bg-gray-50 hover:shadow transition-all duration-300;
 }

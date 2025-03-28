@@ -1,48 +1,48 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { updateGamePlays } from '../data/games';
 
 interface GameEmbedProps {
   gameUrl: string;
   title: string;
-  width?: string | number;
-  height?: string | number;
+  gameId: string;
 }
 
 const GameEmbed: React.FC<GameEmbedProps> = ({
   gameUrl,
   title,
-  width = '100%',
-  height = 600
+  gameId
 }) => {
   const [isLoading, setIsLoading] = useState(true);
 
+  useEffect(() => {
+    // 检查上次更新的时间
+    const lastUpdate = localStorage.getItem(`game-plays-last-update-${gameId}`);
+    const now = Date.now();
+    
+    // 如果上次更新是在 5 秒内，则不更新
+    if (lastUpdate && now - parseInt(lastUpdate) < 5000) {
+      return;
+    }
+    
+    // 更新游玩次数
+    updateGamePlays(gameId);
+    
+    // 记录更新时间
+    localStorage.setItem(`game-plays-last-update-${gameId}`, now.toString());
+  }, [gameId]);
+
   return (
-    <div className="game-embed-container w-full rounded-xl overflow-hidden shadow-lg bg-white">
-      <div className="relative" style={{ height }}>
-        {isLoading && (
-          <div className="absolute inset-0 flex items-center justify-center bg-gray-100 z-10">
-            <div className="text-center">
-              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-indigo-500 mx-auto mb-2"></div>
-              <p className="text-gray-500">游戏加载中...</p>
-            </div>
-          </div>
-        )}
-        
-        <iframe
-          src={gameUrl}
-          title={title}
-          width={width}
-          height={height}
-          className="border-0 w-full h-full"
-          allowFullScreen
-          sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
-          onLoad={() => setIsLoading(false)}
-        />
-      </div>
-      
-      <div className="p-4 border-t border-gray-100">
-        <p className="text-sm text-gray-500">
-          此游戏由外部提供，如遇到问题请刷新页面。游戏全屏后按ESC键可退出全屏模式。
-        </p>
+    <div className="w-full h-full">
+      <iframe
+        src={gameUrl}
+        title={title}
+        className="w-full h-full border-0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+        onLoad={() => setIsLoading(false)}
+      />
+      <div className="mt-2 text-center text-sm text-gray-500">
+        Game provided by external source
       </div>
     </div>
   );

@@ -5,23 +5,32 @@ interface Comment {
   nickname: string;
   content: string;
   timestamp: number;
-  gameId: number;
+  gameId: string;
 }
 
 interface CommentSectionProps {
-  gameId: number;
+  gameId: string;
 }
 
 const CommentSection: React.FC<CommentSectionProps> = ({ gameId }) => {
   const [nickname, setNickname] = useState('');
   const [content, setContent] = useState('');
   const [comments, setComments] = useState<Comment[]>([]);
+  const [newComment, setNewComment] = useState('');
+  const [commentCount, setCommentCount] = useState<number>(0);
 
   // 从localStorage加载评论
   useEffect(() => {
-    const savedComments = localStorage.getItem(`game-comments-${gameId}`);
+    const savedComments = localStorage.getItem(`game_${gameId}_comments`);
     if (savedComments) {
-      setComments(JSON.parse(savedComments));
+      try {
+        const parsedComments = JSON.parse(savedComments);
+        setComments(parsedComments);
+        setCommentCount(parsedComments.length);
+        console.log(`${gameId}: ${parsedComments.length} 条评论`);
+      } catch (error) {
+        console.error('Error loading comments:', error);
+      }
     }
   }, [gameId]);
 
@@ -30,7 +39,7 @@ const CommentSection: React.FC<CommentSectionProps> = ({ gameId }) => {
     e.preventDefault();
     
     if (!nickname.trim() || !content.trim()) {
-      alert('请填写昵称和评论内容');
+      alert('Please enter your nickname and comment');
       return;
     }
 
@@ -44,9 +53,10 @@ const CommentSection: React.FC<CommentSectionProps> = ({ gameId }) => {
 
     const updatedComments = [newComment, ...comments];
     setComments(updatedComments);
-    localStorage.setItem(`game-comments-${gameId}`, JSON.stringify(updatedComments));
+    localStorage.setItem(`game_${gameId}_comments`, JSON.stringify(updatedComments));
+    setCommentCount(updatedComments.length);
     
-    // 重置表单
+    // Reset form
     setContent('');
   };
 
@@ -64,12 +74,12 @@ const CommentSection: React.FC<CommentSectionProps> = ({ gameId }) => {
 
   return (
     <div className="space-y-6">
-      {/* 评论输入区域 */}
+      {/* Comment Input Area */}
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
           <input
             type="text"
-            placeholder="你的昵称"
+            placeholder="Your Nickname"
             value={nickname}
             onChange={(e) => setNickname(e.target.value)}
             className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
@@ -78,7 +88,7 @@ const CommentSection: React.FC<CommentSectionProps> = ({ gameId }) => {
         </div>
         <div>
           <textarea
-            placeholder="写下你的评论..."
+            placeholder="Write your comment..."
             value={content}
             onChange={(e) => setContent(e.target.value)}
             className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
@@ -91,12 +101,17 @@ const CommentSection: React.FC<CommentSectionProps> = ({ gameId }) => {
             type="submit"
             className="px-6 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors"
           >
-            发表评论
+            Post Comment
           </button>
         </div>
       </form>
 
-      {/* 评论列表 */}
+      {/* Comment Count */}
+      <div className="text-sm text-gray-600 mb-4">
+        共 {commentCount} 条评论
+      </div>
+
+      {/* Comment List */}
       <div className="space-y-4">
         {comments.length > 0 ? (
           comments.map((comment) => (
@@ -115,7 +130,7 @@ const CommentSection: React.FC<CommentSectionProps> = ({ gameId }) => {
           ))
         ) : (
           <div className="text-center text-gray-500 py-4">
-            还没有评论，来说说你的想法吧~
+            No comments yet. Be the first to share your thoughts!
           </div>
         )}
       </div>
