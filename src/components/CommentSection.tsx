@@ -108,7 +108,7 @@ const CommentSection: React.FC<CommentSectionProps> = ({ gameId }) => {
 
       {/* Comment Count */}
       <div className="text-sm text-gray-600 mb-4">
-        共 {commentCount} 条评论
+        {commentCount} comments
       </div>
 
       {/* Comment List */}

@@ -58,7 +58,7 @@ const GameCard: React.FC<GameCardProps> = ({ game }) => {
             </div>
             <div className="flex items-center text-gray-600 text-xs">
               <span className="mr-1">💬</span>
-              共 {game.comments?.length || 0} 条评论
+              {game.comments?.length || 0} comments
             </div>
           </div>
         </div>

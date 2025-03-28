@@ -34,6 +34,8 @@ const GameDetail: React.FC = () => {
       const gameData = getGameById(gameId);
       if (gameData) {
         setGame(gameData);
+        // 滚动到页面顶部
+        window.scrollTo(0, 0);
       } else {
         navigate('/');
       }
@@ -69,15 +71,18 @@ const GameDetail: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           {game ? (
             <div className="space-y-8">
-              {/* Game Window */}
-              <div className="bg-white rounded-2xl shadow-lg overflow-hidden mb-8">
-                <div className="w-full h-[calc(100vh-200px)] min-h-[600px]">
-                  <GameEmbed gameUrl={game.gameUrl} title={game.title} gameId={game.id} />
-                </div>
+              {/* Game Window - First thing users see */}
+              <div className="w-full max-w-[1200px] mx-auto bg-white shadow-lg p-4 mb-8">
+                <GameEmbed gameUrl={game.gameUrl} title={game.title} gameId={game.id} />
               </div>
 
-              {/* 游戏描述 */}
-              <div className="bg-white rounded-2xl shadow-lg overflow-hidden mb-8">
+              {/* Scroll down to see more content */}
+              <div className="text-center text-gray-500 mb-4">
+                <span className="animate-bounce">↓</span> Scroll down to see more
+              </div>
+
+              {/* Game Description */}
+              <div className="bg-white rounded-xl shadow-sm overflow-hidden">
                 <div className="p-8">
                   <div className="flex flex-col md:flex-row gap-8">
                     {/* Game Image */}
@@ -110,7 +115,7 @@ const GameDetail: React.FC = () => {
                         </div>
                         <div className="flex items-center text-gray-600">
                           <span className="mr-2">💬</span>
-                          <span className="text-indigo-600 font-medium">共 {commentCount} 条评论</span>
+                          <span className="text-indigo-600 font-medium">{commentCount} comments</span>
                         </div>
                       </div>
 
@@ -169,26 +174,41 @@ const GameDetail: React.FC = () => {
       {/* 提示信息 Modal */}
       {showModal && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-          <div className="bg-white rounded-lg p-6 max-w-md mx-4">
-            <div className="flex items-center mb-4">
+          <div className="bg-pink-50/70 backdrop-blur-sm rounded-2xl p-8 max-w-lg mx-4 shadow-2xl transform transition-all border border-pink-100">
+            <div className="text-center mb-6">
+              <h2 className="text-3xl font-bold text-pink-600 mb-2">{game.title}</h2>
+              <div className="w-16 h-1 bg-pink-300 mx-auto rounded-full"></div>
+            </div>
+            <div className="flex items-start mb-6">
               <div className="flex-shrink-0">
-                <svg className="h-5 w-5 text-blue-400" viewBox="0 0 20 20" fill="currentColor">
-                  <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
-                </svg>
+                <div className="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center">
+                  <svg className="h-6 w-6 text-pink-500" viewBox="0 0 20 20" fill="currentColor">
+                    <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
+                  </svg>
+                </div>
               </div>
-              <div className="ml-3">
-                <h3 className="text-lg font-medium text-gray-900">游戏提示</h3>
-                <p className="text-sm text-gray-500 mt-1">
-                  请耐心等待游戏load, 请不要注册用户，直接玩
-                </p>
+              <div className="ml-4">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Game Tip</h3>
+                <div className="space-y-3">
+                  <p className="text-lg text-gray-700">
+                    Please wait patiently, game is loading.....
+                  </p>
+                  <p className="text-lg text-gray-700">
+                    Please choose <span className="font-bold text-2xl text-pink-600">Local save</span> to play the fun games!
+                  </p>
+                  <p className="text-lg text-gray-700 font-medium flex items-center">
+                    <span className="mr-2 animate-bounce">✨</span>
+                    <span className="animate-pulse">Enjoy!</span>
+                  </p>
+                </div>
               </div>
             </div>
-            <div className="mt-6">
+            <div className="mt-8">
               <button
                 onClick={() => setShowModal(false)}
-                className="w-full px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors"
+                className="w-full px-6 py-3 bg-pink-500 text-white text-lg font-semibold rounded-xl hover:bg-pink-600 transition-colors duration-200 shadow-lg hover:shadow-xl"
               >
-                我知道了
+                Got it
               </button>
             </div>
           </div>

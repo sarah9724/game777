@@ -32,15 +32,17 @@ const GameEmbed: React.FC<GameEmbedProps> = ({
   }, [gameId]);
 
   return (
-    <div className="w-full h-full">
-      <iframe
-        src={gameUrl}
-        title={title}
-        className="w-full h-full border-0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowFullScreen
-        onLoad={() => setIsLoading(false)}
-      />
+    <div className="w-full max-w-[1200px] mx-auto">
+      <div className="w-full h-[600px] bg-white rounded-lg shadow-lg overflow-hidden">
+        <iframe
+          src={gameUrl}
+          title={title}
+          className="w-full h-full border-0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+          onLoad={() => setIsLoading(false)}
+        />
+      </div>
       <div className="mt-2 text-center text-sm text-gray-500">
         Game provided by external source
       </div>
