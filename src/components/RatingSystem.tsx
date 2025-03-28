@@ -88,7 +88,7 @@ const RatingSystem: React.FC<RatingSystemProps> = ({
             onClick={() => handleRatingClick(star)}
             onMouseEnter={() => setHoveredRating(star)}
             onMouseLeave={() => setHoveredRating(null)}
-            className={`text-2xl focus:outline-none transition-colors ${
+            className={`text-sm focus:outline-none transition-colors ${
               (hoveredRating !== null ? star <= hoveredRating : star <= (rating || 0))
                 ? 'text-yellow-400'
                 : 'text-gray-300'
