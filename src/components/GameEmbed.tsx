@@ -34,7 +34,7 @@ const GameEmbed: React.FC<GameEmbedProps> = ({
   return (
     <div className="w-full max-w-[1400px] mx-auto">
       <div className="w-full rounded-lg shadow-lg overflow-hidden">
-        <div className="w-full" style={{ height: 'calc(100vh - 150px)', maxHeight: '1000px' }}>
+        <div className="w-full aspect-[16/9] max-h-[800px]">
           <iframe
             src={gameUrl}
             title={title}
