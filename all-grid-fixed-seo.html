@@ -3,7 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI导航站</title>
+    <!-- SEO Meta Tags -->
+    <title>AI导航站 - 精选AI工具集合 | 人工智能导航</title>
+    <meta name="description" content="AI导航站提供最新最全的人工智能工具导航，包括ChatGPT、Claude、Midjourney等AI工具，涵盖AI写作、AI绘画、AI办公等多个领域，助您快速找到合适的AI工具。">
+    <meta name="keywords" content="AI导航,人工智能导航,AI工具导航,ChatGPT,Claude,Midjourney,AI写作,AI绘画,AI办公,AI工具集合">
+    <meta name="author" content="AI导航站">
+    <meta name="robots" content="index, follow">
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="AI导航站 - 精选AI工具集合">
+    <meta property="og:description" content="发现最新最全的AI工具，提升工作效率">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ai-navigation.com">
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AI导航站 - 精选AI工具集合">
+    <meta name="twitter:description" content="发现最新最全的AI工具，提升工作效率">
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://ai-navigation.com">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
     <style>
         /* 基本样式 */
@@ -440,7 +458,34 @@
         .brand-chuangkit {
             background: linear-gradient(135deg, #06b6d4, #0891b2);
         }
-        
+        /* 添加品牌背景样式 - 更鲜艳的颜色 */
+        .brand-beautiful {
+            background: linear-gradient(135deg, #4f46e5, #2563eb);
+        }
+
+        .brand-napkin {
+            background: linear-gradient(135deg, #ea580c, #c2410c);
+        }
+
+        .brand-runway {
+            background: linear-gradient(135deg, #a855f7, #6d28d9);
+        }
+
+        .brand-xiaohuanxiong {
+            background: linear-gradient(135deg, #e11d48, #be123c);
+        }
+
+        .brand-liblib {
+            background: linear-gradient(135deg, #eab308, #ca8a04);
+        }
+
+        .brand-jsdesign {
+            background: linear-gradient(135deg, #06b6d4, #0284c7);
+        }
+
+        .brand-canva {
+            background: linear-gradient(135deg, #16a34a, #15803d);
+        }
         /* 卡片缩略图装饰元素 */
         .card-img::before {
             content: "";
@@ -1138,8 +1183,24 @@
     </style>
 </head>
 <body>
+    <!-- 结构化数据 -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "AI导航站",
+        "description": "AI导航站提供最新最全的人工智能工具导航，包括ChatGPT、Claude、Midjourney等AI工具",
+        "url": "https://ai-navigation.com",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://ai-navigation.com/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
+
     <!-- 导航栏 -->
-    <nav class="navbar">
+    <nav class="navbar" role="navigation" aria-label="主导航">
         <div class="navbar-container">
             <a href="#" class="navbar-logo">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -1179,34 +1240,36 @@
                     <a href="#image" class="navbar-link">AI绘图</a>
                 </li>
                 <li class="navbar-item">
-                    <a href="#design" class="navbar-link">AI设计</a>
+                    <a href="#ai-design" class="navbar-link">AI设计</a>
                 </li>
             </ul>
         </div>
     </nav>
     
-    <!-- 删除静态的回到顶部按钮 -->
-
-    <div class="container">
-        <section class="hero">
-        <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
-            <h1>探索AI的无限可能</h1>
-            <p>精选AI工具导航，帮助你在各种场景下提升效率与创造力</p>
-            <div class="hero-links">
-                <a href="#chat" class="hero-link">聊天机器人</a>
-                <a href="#ppt" class="hero-link">PPT生成</a>
-                <a href="#video-gen" class="hero-link">视频生成</a>
-                <a href="#video-edit" class="hero-link">视频剪辑</a>
-                <a href="#coding" class="hero-link">AI编程</a>
-                <a href="#search" class="hero-link">信息检索</a>
-                <a href="#music" class="hero-link">AI音乐</a>
-                <a href="#data" class="hero-link">数据处理</a>
-                <a href="#image" class="hero-link">AI绘图</a>
-                <a href="#design" class="hero-link">AI设计</a>
+    <!-- 主要内容区 -->
+    <main role="main">
+        <!-- 英雄区域 -->
+        <section class="hero" aria-label="网站介绍">
+            <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
+                <h1>探索AI的无限可能</h1>
+                <p>精选AI工具导航，帮助你在各种场景下提升效率与创造力</p>
+                <div class="hero-links">
+                    <a href="#chat" class="hero-link">聊天机器人</a>
+                    <a href="#ppt" class="hero-link">PPT生成</a>
+                    <a href="#video-gen" class="hero-link">视频生成</a>
+                    <a href="#video-edit" class="hero-link">视频剪辑</a>
+                    <a href="#coding" class="hero-link">AI编程</a>
+                    <a href="#search" class="hero-link">信息检索</a>
+                    <a href="#music" class="hero-link">AI音乐</a>
+                    <a href="#data" class="hero-link">数据处理</a>
+                    <a href="#image" class="hero-link">AI绘图</a>
+                    <a href="#ai-design" class="hero-link">AI设计</a>
+                </div>
             </div>
-        </div>
-    </section>
-<section id="chat" class="section">
+        </section>
+
+        <!-- 工具分类区域 -->
+        <section id="chat" class="section" aria-label="聊天机器人">
             <div class="section-header" data-aos="fade-up">
                 <h2 class="section-title">聊天机器人</h2>
                 <p class="section-description">各具特色的AI助手，为你提供智能对话和解决问题的能力</p>
@@ -1605,7 +1668,9 @@
             </div>
             </div>
         </section>
-<section id="ppt" class="section">
+
+        <!-- 工具分类区域 -->
+        <section id="ppt" class="section" aria-label="PPT生成">
             <div class="section-header" data-aos="fade-up">
                 <h2 class="section-title">PPT生成</h2>
                 <p class="section-description">AI驱动的PPT创建工具，轻松生成专业级演示文稿</p>
@@ -1896,17 +1961,12 @@
                 </div>
             </div>
         </section>
-<section id="视频生成" class="section-title mt-5">
-  <h2 class="h5">Video Generation</h2>
-  <p class="text-muted small mb-0">AI video creation tools, from concept to final video in one click</p>
-  <a href="#" onclick="return false;" class="badge bg-primary-soft text-decoration-none" data-tag-category="视频生成">Video Generation</a>
-  <a href="#" onclick="return false;" class="badge bg-secondary-soft text-decoration-none" data-country="中国">China</a>
-  <a href="#" onclick="return false;" class="badge bg-success-soft text-decoration-none" data-hot-tag="热门工具">Popular Tool</a>
-</div>
-<section id="video-gen" class="section">
+
+        <!-- 工具分类区域 -->
+        <section id="video-gen" class="section" aria-label="视频生成">
             <div class="section-header" data-aos="fade-up">
-                <h2 class="section-title">Video Generation</h2>
-                <p class="section-description">AI video creation tools, from concept to final video in one click</p>
+                <h2 class="section-title">视频生成</h2>
+                <p class="section-description">AI视频创作工具，从创意到成片一键完成</p>
             </div>
             
             <div class="cards-grid">
@@ -1914,7 +1974,7 @@
                 
                 
                 <div class="card-wrapper card-featured">
-                    <div class="hot-tag">Popular Tool</div>
+                    <div class="hot-tag">热门工具</div>
                     <div class="card" data-tags="视频生成,创意,国外,付费">
                         <div class="card-img brand-keling">
                             <span class="category-indicator category-video-gen">视频生成</span>
@@ -2136,7 +2196,9 @@
                 </div>
             </div>
         </section>
-<section id="video-edit" class="section">
+
+        <!-- 工具分类区域 -->
+        <section id="video-edit" class="section" aria-label="视频剪辑">
             <div class="section-header" data-aos="fade-up">
                 <h2 class="section-title">视频剪辑</h2>
                 <p class="section-description">AI辅助视频编辑工具，让剪辑更简单高效</p>
@@ -2314,7 +2376,9 @@
                 </div>
             </div>
         </section>
-<section id="coding" class="section">
+
+        <!-- 工具分类区域 -->
+        <section id="coding" class="section" aria-label="AI编程">
             <div class="section-header" data-aos="fade-up">
                 <h2 class="section-title">AI编程</h2>
                 <p class="section-description">智能编程助手，提升开发效率与代码质量</p>
@@ -2602,7 +2666,9 @@
                 </div>
             </div>
         </section>
-<section id="search" class="section">
+
+        <!-- 工具分类区域 -->
+        <section id="search" class="section" aria-label="信息检索">
             <div class="section-header" data-aos="fade-up">
                 <h2 class="section-title">信息检索</h2>
                 <p class="section-description">AI驱动的智能搜索工具，高效获取精准信息</p>
@@ -2780,7 +2846,9 @@
                 </div>
             </div>
         </section>
-<section id="music" class="section">
+
+        <!-- 工具分类区域 -->
+        <section id="music" class="section" aria-label="AI音乐">
             <div class="section-header" data-aos="fade-up">
                 <h2 class="section-title">AI音乐</h2>
                 <p class="section-description">AI作曲与音乐生成工具，释放创意音乐潜能</p>
@@ -2961,7 +3029,9 @@
                 </div>
             </div>
         </section>
-<section id="data" class="section">
+
+        <!-- 工具分类区域 -->
+        <section id="data" class="section" aria-label="数据处理">
             <div class="section-header" data-aos="fade-up">
                 <h2 class="section-title">数据处理</h2>
                 <p class="section-description">智能数据分析与处理工具，简化数据工作流程</p>
@@ -3086,7 +3156,9 @@
                 </div>
             </div>
         </section>
-<section id="image" class="section">
+
+        <!-- 工具分类区域 -->
+        <section id="image" class="section" aria-label="AI绘图">
             <div class="section-header" data-aos="fade-up">
                 <h2 class="section-title">AI绘图</h2>
                 <p class="section-description">AI图像生成工具，将文字描述转化为精美图像</p>
@@ -3211,11 +3283,254 @@
                     </div>
                 </div>
                 
+           
+                
+                
+            </div>
+        </section>
+        
+        <!-- AI设计模块 -->
+        <section id="ai-design" class="section" aria-label="AI设计">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">AI设计</h2>
+                <p class="section-description">智能设计工具，简化创意设计流程</p>
+            </div>
+            
+            <div class="cards-grid">
+                <!-- 创客贴 -->
                 <div class="card-wrapper card-featured">
                     <div class="hot-tag">热门工具</div>
-                    <div class="card" data-tags="AI绘图,创意,国内,付费">
+                    <div class="card" data-tags="AI设计,创意,国内,付费">
                         <div class="card-img brand-chuangkit">
-                            <span class="category-indicator category-image">AI绘图</span>
+                            <span class="category-indicator category-design">AI设计</span>
+                            <span class="country-tag country-cn">中国</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="70" height="70">
+                                <circle cx="50" cy="50" r="48" fill="none" stroke="white" stroke-width="2" opacity="0.3"/>
+                                <path d="M35,35 Q50,25 65,35 Q75,50 65,65 Q50,75 35,65 Q25,50 35,35" stroke="white" stroke-width="2" fill="none" />
+                                <circle cx="50" cy="50" r="10" fill="white" opacity="0.3" />
+                            </svg>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">创客贴</h3>
+                            <p class="card-description">一站式AI设计平台，提供海报、名片、PPT等多种设计场景的智能创作，让零基础用户也能轻松完成专业设计。</p>
+                        <div class="card-features">
+                                <div class="feature">一键智能生成设计</div>
+                                <div class="feature">丰富的模板与素材库</div>
+                                <div class="feature">多场景设计解决方案</div>
+                        </div>
+                            <a href="https://www.chuangkit.com" target="_blank" class="card-link">使用创客贴</a>
+                            <button class="save-button" title="添加到收藏">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+                                </svg>
+                            </button>
+                    </div>
+                        <div class="card-hover-info">
+                            <div class="hover-detail">
+                                <div class="hover-detail-title">用户评分</div>
+                                <div class="hover-detail-rating">
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span>(4.7)</span>
+                                </div>
+                            </div>
+                            <div class="hover-detail">
+                                <div class="hover-detail-title">特点优势</div>
+                                <div class="hover-detail-content">创客贴提供丰富的设计模板和智能创作工具，支持一键生成多种设计作品，适合企业营销和个人创作需求</div>
+                            </div>
+                            <div class="hover-detail">
+                                <div class="hover-detail-title">相关标签</div>
+                                <div class="hover-tags">
+                                    <span class="hover-tag">设计模板</span>
+                                    <span class="hover-tag">智能创作</span>
+                                    <span class="hover-tag">多场景设计</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 即时设计 -->
+                <div class="card-wrapper card-featured">
+                    <div class="hot-tag">热门工具</div>
+                    <div class="card" data-tags="AI设计,效率,国内,付费">
+                        <div class="card-img brand-jsdesign">
+                            <span class="category-indicator category-design">AI设计</span>
+                            <span class="country-tag country-cn">中国</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="70" height="70">
+                                <circle cx="50" cy="50" r="48" fill="none" stroke="white" stroke-width="2" opacity="0.3"/>
+                                <rect x="30" y="30" width="40" height="40" rx="5" fill="none" stroke="white" stroke-width="2"/>
+                                <line x1="30" y1="45" x2="70" y2="45" stroke="white" stroke-width="2"/>
+                                <circle cx="40" cy="38" r="3" fill="white"/>
+                                <path d="M35,55 H65 M35,62 H55" stroke="white" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">即时设计</h3>
+                            <p class="card-description">专业的在线设计工具，集成AI生成和编辑功能，支持团队协作，提供大量模板和素材，适合各类设计需求。</p>
+                        <div class="card-features">
+                                <div class="feature">智能设计辅助</div>
+                                <div class="feature">团队协作功能</div>
+                                <div class="feature">丰富的模板库</div>
+                        </div>
+                            <a href="https://js.design" target="_blank" class="card-link">使用即时设计</a>
+                            <button class="save-button" title="添加到收藏">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+                                </svg>
+                            </button>
+                    </div>
+                        <div class="card-hover-info">
+                            <div class="hover-detail">
+                                <div class="hover-detail-title">用户评分</div>
+                                <div class="hover-detail-rating">
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span>(4.7)</span>
+                                </div>
+                            </div>
+                            <div class="hover-detail">
+                                <div class="hover-detail-title">特点优势</div>
+                                <div class="hover-detail-content">即时设计提供专业的设计工具和AI辅助功能，强大的团队协作能力，适合企业和设计师日常工作使用</div>
+                            </div>
+                            <div class="hover-detail">
+                                <div class="hover-detail-title">相关标签</div>
+                                <div class="hover-tags">
+                                    <span class="hover-tag">团队协作</span>
+                                    <span class="hover-tag">在线设计</span>
+                                    <span class="hover-tag">智能辅助</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Canva AI -->
+                <div class="card-wrapper card-featured">
+                    <div class="hot-tag">热门工具</div>
+                    <div class="card" data-tags="AI设计,创意,国外,付费">
+                        <div class="card-img brand-canva">
+                            <span class="category-indicator category-design">AI设计</span>
+                            <span class="country-tag country-us">美国</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="70" height="70">
+                                <circle cx="50" cy="50" r="48" fill="none" stroke="white" stroke-width="2" opacity="0.3"/>
+                                <path d="M37,37 L63,37 L63,63 L37,63 Z" fill="none" stroke="white" stroke-width="2"/>
+                                <path d="M30,30 L45,45 M55,45 L70,30 M30,70 L45,55 M55,55 L70,70" stroke="white" stroke-width="2"/>
+                                <circle cx="50" cy="50" r="8" fill="none" stroke="white" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Canva AI</h3>
+                            <p class="card-description">全球领先的在线设计平台，集成强大的AI功能，包括Magic Design、Magic Studio等工具，适合各类创意设计需求。</p>
+                        <div class="card-features">
+                                <div class="feature">AI魔法设计助手</div>
+                                <div class="feature">海量模板与素材</div>
+                                <div class="feature">多语言与多平台支持</div>
+                        </div>
+                            <a href="https://www.canva.com" target="_blank" class="card-link">使用Canva AI</a>
+                            <button class="save-button" title="添加到收藏">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+                                </svg>
+                            </button>
+                    </div>
+                        <div class="card-hover-info">
+                            <div class="hover-detail">
+                                <div class="hover-detail-title">用户评分</div>
+                                <div class="hover-detail-rating">
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span>(4.9)</span>
+                                </div>
+                            </div>
+                            <div class="hover-detail">
+                                <div class="hover-detail-title">特点优势</div>
+                                <div class="hover-detail-content">Canva AI提供直观易用的设计界面和强大的AI辅助功能，丰富的模板库和素材，支持多种语言，是全球最受欢迎的设计平台之一</div>
+                            </div>
+                            <div class="hover-detail">
+                                <div class="hover-detail-title">相关标签</div>
+                                <div class="hover-tags">
+                                    <span class="hover-tag">AI魔法设计</span>
+                                    <span class="hover-tag">全球化</span>
+                                    <span class="hover-tag">易用性高</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- LibLibAI -->
+                <div class="card-wrapper card-featured">
+                    <div class="hot-tag">热门工具</div>
+                    <div class="card" data-tags="AI设计,插画,国内,免费">
+                        <div class="card-img brand-liblib">
+                            <span class="category-indicator category-design">AI设计</span>
+                            <span class="country-tag country-cn">中国</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="70" height="70">
+                                <circle cx="50" cy="50" r="48" fill="none" stroke="white" stroke-width="2" opacity="0.3"/>
+                                <path d="M30,40 C30,30 45,25 50,35 C55,25 70,30 70,40 C70,60 50,75 50,75 C50,75 30,60 30,40 Z" fill="none" stroke="white" stroke-width="2"/>
+                                <circle cx="40" cy="40" r="5" fill="white" opacity="0.6"/>
+                                <circle cx="60" cy="40" r="5" fill="white" opacity="0.6"/>
+                            </svg>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">LibLibAI</h3>
+                            <p class="card-description">专注于AI绘画和插画创作的平台，提供多种艺术风格和创作模式，适合设计师、插画师和内容创作者使用。</p>
+                        <div class="card-features">
+                                <div class="feature">多样化插画风格</div>
+                                <div class="feature">二次元风格特色</div>
+                                <div class="feature">简单易用的创作界面</div>
+                        </div>
+                            <a href="https://liblib.ai" target="_blank" class="card-link">使用LibLibAI</a>
+                            <button class="save-button" title="添加到收藏">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+                                </svg>
+                            </button>
+                    </div>
+                        <div class="card-hover-info">
+                            <div class="hover-detail">
+                                <div class="hover-detail-title">用户评分</div>
+                                <div class="hover-detail-rating">
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span>(4.6)</span>
+                                </div>
+                            </div>
+                            <div class="hover-detail">
+                                <div class="hover-detail-title">特点优势</div>
+                                <div class="hover-detail-content">LibLibAI专注于插画创作，特别是二次元风格，提供简单直观的创作流程，适合喜欢动漫风格的创作者使用</div>
+                            </div>
+                            <div class="hover-detail">
+                                <div class="hover-detail-title">相关标签</div>
+                                <div class="hover-tags">
+                                    <span class="hover-tag">二次元风格</span>
+                                    <span class="hover-tag">插画创作</span>
+                                    <span class="hover-tag">创意设计</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 稿定AI -->
+                <div class="card-wrapper card-featured">
+                    <div class="hot-tag">热门工具</div>
+                    <div class="card" data-tags="AI设计,创意,国内,付费">
+                        <div class="card-img brand-chuangkit">
+                            <span class="category-indicator category-design">AI设计</span>
                             <span class="country-tag country-cn">中国</span>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="70" height="70">
                                 <circle cx="50" cy="50" r="48" fill="none" stroke="white" stroke-width="2" opacity="0.3"/>
@@ -3250,12 +3565,12 @@
                                     <span class="star">★</span>
                                     <span class="star">★</span>
                                     <span>(4.8)</span>
-                </div>
-                    </div>
+                                </div>
+                            </div>
                             <div class="hover-detail">
                                 <div class="hover-detail-title">特点优势</div>
                                 <div class="hover-detail-content">稿定AI提供专业设计场景优化，模板与素材智能生成，一键智能抠图与修图，是AI图像生成领域的佼佼者</div>
-                        </div>
+                            </div>
                             <div class="hover-detail">
                                 <div class="hover-detail-title">相关标签</div>
                                 <div class="hover-tags">
@@ -3268,118 +3583,64 @@
                         </div>
                     </div>
                 </div>
-                
-                <div class="card-wrapper card-featured">
-                    <div class="hot-tag">热门工具</div>
-                    <div class="card" data-tags="AI绘图,效率,国外,免费">
-                        <div class="card-img brand-recraft">
-                            <span class="category-indicator category-image">AI绘图</span>
-                            <span class="country-tag country-us">美国</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="70" height="70">
-                                <circle cx="50" cy="50" r="48" fill="none" stroke="white" stroke-width="2" opacity="0.3"/>
-                                <path d="M30,30 L70,30 L70,70 L30,70 Z" fill="none" stroke="white" stroke-width="3"/>
-                                <path d="M35,40 L65,40 M35,50 L65,50 M35,60 L65,60" stroke="white" stroke-width="2"/>
-                                <circle cx="50" cy="50" r="5" fill="white" opacity="0.8"/>
-                            </svg>
-                        </div>
-                        <div class="card-content">
-                            <h3 class="card-title">Recraft</h3>
-                            <p class="card-description">专业的AI设计工具，支持图像生成、编辑和优化，提供丰富的设计模板和创意灵感，适合设计师和营销人员。</p>
-                        <div class="card-features">
-                                <div class="feature">高质量图像生成与编辑</div>
-                                <div class="feature">智能设计模板系统</div>
-                                <div class="feature">商业用途优化</div>
-                        </div>
-                            <a href="https://recraft.ai" target="_blank" class="card-link">体验Recraft</a>
-                            <button class="save-button" title="添加到收藏">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
-                                </svg>
-                            </button>
-                    </div>
-                        <div class="card-hover-info">
-                            <div class="hover-detail">
-                                <div class="hover-detail-title">用户评分</div>
-                                <div class="hover-detail-rating">
-                                    <span class="star">★</span>
-                                    <span class="star">★</span>
-                                    <span class="star">★</span>
-                                    <span class="star">★</span>
-                                    <span class="star">★</span>
-                                    <span>(4.8)</span>
-                                </div>
-                            </div>
-                            <div class="hover-detail">
-                                <div class="hover-detail-title">特点优势</div>
-                                <div class="hover-detail-content">Recraft专注于商业设计场景，提供高质量图像生成与编辑功能，智能设计模板系统，是AI设计领域的佼佼者</div>
-                            </div>
-                            <div class="hover-detail">
-                                <div class="hover-detail-title">相关标签</div>
-                                <div class="hover-tags">
-                                    <span class="hover-tag">高质量图像</span>
-                                    <span class="hover-tag">智能设计</span>
-                                    <span class="hover-tag">商业用途</span>
-                                    <span class="hover-tag">设计模板</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </section>
-    </div>
-    
+    </main>
+
+    <!-- 页脚 -->
+    <footer role="contentinfo" aria-label="页脚信息">
+        <!-- 收藏工具按钮 -->
+        <div class="toolbar">
+            <div class="toolbar-button" id="saved-tools-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+                </svg>
+            </div>
+        </div>
+        
+        <!-- 收藏工具模态窗口 -->
+        <div id="saved-tools-modal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title">我的收藏工具</h3>
+                    <button class="modal-close">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div id="saved-list" class="saved-list">
+                        <!-- 收藏的工具将在这里显示 -->
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary modal-close-btn">关闭</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 工具详情模态窗口 -->
+        <div id="tool-detail-modal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="detail-title"></h3>
+                    <button class="modal-close">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <p id="detail-description"></p>
+                    <div class="hover-detail">
+                        <div class="hover-detail-title">相关标签</div>
+                        <div id="detail-tags" class="hover-tags"></div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary modal-close-btn">关闭</button>
+                    <button class="btn" id="detail-save-btn">保存到收藏</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
     <!-- 弹出消息 -->
     <div id="toast" class="toast"></div>
-    
-    <!-- 收藏工具按钮 -->
-    <div class="toolbar">
-        <div class="toolbar-button" id="saved-tools-button">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
-            </svg>
-        </div>
-    </div>
-    
-    <!-- 收藏工具模态窗口 -->
-    <div id="saved-tools-modal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h3 class="modal-title">我的收藏工具</h3>
-                <button class="modal-close">&times;</button>
-            </div>
-            <div class="modal-body">
-                <div id="saved-list" class="saved-list">
-                    <!-- 收藏的工具将在这里显示 -->
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button class="btn btn-secondary modal-close-btn">关闭</button>
-            </div>
-        </div>
-    </div>
-    
-    <!-- 工具详情模态窗口 -->
-    <div id="tool-detail-modal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h3 class="modal-title" id="detail-title"></h3>
-                <button class="modal-close">&times;</button>
-            </div>
-            <div class="modal-body">
-                <p id="detail-description"></p>
-                <div class="hover-detail">
-                    <div class="hover-detail-title">相关标签</div>
-                    <div id="detail-tags" class="hover-tags"></div>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button class="btn btn-secondary modal-close-btn">关闭</button>
-                <button class="btn" id="detail-save-btn">保存到收藏</button>
-            </div>
-        </div>
-    </div>
-    
+
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <!-- 移除外部脚本引用，直接在HTML中实现所有功能 -->
     <script>
