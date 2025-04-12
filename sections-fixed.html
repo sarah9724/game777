@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI导航站</title>
+    <title>AI Navigation Hub</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
     <style>
-        /* 基本样式 */
+        /* Basic Styles */
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             line-height: 1.6;
@@ -22,7 +22,7 @@
             padding: 20px;
         }
         
-        /* 栅格布局 */
+        /* Grid Layout */
         .cards-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -30,7 +30,7 @@
             width: 100%;
         }
         
-        /* 响应式布局 */
+        /* Responsive Layout */
         @media (max-width: 1200px) {
             .cards-grid {
                 grid-template-columns: repeat(2, 1fr);
@@ -43,7 +43,7 @@
             }
         }
         
-        /* 卡片容器 */
+        /* Card Container */
         .card-wrapper {
             break-inside: avoid;
             margin-bottom: 25px;
@@ -51,7 +51,7 @@
             width: 100%;
         }
         
-        /* 卡片样式 */
+        /* Card Styles */
         .card {
             background: white;
             border-radius: 12px;
@@ -72,7 +72,7 @@
             position: relative;
         }
         
-        /* 卡片悬停信息 */
+        /* Hover Information */
         .card-hover-info {
             position: absolute;
             top: 0;
@@ -89,15 +89,15 @@
             z-index: 10;
             box-shadow: 0 12px 24px rgba(0,0,0,0.12);
             overflow: auto;
-            display: none; /* 完全隐藏悬停信息元素 */
+            display: none; /* Completely hide hover information elements */
         }
         
         .card:hover .card-hover-info {
-            opacity: 0; /* 禁用悬停时的显示 */
-            pointer-events: none; /* 确保鼠标事件穿透到下层元素 */
+            opacity: 0; /* Disable display on hover */
+            pointer-events: none; /* Ensure mouse events penetrate to lower elements */
         }
         
-        /* 部分页面 */
+        /* Section Pages */
         .section {
             margin-bottom: 60px;
         }
@@ -119,7 +119,7 @@
             max-width: 800px;
         }
         
-        /* 卡片内容 */
+        /* Card Content */
         .card-img {
             padding: 25px;
             display: flex;
@@ -132,7 +132,7 @@
             transition: all 0.3s ease;
         }
         
-        /* AI工具品牌背景样式 */
+        /* AI Tool Brand Background Styles */
         .brand-claude {
             background: linear-gradient(135deg, #5436da, #7b62ff);
         }
@@ -249,7 +249,7 @@
             background: linear-gradient(135deg, #06b6d4, #0891b2);
         }
         
-        /* 卡片缩略图装饰元素 */
+        /* Card Thumbnail Decoration Elements */
         .card-img::before {
             content: "";
             position: absolute;
@@ -767,37 +767,37 @@
     <div class="container">
         <section class="hero">
         <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
-            <h1>探索AI的无限可能</h1>
-            <p>精选AI工具导航，帮助你在各种场景下提升效率与创造力</p>
+            <h1>Explore the Infinite Possibilities of AI</h1>
+            <p>Curated AI tools navigation to help you enhance efficiency and creativity in various scenarios</p>
             <div class="hero-links">
-                <a href="#chat" class="hero-link">聊天机器人</a>
-                <a href="#ppt" class="hero-link">PPT生成</a>
-                <a href="#video-gen" class="hero-link">视频生成</a>
-                <a href="#video-edit" class="hero-link">视频剪辑</a>
-                <a href="#coding" class="hero-link">AI编程</a>
-                <a href="#search" class="hero-link">信息检索</a>
-                <a href="#music" class="hero-link">AI音乐</a>
-                <a href="#data" class="hero-link">数据处理</a>
-                <a href="#image" class="hero-link">AI绘图</a>
-                <a href="#design" class="hero-link">AI设计</a>
+                <a href="#chat" class="hero-link">Chatbot</a>
+                <a href="#ppt" class="hero-link">PPT Generation</a>
+                <a href="#video-gen" class="hero-link">Video Generation</a>
+                <a href="#video-edit" class="hero-link">Video Editing</a>
+                <a href="#coding" class="hero-link">AI Programming</a>
+                <a href="#search" class="hero-link">Information Retrieval</a>
+                <a href="#music" class="hero-link">AI Music</a>
+                <a href="#data" class="hero-link">Data Processing</a>
+                <a href="#image" class="hero-link">AI Drawing</a>
+                <a href="#design" class="hero-link">AI Design</a>
             </div>
         </div>
     </section>
 <section id="chat" class="section">
             <div class="section-header" data-aos="fade-up">
-                <h2 class="section-title">聊天机器人</h2>
-                <p class="section-description">各具特色的AI助手，为你提供智能对话和解决问题的能力</p>
+                <h2 class="section-title">Chatbot</h2>
+                <p class="section-description">AI assistants with unique features to provide intelligent conversations and problem-solving capabilities</p>
             </div>
             
             <div class="section-content">
             <div class="cards-grid">
                 
                 <div class="card-wrapper card-featured">
-                    <div class="hot-tag">热门工具</div>
-                    <div class="card" data-tags="聊天机器人,热门,国外,付费">
+                    <div class="hot-tag">Popular Tool</div>
+                    <div class="card" data-tags="chatbot,popular,foreign,paid">
                     <div class="card-img brand-claude">
-                            <span class="category-indicator category-chat">聊天机器人</span>
-                            <span class="country-tag country-us">美国</span>
+                            <span class="category-indicator category-chat">Chatbot</span>
+                            <span class="country-tag country-us">USA</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="70" height="70">
                                     <circle cx="50" cy="50" r="48" fill="none" stroke="white" stroke-width="2" opacity="0.3"/>
                                     <path d="M65,35 C65,28.3726 59.6274,23 53,23 C46.3726,23 41,28.3726 41,35 C41,41.6274 46.3726,47 53,47 L53,65 C53,71.6274 47.6274,77 41,77 C34.3726,77 29,71.6274 29,65" stroke="white" stroke-width="4" fill="none" stroke-linecap="round"/>
@@ -807,17 +807,17 @@
                     </div>
                     <div class="card-content">
                         <h3 class="card-title">Claude</h3>
-                        <p class="card-description">Anthropic公司开发的AI助手，擅长自然对话、复杂分析和创意写作，在长文本处理和上下文理解方面表现出色。</p>
+                        <p class="card-description">AI assistant developed by Anthropic, excels in natural conversation, complex analysis, and creative writing, performing well in long text processing and contextual understanding.</p>
                         <div class="card-features">
-                            <div class="feature">出色的人文理解与伦理意识</div>
-                            <div class="feature">擅长复杂推理与长文档分析</div>
-                            <div class="feature">支持多种语言与文本格式处理</div>
+                            <div class="feature">Outstanding human understanding and ethical awareness</div>
+                            <div class="feature">Excellent at complex reasoning and long document analysis</div>
+                            <div class="feature">Supports multiple languages and text formats</div>
                         </div>
-                        <a href="https://claude.ai" target="_blank" class="card-link">探索Claude</a>
+                        <a href="https://claude.ai" target="_blank" class="card-link">Explore Claude</a>
                         </div>
                         <div class="card-hover-info">
                             <div class="hover-detail">
-                                <div class="hover-detail-title">用户评分</div>
+                                <div class="hover-detail-title">User Rating</div>
                                 <div class="hover-detail-rating">
                                     <span class="star">★</span>
                                     <span class="star">★</span>
@@ -828,16 +828,16 @@
                                 </div>
                             </div>
                             <div class="hover-detail">
-                                <div class="hover-detail-title">特点优势</div>
-                                <div class="hover-detail-content">Claude在长文本处理方面表现卓越，最多可处理100K+上下文，创造性回答和伦理安全性是其亮点</div>
+                                <div class="hover-detail-title">Features</div>
+                                <div class="hover-detail-content">Claude excels in long text processing, capable of handling up to 100K+ context, and its creative answers and ethical safety are highlights</div>
                             </div>
                             <div class="hover-detail">
-                                <div class="hover-detail-title">相关标签</div>
+                                <div class="hover-detail-title">Related Tags</div>
                                 <div class="hover-tags">
-                                    <span class="hover-tag">长文本处理</span>
-                                    <span class="hover-tag">伦理AI</span>
-                                    <span class="hover-tag">创意写作</span>
-                                    <span class="hover-tag">企业级</span>
+                                    <span class="hover-tag">Long text processing</span>
+                                    <span class="hover-tag">Ethical AI</span>
+                                    <span class="hover-tag">Creative writing</span>
+                                    <span class="hover-tag">Enterprise</span>
                                 </div>
                             </div>
                         </div>
@@ -845,11 +845,11 @@
                 </div>
                 
                 <div class="card-wrapper card-featured">
-                    <div class="hot-tag">热门工具</div>
-                    <div class="card" data-tags="聊天机器人,热门,国外,付费">
+                    <div class="hot-tag">Popular Tool</div>
+                    <div class="card" data-tags="chatbot,popular,foreign,paid">
                     <div class="card-img brand-chatgpt">
-                            <span class="category-indicator category-chat">聊天机器人</span>
-                            <span class="country-tag country-us">美国</span>
+                            <span class="category-indicator category-chat">Chatbot</span>
+                            <span class="country-tag country-us">USA</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="70" height="70">
                                     <circle cx="50" cy="50" r="48" fill="none" stroke="white" stroke-width="2" opacity="0.3"/>
                                     <path d="M30,40 L50,25 L70,40 L70,60 L50,75 L30,60 Z" fill="white"/>
@@ -858,17 +858,17 @@
                     </div>
                     <div class="card-content">
                         <h3 class="card-title">ChatGPT</h3>
-                        <p class="card-description">OpenAI开发的对话式AI助手，拥有强大的通用知识库和创意写作能力，可进行自然流畅的对话。</p>
+                        <p class="card-description">AI assistant developed by OpenAI, with a powerful general knowledge base and creative writing ability, capable of natural and smooth conversation.</p>
                         <div class="card-features">
-                            <div class="feature">强大的通用知识与语言处理</div>
-                            <div class="feature">提供API和插件生态系统</div>
-                            <div class="feature">可用于代码生成与多媒体处理</div>
+                            <div class="feature">Strong general knowledge and language processing</div>
+                            <div class="feature">Provides API and plugin ecosystem</div>
+                            <div class="feature">Can be used for code generation and multimedia processing</div>
                         </div>
-                        <a href="https://chat.openai.com" target="_blank" class="card-link">体验ChatGPT</a>
+                        <a href="https://chat.openai.com" target="_blank" class="card-link">Experience ChatGPT</a>
                         </div>
                         <div class="card-hover-info">
                             <div class="hover-detail">
-                                <div class="hover-detail-title">用户评分</div>
+                                <div class="hover-detail-title">User Rating</div>
                                 <div class="hover-detail-rating">
                                     <span class="star">★</span>
                                     <span class="star">★</span>
@@ -879,16 +879,16 @@
                                 </div>
                             </div>
                             <div class="hover-detail">
-                                <div class="hover-detail-title">特点优势</div>
-                                <div class="hover-detail-content">ChatGPT拥有广泛的通用知识库，支持多种插件扩展功能，是市场上最流行的AI助手之一</div>
+                                <div class="hover-detail-title">Features</div>
+                                <div class="hover-detail-content">ChatGPT has a vast knowledge base and excellent language understanding, suitable for various tasks from daily conversation to professional work</div>
                             </div>
                             <div class="hover-detail">
-                                <div class="hover-detail-title">相关标签</div>
+                                <div class="hover-detail-title">Related Tags</div>
                                 <div class="hover-tags">
-                                    <span class="hover-tag">插件生态</span>
-                                    <span class="hover-tag">代码生成</span>
-                                    <span class="hover-tag">通用AI</span>
-                                    <span class="hover-tag">API支持</span>
+                                    <span class="hover-tag">General AI</span>
+                                    <span class="hover-tag">API Access</span>
+                                    <span class="hover-tag">Plugin Support</span>
+                                    <span class="hover-tag">Enterprise</span>
                                 </div>
                             </div>
                         </div>
@@ -898,8 +898,8 @@
                 <div class="card-wrapper">
                     <div class="card">
                     <div class="card-img brand-deepseek">
-                            <span class="category-indicator category-chat">聊天机器人</span>
-                            <span class="country-tag country-cn">中国</span>
+                            <span class="category-indicator category-chat">chatbot</span>
+                            <span class="country-tag country-cn">China</span>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="60" height="60">
                             <circle cx="50" cy="50" r="40" fill="white" opacity="0.2" />
                             <path d="M35,35 L65,35 L65,45 L55,55 L55,65 L45,65 L45,55 L35,45 Z" fill="white" />
@@ -908,17 +908,17 @@
                     </div>
                     <div class="card-content">
                         <h3 class="card-title">DeepSeek</h3>
-                        <p class="card-description">中国初创企业开发的强大AI模型，在科学研究和专业领域知识方面表现优异，尤其在代码生成上有特色。</p>
+                        <p class="card-description">A powerful AI model developed by a Chinese startup, excelling in scientific research and professional domain knowledge, particularly in code generation.</p>
                         <div class="card-features">
-                            <div class="feature">卓越的代码生成与理解能力</div>
-                            <div class="feature">科研文献和专业知识覆盖广</div>
-                            <div class="feature">中英双语支持，对中文语境理解深入</div>
+                            <div class="feature">Excellent code generation and understanding capabilities</div>
+                            <div class="feature">Broad coverage of research literature and professional knowledge</div>
+                            <div class="feature">Bilingual support with deep understanding of Chinese context</div>
                         </div>
-                        <a href="https://deepseek.com" target="_blank" class="card-link">使用DeepSeek</a>
+                        <a href="https://deepseek.com" target="_blank" class="card-link">Use DeepSeek</a>
                         </div>
                         <div class="card-hover-info">
                             <div class="hover-detail">
-                                <div class="hover-detail-title">用户评分</div>
+                                <div class="hover-detail-title">User Rating</div>
                                 <div class="hover-detail-rating">
                                     <span class="star">★</span>
                                     <span class="star">★</span>
@@ -929,16 +929,16 @@
                                 </div>
                             </div>
                             <div class="hover-detail">
-                                <div class="hover-detail-title">特点优势</div>
-                                <div class="hover-detail-content">DeepSeek在代码生成方面表现优异，拥有丰富的科研和专业领域知识，是程序员的得力助手</div>
+                                <div class="hover-detail-title">Key Features</div>
+                                <div class="hover-detail-content">DeepSeek excels in code generation, with rich knowledge in research and professional domains, making it an excellent assistant for programmers</div>
                             </div>
                             <div class="hover-detail">
-                                <div class="hover-detail-title">相关标签</div>
+                                <div class="hover-detail-title">Related Tags</div>
                                 <div class="hover-tags">
-                                    <span class="hover-tag">代码助手</span>
-                                    <span class="hover-tag">科研工具</span>
-                                    <span class="hover-tag">中文优化</span>
-                                    <span class="hover-tag">专业知识</span>
+                                    <span class="hover-tag">Code Assistant</span>
+                                    <span class="hover-tag">Research Tools</span>
+                                    <span class="hover-tag">Chinese Optimization</span>
+                                    <span class="hover-tag">Professional Knowledge</span>
                                 </div>
                             </div>
                         </div>
@@ -948,13 +948,13 @@
                 <div class="card-wrapper">
                     <div class="card">
                     <div class="card-img brand-qianwen">
-                                <span class="category-indicator category-chat">聊天机器人</span>
-                                <span class="country-tag country-cn">中国</span>
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="70" height="70">
-                                    <circle cx="50" cy="50" r="48" fill="none" stroke="white" stroke-width="2" opacity="0.3"/>
-                                    <path d="M30,40 L50,25 L70,40 L70,60 L50,75 L30,60 Z" fill="white"/>
-                                    <path d="M40,45 L50,38 L60,45 L60,55 L50,62 L40,55 Z" fill="#FF6A00" opacity="0.8"/>
-                                </svg>
+                            <span class="category-indicator category-chat">聊天机器人</span>
+                            <span class="country-tag country-cn">中国</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="70" height="70">
+                                <circle cx="50" cy="50" r="48" fill="none" stroke="white" stroke-width="2" opacity="0.3"/>
+                                <path d="M30,40 L50,25 L70,40 L70,60 L50,75 L30,60 Z" fill="white"/>
+                                <path d="M40,45 L50,38 L60,45 L60,55 L50,62 L40,55 Z" fill="#FF6A00" opacity="0.8"/>
+                            </svg>
                         </div>
                         <div class="card-content">
                             <h3 class="card-title">通义千问</h3>
@@ -1002,220 +1002,6 @@
                             <span class="country-tag country-cn">中国</span>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="60" height="60">
                             <circle cx="50" cy="50" r="40" fill="white" opacity="0.2" />
-            <div class="cards-grid">
-                <div class="masonry-sizer"></div>
-                <div class="masonry-gutter"></div>
-                
-                <div class="card-wrapper card-featured">
-                    <div class="hot-tag">热门工具</div>
-                    <div class="card" data-tags="聊天机器人,热门,国外,付费">
-                    <div class="card-img brand-claude">
-                            <span class="category-indicator category-chat">聊天机器人</span>
-                            <span class="country-tag country-us">美国</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="70" height="70">
-                                <circle cx="50" cy="50" r="48" fill="none" stroke="white" stroke-width="2" opacity="0.3"/>
-                                <path d="M65,35 C65,28.3726 59.6274,23 53,23 C46.3726,23 41,28.3726 41,35 C41,41.6274 46.3726,47 53,47 L53,65 C53,71.6274 47.6274,77 41,77 C34.3726,77 29,71.6274 29,65" stroke="white" stroke-width="4" fill="none" stroke-linecap="round"/>
-                                <circle cx="53" cy="35" r="7" fill="white"/>
-                                <circle cx="41" cy="65" r="7" fill="white"/>
-                            </svg>
-                    </div>
-                    <div class="card-content">
-                        <h3 class="card-title">Claude</h3>
-                        <p class="card-description">Anthropic公司开发的AI助手，擅长自然对话、复杂分析和创意写作，在长文本处理和上下文理解方面表现出色。</p>
-                        <div class="card-features">
-                            <div class="feature">出色的人文理解与伦理意识</div>
-                            <div class="feature">擅长复杂推理与长文档分析</div>
-                            <div class="feature">支持多种语言与文本格式处理</div>
-                        </div>
-                        <a href="https://claude.ai" target="_blank" class="card-link">探索Claude</a>
-                        </div>
-                        <div class="card-hover-info">
-                            <div class="hover-detail">
-                                <div class="hover-detail-title">用户评分</div>
-                                <div class="hover-detail-rating">
-                                    <span class="star">★</span>
-                                    <span class="star">★</span>
-                                    <span class="star">★</span>
-                                    <span class="star">★</span>
-                                    <span class="star">★</span>
-                                    <span>(4.9)</span>
-                                </div>
-                            </div>
-                            <div class="hover-detail">
-                                <div class="hover-detail-title">特点优势</div>
-                                <div class="hover-detail-content">Claude在长文本处理方面表现卓越，最多可处理100K+上下文，创造性回答和伦理安全性是其亮点</div>
-                            </div>
-                            <div class="hover-detail">
-                                <div class="hover-detail-title">相关标签</div>
-                                <div class="hover-tags">
-                                    <span class="hover-tag">长文本处理</span>
-                                    <span class="hover-tag">伦理AI</span>
-                                    <span class="hover-tag">创意写作</span>
-                                    <span class="hover-tag">企业级</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="card-wrapper card-featured">
-                    <div class="hot-tag">热门工具</div>
-                    <div class="card" data-tags="聊天机器人,热门,国外,付费">
-                    <div class="card-img brand-chatgpt">
-                            <span class="category-indicator category-chat">聊天机器人</span>
-                            <span class="country-tag country-us">美国</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="70" height="70">
-                                <circle cx="50" cy="50" r="48" fill="none" stroke="white" stroke-width="2" opacity="0.3"/>
-                                <path d="M30,40 L50,25 L70,40 L70,60 L50,75 L30,60 Z" fill="white"/>
-                                <path d="M40,45 L50,38 L60,45 L60,55 L50,62 L40,55 Z" fill="#FF6A00" opacity="0.8"/>
-                            </svg>
-                    </div>
-                    <div class="card-content">
-                        <h3 class="card-title">ChatGPT</h3>
-                        <p class="card-description">OpenAI开发的对话式AI助手，拥有强大的通用知识库和创意写作能力，可进行自然流畅的对话。</p>
-                        <div class="card-features">
-                            <div class="feature">强大的通用知识与语言处理</div>
-                            <div class="feature">提供API和插件生态系统</div>
-                            <div class="feature">可用于代码生成与多媒体处理</div>
-                        </div>
-                        <a href="https://chat.openai.com" target="_blank" class="card-link">体验ChatGPT</a>
-                        </div>
-                        <div class="card-hover-info">
-                            <div class="hover-detail">
-                                <div class="hover-detail-title">用户评分</div>
-                                <div class="hover-detail-rating">
-                                    <span class="star">★</span>
-                                    <span class="star">★</span>
-                                    <span class="star">★</span>
-                                    <span class="star">★</span>
-                                    <span class="star">★</span>
-                                    <span>(4.8)</span>
-                                </div>
-                            </div>
-                            <div class="hover-detail">
-                                <div class="hover-detail-title">特点优势</div>
-                                <div class="hover-detail-content">ChatGPT拥有广泛的通用知识库，支持多种插件扩展功能，是市场上最流行的AI助手之一</div>
-                            </div>
-                            <div class="hover-detail">
-                                <div class="hover-detail-title">相关标签</div>
-                                <div class="hover-tags">
-                                    <span class="hover-tag">插件生态</span>
-                                    <span class="hover-tag">代码生成</span>
-                                    <span class="hover-tag">通用AI</span>
-                                    <span class="hover-tag">API支持</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="card-wrapper">
-                    <div class="card">
-                    <div class="card-img brand-deepseek">
-                            <span class="category-indicator category-chat">聊天机器人</span>
-                            <span class="country-tag country-cn">中国</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="60" height="60">
-                            <circle cx="50" cy="50" r="40" fill="white" opacity="0.2" />
-                            <path d="M35,35 L65,35 L65,45 L55,55 L55,65 L45,65 L45,55 L35,45 Z" fill="white" />
-                            <circle cx="50" cy="40" r="8" fill="white" opacity="0.6" />
-                        </svg>
-                    </div>
-                    <div class="card-content">
-                        <h3 class="card-title">DeepSeek</h3>
-                        <p class="card-description">中国初创企业开发的强大AI模型，在科学研究和专业领域知识方面表现优异，尤其在代码生成上有特色。</p>
-                        <div class="card-features">
-                            <div class="feature">卓越的代码生成与理解能力</div>
-                            <div class="feature">科研文献和专业知识覆盖广</div>
-                            <div class="feature">中英双语支持，对中文语境理解深入</div>
-                        </div>
-                        <a href="https://deepseek.com" target="_blank" class="card-link">使用DeepSeek</a>
-                        </div>
-                        <div class="card-hover-info">
-                            <div class="hover-detail">
-                                <div class="hover-detail-title">用户评分</div>
-                                <div class="hover-detail-rating">
-                                    <span class="star">★</span>
-                                    <span class="star">★</span>
-                                    <span class="star">★</span>
-                                    <span class="star">★</span>
-                                    <span class="star">☆</span>
-                                    <span>(4.2)</span>
-                                </div>
-                            </div>
-                            <div class="hover-detail">
-                                <div class="hover-detail-title">特点优势</div>
-                                <div class="hover-detail-content">DeepSeek在代码生成方面表现优异，拥有丰富的科研和专业领域知识，是程序员的得力助手</div>
-                            </div>
-                            <div class="hover-detail">
-                                <div class="hover-detail-title">相关标签</div>
-                                <div class="hover-tags">
-                                    <span class="hover-tag">代码助手</span>
-                                    <span class="hover-tag">科研工具</span>
-                                    <span class="hover-tag">中文优化</span>
-                                    <span class="hover-tag">专业知识</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="card-wrapper">
-                    <div class="card">
-                    <div class="card-img brand-qianwen">
-                            <span class="category-indicator category-chat">聊天机器人</span>
-                            <span class="country-tag country-cn">中国</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="70" height="70">
-                                <circle cx="50" cy="50" r="48" fill="none" stroke="white" stroke-width="2" opacity="0.3"/>
-                                <path d="M30,40 L50,25 L70,40 L70,60 L50,75 L30,60 Z" fill="white"/>
-                                <path d="M40,45 L50,38 L60,45 L60,55 L50,62 L40,55 Z" fill="#FF6A00" opacity="0.8"/>
-                        </svg>
-                    </div>
-                    <div class="card-content">
-                        <h3 class="card-title">通义千问</h3>
-                        <p class="card-description">阿里巴巴达摩院开发的大型语言模型，对中文语境和文化理解深入，适合中文用户的各类需求。</p>
-                        <div class="card-features">
-                            <div class="feature">深度的中文文化与语境理解</div>
-                            <div class="feature">多模态能力，支持图像理解</div>
-                            <div class="feature">中国本土知识覆盖全面</div>
-                        </div>
-                        <a href="https://qianwen.aliyun.com" target="_blank" class="card-link">访问通义千问</a>
-                        </div>
-                        <div class="card-hover-info">
-                            <div class="hover-detail">
-                                <div class="hover-detail-title">用户评分</div>
-                                <div class="hover-detail-rating">
-                                    <span class="star">★</span>
-                                    <span class="star">★</span>
-                                    <span class="star">★</span>
-                                    <span class="star">★</span>
-                                    <span class="star">★</span>
-                                    <span>(4.7)</span>
-                                </div>
-                            </div>
-                            <div class="hover-detail">
-                                <div class="hover-detail-title">特点优势</div>
-                                <div class="hover-detail-content">通义千问在多模态理解和生成方面表现出色，支持图像理解，是中国本土AI的代表之一</div>
-                            </div>
-                            <div class="hover-detail">
-                                <div class="hover-detail-title">相关标签</div>
-                                <div class="hover-tags">
-                                    <span class="hover-tag">多模态理解</span>
-                                    <span class="hover-tag">图像理解</span>
-                                    <span class="hover-tag">中文优化</span>
-                                    <span class="hover-tag">企业级</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="card-wrapper">
-                    <div class="card">
-                    <div class="card-img brand-doubao">
-                            <span class="category-indicator category-chat">聊天机器人</span>
-                            <span class="country-tag country-cn">中国</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="60" height="60">
-                            <circle cx="50" cy="50" r="40" fill="white" opacity="0.2" />
                             <circle cx="50" cy="40" r="15" fill="white" />
                             <path d="M35,55 Q50,75 65,55" stroke="white" stroke-width="5" fill="none" />
                             <circle cx="45" cy="40" r="3" fill="#F52525" />
@@ -1223,18 +1009,18 @@
                         </svg>
                     </div>
                     <div class="card-content">
-                        <h3 class="card-title">豆包</h3>
-                        <p class="card-description">字节跳动推出的AI助手，基于云雀语言模型，拥有丰富的多模态能力和创意内容生成功能。</p>
+                        <h3 class="card-title">Doubao</h3>
+                        <p class="card-description">AI assistant launched by ByteDance, based on the Skylark language model, featuring rich multimodal capabilities and creative content generation.</p>
                         <div class="card-features">
-                            <div class="feature">流畅的多轮对话体验</div>
-                            <div class="feature">擅长创意内容与文案生成</div>
-                            <div class="feature">与字节系产品深度集成</div>
+                            <div class="feature">Smooth multi-turn conversation experience</div>
+                            <div class="feature">Expert in creative content and copywriting</div>
+                            <div class="feature">Deep integration with ByteDance products</div>
                         </div>
-                        <a href="https://www.doubao.com" target="_blank" class="card-link">尝试豆包</a>
+                        <a href="https://www.doubao.com" target="_blank" class="card-link">Try Doubao</a>
                         </div>
                         <div class="card-hover-info">
                             <div class="hover-detail">
-                                <div class="hover-detail-title">用户评分</div>
+                                <div class="hover-detail-title">User Rating</div>
                                 <div class="hover-detail-rating">
                                     <span class="star">★</span>
                                     <span class="star">★</span>
@@ -1245,16 +1031,16 @@
                                 </div>
                             </div>
                             <div class="hover-detail">
-                                <div class="hover-detail-title">特点优势</div>
-                                <div class="hover-detail-content">豆包在多模态对话和创意内容生成方面表现出色，与字节系产品深度集成，用户体验良好</div>
+                                <div class="hover-detail-title">Key Features</div>
+                                <div class="hover-detail-content">Doubao excels in multimodal dialogue and creative content generation, with deep integration with ByteDance products and excellent user experience</div>
                             </div>
                             <div class="hover-detail">
-                                <div class="hover-detail-title">相关标签</div>
+                                <div class="hover-detail-title">Related Tags</div>
                                 <div class="hover-tags">
-                                    <span class="hover-tag">多模态对话</span>
-                                    <span class="hover-tag">创意内容生成</span>
-                                    <span class="hover-tag">深度集成</span>
-                                    <span class="hover-tag">用户体验</span>
+                                    <span class="hover-tag">Multimodal Dialogue</span>
+                                    <span class="hover-tag">Creative Content</span>
+                                    <span class="hover-tag">Deep Integration</span>
+                                    <span class="hover-tag">User Experience</span>
                                 </div>
                             </div>
                         </div>
@@ -1366,8 +1152,8 @@
         </section>
 <section id="ppt" class="section">
             <div class="section-header" data-aos="fade-up">
-                <h2 class="section-title">PPT生成</h2>
-                <p class="section-description">AI驱动的PPT创建工具，轻松生成专业级演示文稿</p>
+                <h2 class="section-title">PPT Generation</h2>
+                <p class="section-description">AI-powered presentation tools to help you create professional slides quickly</p>
             </div>
             
             <div class="cards-grid">
@@ -1375,11 +1161,11 @@
                 <div class="masonry-gutter"></div>
                 
                 <div class="card-wrapper card-featured">
-                    <div class="hot-tag">热门工具</div>
-                    <div class="card" data-tags="PPT生成,效率,国外,付费">
+                    <div class="hot-tag">Popular Tool</div>
+                    <div class="card" data-tags="ppt-generation,efficiency,foreign,paid">
                         <div class="card-img brand-aippt">
-                            <span class="category-indicator category-ppt">PPT生成</span>
-                            <span class="country-tag country-us">美国</span>
+                            <span class="category-indicator category-ppt">ppt-generation</span>
+                            <span class="country-tag country-us">USA</span>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="60" height="60">
                                 <circle cx="50" cy="50" r="40" fill="white" opacity="0.2" />
                                 <rect x="30" y="30" width="40" height="40" rx="5" fill="white" />
@@ -1426,11 +1212,11 @@
                 </div>
                 
                 <div class="card-wrapper card-featured">
-                    <div class="hot-tag">热门工具</div>
-                    <div class="card" data-tags="PPT生成,效率,国外,付费">
+                    <div class="hot-tag">Popular Tool</div>
+                    <div class="card" data-tags="ppt-generation,efficiency,foreign,paid">
                         <div class="card-img brand-gamma">
-                            <span class="category-indicator category-ppt">PPT生成</span>
-                            <span class="country-tag country-us">美国</span>
+                            <span class="category-indicator category-ppt">ppt-generation</span>
+                            <span class="country-tag country-us">USA</span>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="60" height="60">
                                 <circle cx="50" cy="50" r="40" fill="white" opacity="0.2" />
                                 <path d="M30,35 L70,35 L70,65 L30,65 Z" stroke="white" stroke-width="3" fill="none" />
@@ -1478,9 +1264,9 @@
     </div>
     
                 <div class="card-wrapper">
-                    <div class="card" data-tags="PPT生成,效率,国内,免费">
+                    <div class="card" data-tags="ppt-generation,efficiency,domestic,paid">
                         <div class="card-img brand-liveppt">
-                            <span class="category-indicator category-ppt">PPT生成</span>
+                            <span class="category-indicator category-ppt">ppt-generation</span>
                             <span class="country-tag country-cn">中国</span>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="60" height="60">
                                 <circle cx="50" cy="50" r="40" fill="white" opacity="0.2" />
@@ -1530,8 +1316,8 @@
         </section>
 <section id="video-gen" class="section">
             <div class="section-header" data-aos="fade-up">
-                <h2 class="section-title">视频生成</h2>
-                <p class="section-description">AI视频创作工具，从创意到成片一键完成</p>
+                <h2 class="section-title">Video Generation</h2>
+                <p class="section-description">AI tools for creating and generating video content automatically</p>
             </div>
             
             <div class="cards-grid">
@@ -1539,10 +1325,10 @@
                 <div class="masonry-gutter"></div>
                 
                 <div class="card-wrapper card-featured">
-                    <div class="hot-tag">热门工具</div>
-                    <div class="card" data-tags="视频生成,创意,国外,付费">
+                    <div class="hot-tag">Popular Tool</div>
+                    <div class="card" data-tags="video-generation,creative,foreign,paid">
                         <div class="card-img brand-keling">
-                            <span class="category-indicator category-video-gen">视频生成</span>
+                            <span class="category-indicator category-video-gen">video-generation</span>
                             <span class="country-tag country-cn">中国</span>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="60" height="60">
                                 <circle cx="50" cy="50" r="40" fill="white" opacity="0.2" />
@@ -1590,10 +1376,10 @@
                 </div>
                 
                 <div class="card-wrapper card-featured">
-                    <div class="hot-tag">热门工具</div>
-                    <div class="card" data-tags="视频生成,创意,国外,付费">
+                    <div class="hot-tag">Popular Tool</div>
+                    <div class="card" data-tags="video-generation,creative,foreign,paid">
                         <div class="card-img brand-jimmeng">
-                            <span class="category-indicator category-video-gen">视频生成</span>
+                            <span class="category-indicator category-video-gen">video-generation</span>
                             <span class="country-tag country-cn">中国</span>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="60" height="60">
                                 <circle cx="50" cy="50" r="40" fill="white" opacity="0.2" />
@@ -1643,8 +1429,8 @@
                 <div class="card-wrapper">
                     <div class="card">
                         <div class="card-img brand-pixverse">
-                            <span class="category-indicator category-video-gen">视频生成</span>
-                            <span class="country-tag country-us">美国</span>
+                            <span class="category-indicator category-video-gen">video-generation</span>
+                            <span class="country-tag country-us">USA</span>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="60" height="60">
                                 <circle cx="50" cy="50" r="40" fill="white" opacity="0.2" />
                                 <path d="M35,40 L65,40 L65,60 L35,60 Z" fill="white" opacity="0.6" />
@@ -1693,8 +1479,8 @@
         </section>
 <section id="video-edit" class="section">
             <div class="section-header" data-aos="fade-up">
-                <h2 class="section-title">视频剪辑</h2>
-                <p class="section-description">AI辅助视频编辑工具，让剪辑更简单高效</p>
+                <h2 class="section-title">Video Editing</h2>
+                <p class="section-description">Intelligent video editing tools to enhance your video content</p>
             </div>
             
             <div class="cards-grid">
@@ -1702,10 +1488,10 @@
                 <div class="masonry-gutter"></div>
                 
                 <div class="card-wrapper card-featured">
-                    <div class="hot-tag">热门工具</div>
-                    <div class="card" data-tags="视频剪辑,效率,国外,付费">
+                    <div class="hot-tag">Popular Tool</div>
+                    <div class="card" data-tags="video-editing,efficiency,foreign,paid">
                     <div class="card-img brand-jianying">
-                            <span class="category-indicator category-video-edit">视频剪辑</span>
+                            <span class="category-indicator category-video-edit">video-editing</span>
                             <span class="country-tag country-cn">中国</span>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="60" height="60">
                             <circle cx="50" cy="50" r="40" fill="white" opacity="0.2" />
@@ -1753,10 +1539,10 @@
                 </div>
                 
                 <div class="card-wrapper card-featured">
-                    <div class="hot-tag">热门工具</div>
-                    <div class="card" data-tags="视频剪辑,效率,国内,付费">
+                    <div class="hot-tag">Popular Tool</div>
+                    <div class="card" data-tags="video-editing,efficiency,domestic,paid">
                     <div class="card-img brand-miaojian">
-                            <span class="category-indicator category-video-edit">视频剪辑</span>
+                            <span class="category-indicator category-video-edit">video-editing</span>
                             <span class="country-tag country-cn">中国</span>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="60" height="60">
                             <circle cx="50" cy="50" r="40" fill="white" opacity="0.2" />
@@ -1804,9 +1590,9 @@
                 </div>
                 
                 <div class="card-wrapper">
-                    <div class="card" data-tags="视频剪辑,效率,国内,付费">
+                    <div class="card" data-tags="video-editing,efficiency,domestic,paid">
                     <div class="card-img brand-bcut">
-                            <span class="category-indicator category-video-edit">视频剪辑</span>
+                            <span class="category-indicator category-video-edit">video-editing</span>
                             <span class="country-tag country-cn">中国</span>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="60" height="60">
                             <circle cx="50" cy="50" r="40" fill="white" opacity="0.2" />
@@ -1856,8 +1642,8 @@
         </section>
 <section id="coding" class="section">
             <div class="section-header" data-aos="fade-up">
-                <h2 class="section-title">AI编程</h2>
-                <p class="section-description">智能编程助手，提升开发效率与代码质量</p>
+                <h2 class="section-title">AI Programming</h2>
+                <p class="section-description">AI-powered coding assistants and development tools</p>
             </div>
             
             <div class="cards-grid">
@@ -1865,11 +1651,11 @@
                 <div class="masonry-gutter"></div>
                 
                 <div class="card-wrapper card-featured">
-                    <div class="hot-tag">热门工具</div>
-                    <div class="card" data-tags="AI编程,效率,国外,付费">
+                    <div class="hot-tag">Popular Tool</div>
+                    <div class="card" data-tags="ai-programming,efficiency,foreign,paid">
                     <div class="card-img brand-cursor">
-                            <span class="category-indicator category-coding">AI编程</span>
-                            <span class="country-tag country-us">美国</span>
+                            <span class="category-indicator category-coding">ai-programming</span>
+                            <span class="country-tag country-us">USA</span>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="60" height="60">
                             <circle cx="50" cy="50" r="40" fill="white" opacity="0.2" />
                                 <path d="M40,35 L60,35 L60,65 L40,65 Z" stroke="white" stroke-width="2" fill="none" />
@@ -1916,11 +1702,11 @@
                 </div>
                 
                 <div class="card-wrapper card-featured">
-                    <div class="hot-tag">热门工具</div>
-                    <div class="card" data-tags="AI编程,效率,国外,付费">
+                    <div class="hot-tag">Popular Tool</div>
+                    <div class="card" data-tags="ai-programming,efficiency,foreign,paid">
                     <div class="card-img brand-bolt">
-                            <span class="category-indicator category-coding">AI编程</span>
-                            <span class="country-tag country-us">美国</span>
+                            <span class="category-indicator category-coding">ai-programming</span>
+                            <span class="country-tag country-us">USA</span>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="60" height="60">
                             <circle cx="50" cy="50" r="40" fill="white" opacity="0.2" />
                                 <path d="M50,30 L40,55 L55,55 L45,70" stroke="white" stroke-width="3" fill="none" />
@@ -1967,9 +1753,9 @@
                 </div>
                 
                 <div class="card-wrapper">
-                    <div class="card" data-tags="AI编程,效率,国内,付费">
+                    <div class="card" data-tags="ai-programming,efficiency,domestic,paid">
                     <div class="card-img brand-devv">
-                            <span class="category-indicator category-coding">AI编程</span>
+                            <span class="category-indicator category-coding">ai-programming</span>
                             <span class="country-tag country-cn">中国</span>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="60" height="60">
                             <circle cx="50" cy="50" r="40" fill="white" opacity="0.2" />
@@ -2009,7 +1795,7 @@
                                     <span class="hover-tag">中英双语编程</span>
                                     <span class="hover-tag">跨语言代码转换</span>
                                     <span class="hover-tag">多编辑器插件</span>
-                                    <span class="hover-tag">AI编程</span>
+                                    <span class="hover-tag">ai-programming</span>
                                 </div>
                             </div>
                         </div>
@@ -2019,8 +1805,8 @@
         </section>
 <section id="search" class="section">
             <div class="section-header" data-aos="fade-up">
-                <h2 class="section-title">信息检索</h2>
-                <p class="section-description">AI驱动的智能搜索工具，高效获取精准信息</p>
+                <h2 class="section-title">Information Retrieval</h2>
+                <p class="section-description">Advanced AI search and information gathering tools</p>
             </div>
             
             <div class="cards-grid">
@@ -2028,10 +1814,10 @@
                 <div class="masonry-gutter"></div>
                 
                 <div class="card-wrapper card-featured">
-                    <div class="hot-tag">热门工具</div>
-                    <div class="card" data-tags="信息检索,效率,国内,付费">
+                    <div class="hot-tag">Popular Tool</div>
+                    <div class="card" data-tags="information-retrieval,efficiency,domestic,paid">
                     <div class="card-img brand-metaso">
-                            <span class="category-indicator category-search">信息检索</span>
+                            <span class="category-indicator category-search">information-retrieval</span>
                             <span class="country-tag country-cn">中国</span>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="60" height="60">
                             <circle cx="50" cy="50" r="40" fill="white" opacity="0.2" />
@@ -2079,11 +1865,11 @@
                 </div>
                 
                 <div class="card-wrapper card-featured">
-                    <div class="hot-tag">热门工具</div>
-                    <div class="card" data-tags="信息检索,效率,国外,付费">
+                    <div class="hot-tag">Popular Tool</div>
+                    <div class="card" data-tags="information-retrieval,efficiency,foreign,paid">
                     <div class="card-img brand-perplexity">
-                            <span class="category-indicator category-search">信息检索</span>
-                            <span class="country-tag country-us">美国</span>
+                            <span class="category-indicator category-search">information-retrieval</span>
+                            <span class="country-tag country-us">USA</span>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="60" height="60">
                             <circle cx="50" cy="50" r="40" fill="white" opacity="0.2" />
                                 <path d="M40,40 Q50,30 60,40 Q70,50 60,60 Q50,70 40,60 Q30,50 40,40" stroke="white" stroke-width="2" fill="none" />
@@ -2130,9 +1916,9 @@
                 </div>
                 
                 <div class="card-wrapper">
-                    <div class="card" data-tags="信息检索,效率,国内,付费">
+                    <div class="card" data-tags="information-retrieval,efficiency,domestic,paid">
                     <div class="card-img brand-getbiji">
-                            <span class="category-indicator category-search">信息检索</span>
+                            <span class="category-indicator category-search">information-retrieval</span>
                             <span class="country-tag country-cn">中国</span>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="60" height="60">
                             <circle cx="50" cy="50" r="40" fill="white" opacity="0.2" />
@@ -2182,8 +1968,8 @@
         </section>
 <section id="music" class="section">
             <div class="section-header" data-aos="fade-up">
-                <h2 class="section-title">AI音乐</h2>
-                <p class="section-description">AI作曲与音乐生成工具，释放创意音乐潜能</p>
+                <h2 class="section-title">AI Music</h2>
+                <p class="section-description">AI tools for music creation and audio processing</p>
             </div>
             
             <div class="cards-grid">
@@ -2191,11 +1977,11 @@
                 <div class="masonry-gutter"></div>
                 
                 <div class="card-wrapper card-featured">
-                    <div class="hot-tag">热门工具</div>
-                    <div class="card" data-tags="AI音乐,效率,国外,付费">
+                    <div class="hot-tag">Popular Tool</div>
+                    <div class="card" data-tags="ai-music,efficiency,foreign,paid">
                     <div class="card-img brand-suno">
-                            <span class="category-indicator category-music">AI音乐</span>
-                            <span class="country-tag country-us">美国</span>
+                            <span class="category-indicator category-music">ai-music</span>
+                            <span class="country-tag country-us">USA</span>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="70" height="70">
                                 <circle cx="50" cy="50" r="48" fill="none" stroke="white" stroke-width="2" opacity="0.3"/>
                                 <path d="M60,40 L60,70 M60,40 C60,35 55,30 50,30 C45,30 40,35 40,40 C40,45 45,50 50,50" stroke="white" stroke-width="3" fill="none" />
@@ -2242,10 +2028,10 @@
                 </div>
                 
                 <div class="card-wrapper card-featured">
-                    <div class="hot-tag">热门工具</div>
-                    <div class="card" data-tags="AI音乐,效率,国内,付费">
+                    <div class="hot-tag">Popular Tool</div>
+                    <div class="card" data-tags="ai-music,efficiency,domestic,paid">
                     <div class="card-img brand-haimian">
-                            <span class="category-indicator category-music">AI音乐</span>
+                            <span class="category-indicator category-music">ai-music</span>
                             <span class="country-tag country-cn">中国</span>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="60" height="60">
                             <circle cx="50" cy="50" r="40" fill="white" opacity="0.2" />
@@ -2294,10 +2080,10 @@
                 </div>
                 
                 <div class="card-wrapper card-featured">
-                    <div class="hot-tag">热门工具</div>
-                    <div class="card" data-tags="AI音乐,效率,国内,付费">
+                    <div class="hot-tag">Popular Tool</div>
+                    <div class="card" data-tags="ai-music,efficiency,domestic,paid">
                     <div class="card-img brand-hechordpai">
-                            <span class="category-indicator category-music">AI音乐</span>
+                            <span class="category-indicator category-music">ai-music</span>
                             <span class="country-tag country-cn">中国</span>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="60" height="60">
                             <circle cx="50" cy="50" r="40" fill="white" opacity="0.2" />
@@ -2348,8 +2134,8 @@
         </section>
 <section id="data" class="section">
             <div class="section-header" data-aos="fade-up">
-                <h2 class="section-title">数据处理</h2>
-                <p class="section-description">智能数据分析与处理工具，简化数据工作流程</p>
+                <h2 class="section-title">Data Processing</h2>
+                <p class="section-description">AI-powered data analysis and processing tools</p>
             </div>
             
             <div class="cards-grid">
@@ -2357,10 +2143,10 @@
                 <div class="masonry-gutter"></div>
                 
                 <div class="card-wrapper card-featured">
-                    <div class="hot-tag">热门工具</div>
-                    <div class="card" data-tags="数据处理,效率,国内,付费">
+                    <div class="hot-tag">Popular Tool</div>
+                    <div class="card" data-tags="data-processing,efficiency,domestic,paid">
                     <div class="card-img brand-raccoon">
-                            <span class="category-indicator category-data">数据处理</span>
+                            <span class="category-indicator category-data">data-processing</span>
                             <span class="country-tag country-cn">中国</span>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="60" height="60">
                             <circle cx="50" cy="50" r="40" fill="white" opacity="0.2" />
@@ -2409,11 +2195,11 @@
                 </div>
                 
                 <div class="card-wrapper card-featured">
-                    <div class="hot-tag">热门工具</div>
-                    <div class="card" data-tags="数据处理,效率,国外,付费">
+                    <div class="hot-tag">Popular Tool</div>
+                    <div class="card" data-tags="data-processing,efficiency,foreign,paid">
                         <div class="card-img brand-metaso">
-                            <span class="category-indicator category-data">数据处理</span>
-                            <span class="country-tag country-us">美国</span>
+                            <span class="category-indicator category-data">data-processing</span>
+                            <span class="country-tag country-us">USA</span>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="60" height="60">
                             <circle cx="50" cy="50" r="40" fill="white" opacity="0.2" />
                                 <rect x="30" y="40" width="40" height="20" fill="white" opacity="0.6" />
@@ -2463,8 +2249,8 @@
         </section>
 <section id="image" class="section">
             <div class="section-header" data-aos="fade-up">
-                <h2 class="section-title">AI绘图</h2>
-                <p class="section-description">AI图像生成工具，将文字描述转化为精美图像</p>
+                <h2 class="section-title">AI Drawing</h2>
+                <p class="section-description">AI tools for image generation and artistic creation</p>
             </div>
             
             <div class="cards-grid">
@@ -2472,11 +2258,11 @@
                 <div class="masonry-gutter"></div>
                 
                 <div class="card-wrapper card-featured">
-                    <div class="hot-tag">热门工具</div>
-                    <div class="card" data-tags="AI绘图,效率,国外,付费">
+                    <div class="hot-tag">Popular Tool</div>
+                    <div class="card" data-tags="ai-drawing,efficiency,foreign,paid">
                         <div class="card-img brand-midjourney">
-                            <span class="category-indicator category-image">AI绘图</span>
-                            <span class="country-tag country-us">美国</span>
+                            <span class="category-indicator category-image">ai-drawing</span>
+                            <span class="country-tag country-us">USA</span>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="70" height="70">
                                 <circle cx="50" cy="50" r="48" fill="none" stroke="white" stroke-width="2" opacity="0.3"/>
                                 <path d="M30,30 L70,30 L70,70 L30,70 Z" fill="none" stroke="white" stroke-width="3"/>
@@ -2524,10 +2310,10 @@
             </div>
             
                 <div class="card-wrapper card-featured">
-                    <div class="hot-tag">热门工具</div>
-                    <div class="card" data-tags="AI绘图,创意,国内,免费">
+                    <div class="hot-tag">Popular Tool</div>
+                    <div class="card" data-tags="ai-drawing,creative,domestic,free">
                         <div class="card-img brand-recraft">
-                            <span class="category-indicator category-image">AI绘图</span>
+                            <span class="category-indicator category-image">ai-drawing</span>
                             <span class="country-tag country-cn">中国</span>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="70" height="70">
                                 <circle cx="50" cy="50" r="48" fill="none" stroke="white" stroke-width="2" opacity="0.3"/>
@@ -2577,10 +2363,10 @@
                 </div>
                 
                 <div class="card-wrapper card-featured">
-                    <div class="hot-tag">热门工具</div>
-                    <div class="card" data-tags="AI绘图,创意,国内,付费">
+                    <div class="hot-tag">Popular Tool</div>
+                    <div class="card" data-tags="ai-drawing,creative,domestic,paid">
                         <div class="card-img brand-chuangkit">
-                            <span class="category-indicator category-image">AI绘图</span>
+                            <span class="category-indicator category-image">ai-drawing</span>
                             <span class="country-tag country-cn">中国</span>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="70" height="70">
                                 <circle cx="50" cy="50" r="48" fill="none" stroke="white" stroke-width="2" opacity="0.3"/>
