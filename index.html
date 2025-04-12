@@ -3,8 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Navigation Hub</title>
+    <!-- SEO Meta Tags -->
+    <title>AI Navigation Hub - Curated Collection of AI Tools | Artificial Intelligence Navigator</title>
+    <meta name="description" content="AI Navigation Hub offers the most comprehensive directory of artificial intelligence tools, including ChatGPT, Claude, Midjourney and more, covering AI writing, AI art, AI productivity tools, and other domains to help you find the right AI tools quickly.">
+    <meta name="keywords" content="AI navigation, artificial intelligence tools, AI tool directory, ChatGPT, Claude, Midjourney, AI writing, AI art, AI productivity, AI tools collection">
+    <meta name="author" content="AI Navigation Hub">
+    <meta name="robots" content="index, follow">
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="AI Navigation Hub - Curated Collection of AI Tools">
+    <meta property="og:description" content="Discover the latest and most comprehensive AI tools to enhance your productivity">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ai-navigation-hub.com">
+    <meta property="og:image" content="https://ai-navigation-hub.com/images/og-image.jpg">
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AI Navigation Hub - Curated Collection of AI Tools">
+    <meta name="twitter:description" content="Discover the latest and most comprehensive AI tools to enhance your productivity">
+    <meta name="twitter:image" content="https://ai-navigation-hub.com/images/twitter-card.jpg">
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://ai-navigation-hub.com">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+    
+    <!-- Structured Data / JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "AI Navigation Hub",
+      "alternateName": "Artificial Intelligence Navigator",
+      "url": "https://ai-navigation-hub.com",
+      "description": "A comprehensive directory of artificial intelligence tools and resources",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://ai-navigation-hub.com/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "AI Chat Assistants",
+          "url": "https://ai-navigation-hub.com/#chat-assistants"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "AI Writing Tools",
+          "url": "https://ai-navigation-hub.com/#writing-tools"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "AI Image Generation",
+          "url": "https://ai-navigation-hub.com/#image-gen"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Video Generation",
+          "url": "https://ai-navigation-hub.com/#video-gen"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Video Editing",
+          "url": "https://ai-navigation-hub.com/#video-edit"
+        }
+      ]
+    }
+    </script>
     <style>
         /* Basic styles */
         body {
@@ -15,7 +91,19 @@
             margin: 0;
             padding: 0;
             scroll-behavior: smooth; /* Smooth scrolling effect */
-            scroll-padding-top: 70px; /* Space reserved for fixed navigation bar */
+            scroll-padding-top: 80px; /* Space reserved for fixed navigation bar - increased from 70px to 80px */
+        }
+        
+        /* Accessibility */
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+            padding: 0;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
         }
         
         .container {
@@ -1264,6 +1352,164 @@
         }
         */
     </style>
+    <!-- Footer Styles -->
+    <style>
+        /* Footer Styles */
+        .site-footer {
+            background-color: #1a202c;
+            color: #e2e8f0;
+            padding: 3rem 0 1.5rem;
+            margin-top: 4rem;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+        
+        .footer-intro {
+            max-width: 100%;
+        }
+        
+        .footer-categories {
+            display: flex;
+            gap: 3rem;
+            justify-content: flex-start;
+        }
+        
+        .category-column {
+            min-width: 160px;
+        }
+        
+        .footer-section h2, .category-column h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+        
+        .category-column h3 {
+            font-size: 1.2rem;
+        }
+        
+        .footer-section p {
+            color: #a0aec0;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+        
+        .footer-section ul, .category-column ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .footer-section ul li, .category-column ul li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-section ul a, .category-column ul a {
+            color: #a0aec0;
+            text-decoration: none;
+            transition: color 0.2s;
+            display: block;
+            padding: 8px 0;  /* 增加点击区域 */
+        }
+        
+        .footer-section ul a:hover, .category-column ul a:hover {
+            color: #fff;
+        }
+        
+        .footer-bottom {
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #2d3748;
+            text-align: center;
+            color: #a0aec0;
+        }
+        
+        /* 移动设备优化 */
+        @media (max-width: 768px) {
+            .footer-categories {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+            
+            /* 增大移动设备上的点击区域 */
+            .footer-section ul a, .category-column ul a {
+                padding: 10px 0;
+                font-size: 16px; /* 增大字体 */
+            }
+            
+            /* 改进卡片在移动设备上的布局 */
+            .card-content {
+                padding: 15px;
+            }
+            
+            .card-features {
+                margin-top: 12px;
+            }
+            
+            .feature {
+                padding: 8px 12px;
+                margin-bottom: 8px;
+                font-size: 14px;
+            }
+            
+            /* 适应触摸交互 */
+            .card:active {
+                transform: scale(0.98);
+                transition: transform 0.1s;
+            }
+            
+            /* 导航项增大点击区域 */
+            .navbar-link {
+                padding: 0 10px;
+                height: 60px;
+            }
+            
+            /* 更大的返回顶部按钮 */
+            .back-to-top {
+                width: 56px;
+                height: 56px;
+                bottom: 30px;
+                right: 20px;
+            }
+        }
+        
+        /* 小型移动设备优化 */
+        @media (max-width: 480px) {
+            .container {
+                padding: 15px 10px;
+            }
+            
+            .section-title {
+                font-size: 24px;
+            }
+            
+            .section-description {
+                font-size: 14px;
+            }
+            
+            /* 卡片在小屏幕上更紧凑 */
+            .cards-grid {
+                gap: 15px;
+            }
+            
+            /* 改进小屏幕上的页脚 */
+            .site-footer {
+                padding: 2rem 0 1rem;
+            }
+            
+            .footer-section h2 {
+                font-size: 1.3rem;
+            }
+            
+            .category-column h3 {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation Bar -->
@@ -1402,20 +1648,23 @@
     <div class="container">
         <section class="hero">
         <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
-            <h1>Explore the Infinite Possibilities of AI</h1>
-            <p>Curated AI tools navigation to enhance your efficiency and creativity in various scenarios</p>
-            <div class="hero-links">
-                <a href="#chat" class="hero-link">Chatbots</a>
-                <a href="#ppt" class="hero-link">PPT Generation</a>
-                <a href="#video-gen" class="hero-link">Video Generation</a>
-                <a href="#video-edit" class="hero-link">Video Editing</a>
-                <a href="#coding" class="hero-link">AI Coding</a>
-                <a href="#search" class="hero-link">Information Retrieval</a>
-                <a href="#music" class="hero-link">AI Music</a>
-                <a href="#data" class="hero-link">Data Processing</a>
-                <a href="#image" class="hero-link">AI Art</a>
-                <a href="#ai-design" class="hero-link">AI Design</a>
-            </div>
+            <h1 class="hero-title">Explore the Infinite Possibilities of AI</h1>
+            <p class="hero-description">Curated AI tools navigation to enhance your efficiency and creativity in various scenarios</p>
+            <nav class="hero-navigation">
+                <h2 class="visually-hidden">Main Categories</h2>
+                <div class="hero-links">
+                    <a href="#chat" class="hero-link" aria-label="Navigate to Chatbots section">Chatbots</a>
+                    <a href="#ppt" class="hero-link" aria-label="Navigate to PPT Generation section">PPT Generation</a>
+                    <a href="#video-gen" class="hero-link" aria-label="Navigate to Video Generation section">Video Generation</a>
+                    <a href="#video-edit" class="hero-link" aria-label="Navigate to Video Editing section">Video Editing</a>
+                    <a href="#coding" class="hero-link" aria-label="Navigate to AI Coding section">AI Coding</a>
+                    <a href="#search" class="hero-link" aria-label="Navigate to Information Retrieval section">Information Retrieval</a>
+                    <a href="#music" class="hero-link" aria-label="Navigate to AI Music section">AI Music</a>
+                    <a href="#data" class="hero-link" aria-label="Navigate to Data Processing section">Data Processing</a>
+                    <a href="#image" class="hero-link" aria-label="Navigate to AI Art section">AI Art</a>
+                    <a href="#ai-design" class="hero-link" aria-label="Navigate to AI Design section">AI Design</a>
+                </div>
+            </nav>
         </div>
     </section>
 <section id="chat" class="section">
@@ -2975,6 +3224,9 @@
             console.log('显示已保存的工具... (简化版)');
             
             try {
+                // 检测是否为移动设备
+                const isMobile = window.innerWidth <= 768;
+                
                 // 先移除可能存在的旧模态窗口
                 const oldModal = document.getElementById('savedToolsModalNew');
                 if (oldModal) {
@@ -3007,29 +3259,34 @@
                         border-radius: 8px;
                         width: 90%;
                         max-width: 600px;
-                        max-height: 80vh;
+                        max-height: ${isMobile ? '90vh' : '80vh'};
                         overflow-y: auto;
                         position: relative;
                         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
                         margin: auto;
                     ">
                         <div style="
-                            padding: 20px;
+                            padding: ${isMobile ? '15px' : '20px'};
                             display: flex;
                             justify-content: space-between;
                             align-items: center;
                             border-bottom: 1px solid #eee;
                         ">
-                            <h2 style="margin: 0; color: #333; font-size: 24px;">Favorites</h2>
+                            <h2 style="margin: 0; color: #333; font-size: ${isMobile ? '20px' : '24px'};">Favorites</h2>
                             <button id="closeModalButton" style="
                                 background: none;
                                 border: none;
-                                font-size: 24px;
+                                font-size: ${isMobile ? '28px' : '24px'};
                                 cursor: pointer;
-                                color: #999;
-                            ">&times;</button>
+                                padding: 0;
+                                width: ${isMobile ? '44px' : '40px'};
+                                height: ${isMobile ? '44px' : '40px'};
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                            ">×</button>
                         </div>
-                        <div style="padding: 20px;">
+                        <div style="padding: ${isMobile ? '15px' : '20px'};">
                 `;
                 
                 // 检查是否有收藏的工具
@@ -3516,14 +3773,30 @@
         // 设置卡片交互
         function setupCardInteractions() {
             const cards = document.querySelectorAll('.card');
+            const isTouchDevice = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
+            
             cards.forEach(card => {
-                card.addEventListener('mouseenter', function() {
-                    this.style.transform = 'translateY(-5px)';
-                });
+                // 鼠标悬停效果 (桌面设备)
+                if (!isTouchDevice) {
+                    card.addEventListener('mouseenter', function() {
+                        this.style.transform = 'translateY(-5px)';
+                    });
+                    
+                    card.addEventListener('mouseleave', function() {
+                        this.style.transform = '';
+                    });
+                }
                 
-                card.addEventListener('mouseleave', function() {
-                    this.style.transform = '';
-                });
+                // 触摸设备的触摸反馈
+                if (isTouchDevice) {
+                    card.addEventListener('touchstart', function() {
+                        this.style.transform = 'scale(0.98)';
+                    }, {passive: true});
+                    
+                    card.addEventListener('touchend', function() {
+                        this.style.transform = '';
+                    }, {passive: true});
+                }
             });
         }
         
@@ -3646,7 +3919,129 @@
             setupCardInteractions();
             createToolbar();
             setupMobileNavigation();
+            
+            // 优化锚点链接滚动效果
+            setupSmoothScrolling();
         });
+        
+        // 优化锚点链接滚动
+        function setupSmoothScrolling() {
+            // 创建通用滚动处理函数
+            function scrollToSection(e) {
+                e.preventDefault(); // 阻止默认锚点行为
+                
+                // 获取目标元素
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                
+                if (targetElement) {
+                    // 获取当前的滚动位置
+                    const currentScrollPosition = window.scrollY || window.pageYOffset;
+                    
+                    // 计算目标元素的绝对位置（不受当前滚动位置影响）
+                    const navbarHeight = document.querySelector('.navbar').offsetHeight;
+                    // 在移动设备上增加更多偏移以适应可能更大的导航栏
+                    const isMobile = window.innerWidth <= 768;
+                    const extraOffset = isMobile ? 25 : 20;
+                    const targetTop = targetElement.offsetTop - navbarHeight - extraOffset;
+                    
+                    // 平滑滚动到目标位置
+                    window.scrollTo({
+                        top: targetTop,
+                        behavior: 'smooth'
+                    });
+                    
+                    // 在移动设备上，可能需要关闭任何打开的下拉菜单或导航
+                    if (isMobile) {
+                        const mobileMenu = document.querySelector('.navbar-menu.expanded');
+                        if (mobileMenu) {
+                            mobileMenu.classList.remove('expanded');
+                        }
+                    }
+                    
+                    // 记录最后点击的锚点，用于调试
+                    window.lastClickedAnchor = targetId;
+                    console.log('Scrolling to:', targetId, 'Position:', targetTop);
+                }
+            }
+            
+            // 处理所有页脚链接
+            const footerLinks = document.querySelectorAll('.site-footer a[href^="#"]');
+            footerLinks.forEach(link => {
+                // 移除可能存在的旧事件监听器
+                link.removeEventListener('click', scrollToSection);
+                // 添加新的事件监听器
+                link.addEventListener('click', scrollToSection);
+            });
+            
+            // 处理导航栏和页面内其他锚点链接
+            const navbarLinks = document.querySelectorAll('.navbar-link, .hero-link');
+            navbarLinks.forEach(link => {
+                // 移除可能存在的旧事件监听器
+                link.removeEventListener('click', scrollToSection);
+                // 添加新的事件监听器
+                link.addEventListener('click', scrollToSection);
+            });
+            
+            // 处理URL中的锚点
+            if (window.location.hash) {
+                setTimeout(() => {
+                    const targetId = window.location.hash.substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    
+                    if (targetElement) {
+                        const navbarHeight = document.querySelector('.navbar').offsetHeight;
+                        const targetTop = targetElement.offsetTop - navbarHeight - 20;
+                        
+                        window.scrollTo({
+                            top: targetTop,
+                            behavior: 'smooth'
+                        });
+                    }
+                }, 300); // 略微延迟以确保页面完全加载
+            }
+        }
     </script>
+    
+    <!-- Footer with sitemap for SEO -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section footer-intro">
+                    <h2>AI Navigation Hub</h2>
+                    <p>A curated collection of the best AI tools to enhance your productivity and creativity.</p>
+                </div>
+                
+                <div class="footer-categories">
+                    <div class="category-column">
+                        <h3>Categories</h3>
+                        <ul>
+                            <li><a href="#chat">AI Chatbots</a></li>
+                            <li><a href="#ppt">PPT Generation</a></li>
+                            <li><a href="#video-gen">Video Generation</a></li>
+                            <li><a href="#video-edit">Video Editing</a></li>
+                            <li><a href="#coding">AI Coding</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="category-column">
+                        <h3>More Categories</h3>
+                        <ul>
+                            <li><a href="#search">Information Retrieval</a></li>
+                            <li><a href="#music">AI Music</a></li>
+                            <li><a href="#data">Data Processing</a></li>
+                            <li><a href="#image">AI Art</a></li>
+                            <li><a href="#ai-design">AI Design</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2023</span> AI Navigation Hub. All Rights Reserved.</p>
+                <script>document.getElementById('current-year').textContent = new Date().getFullYear();</script>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
