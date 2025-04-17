@@ -20,6 +20,7 @@ const CommentSection: React.FC<CommentSectionProps> = ({ gameId }) => {
   const [commentCount, setCommentCount] = useState<number>(0);
 
   // 从localStorage加载评论
+  // Load comments from localStorage
   useEffect(() => {
     const savedComments = localStorage.getItem(`game_${gameId}_comments`);
     if (savedComments) {
@@ -27,7 +28,7 @@ const CommentSection: React.FC<CommentSectionProps> = ({ gameId }) => {
         const parsedComments = JSON.parse(savedComments);
         setComments(parsedComments);
         setCommentCount(parsedComments.length);
-        console.log(`${gameId}: ${parsedComments.length} 条评论`);
+        console.log(`${gameId}: ${parsedComments.length} comments`);
       } catch (error) {
         console.error('Error loading comments:', error);
       }
@@ -35,6 +36,7 @@ const CommentSection: React.FC<CommentSectionProps> = ({ gameId }) => {
   }, [gameId]);
 
   // 提交评论
+  // Submit comment
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
@@ -61,9 +63,10 @@ const CommentSection: React.FC<CommentSectionProps> = ({ gameId }) => {
   };
 
   // 格式化时间
+  // Format time
   const formatTime = (timestamp: number) => {
     const date = new Date(timestamp);
-    return date.toLocaleString('zh-CN', {
+    return date.toLocaleString('en-US', {
       year: 'numeric',
       month: '2-digit',
       day: '2-digit',

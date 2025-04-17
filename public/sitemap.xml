@@ -1,129 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://game777.pages.dev/</loc>
-    <lastmod>2024-03-28</lastmod>
+    <loc>https://aigrocery.yourwebsite.com/</loc>
+    <lastmod>2024-06-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://game777.pages.dev/game/1</loc>
-    <lastmod>2024-03-28</lastmod>
+    <loc>https://aigrocery.yourwebsite.com/popular</loc>
+    <lastmod>2024-06-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aigrocery.yourwebsite.com/about</loc>
+    <lastmod>2024-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- 添加AI工具页面 -->
+  <!-- 这些URL应该随着新工具的添加而动态生成 -->
+  <url>
+    <loc>https://aigrocery.yourwebsite.com/tool/1</loc>
+    <lastmod>2024-06-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://game777.pages.dev/game/2</loc>
-    <lastmod>2024-03-28</lastmod>
+    <loc>https://aigrocery.yourwebsite.com/tool/2</loc>
+    <lastmod>2024-06-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-  <url>
-    <loc>https://game777.pages.dev/game/3</loc>
-    <lastmod>2024-03-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://game777.pages.dev/game/4</loc>
-    <lastmod>2024-03-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://game777.pages.dev/game/5</loc>
-    <lastmod>2024-03-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://game777.pages.dev/game/6</loc>
-    <lastmod>2024-03-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://game777.pages.dev/game/7</loc>
-    <lastmod>2024-03-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://game777.pages.dev/game/8</loc>
-    <lastmod>2024-03-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://game777.pages.dev/game/9</loc>
-    <lastmod>2024-03-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://game777.pages.dev/game/10</loc>
-    <lastmod>2024-03-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://game777.pages.dev/game/11</loc>
-    <lastmod>2024-03-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://game777.pages.dev/game/12</loc>
-    <lastmod>2024-03-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://game777.pages.dev/game/13</loc>
-    <lastmod>2024-03-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://game777.pages.dev/game/14</loc>
-    <lastmod>2024-03-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://game777.pages.dev/game/15</loc>
-    <lastmod>2024-03-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://game777.pages.dev/game/16</loc>
-    <lastmod>2024-03-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://game777.pages.dev/game/17</loc>
-    <lastmod>2024-03-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://game777.pages.dev/game/18</loc>
-    <lastmod>2024-03-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://game777.pages.dev/game/19</loc>
-    <lastmod>2024-03-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://game777.pages.dev/game/20</loc>
-    <lastmod>2024-03-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
+  <!-- 更多工具页面... -->
 </urlset> 

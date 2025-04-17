@@ -105,7 +105,12 @@ const Leaderboard: React.FC = () => {
                       {game.rating.toFixed(1)} ({game.totalRatings})
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                      {game.plays} 次
+                      <div className="flex flex-col items-center justify-center space-y-2">
+                        <div className="text-4xl text-blue-500">
+                          {game.plays} times
+                        </div>
+                        <div className="text-sm text-gray-500">Played</div>
+                      </div>
                     </td>
                   </tr>
                 ))}

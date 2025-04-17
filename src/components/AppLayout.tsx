@@ -8,7 +8,7 @@ interface AppLayoutProps {
 
 const AppLayout: React.FC<AppLayoutProps> = ({ children }) => {
   return (
-    <div className="min-h-screen bg-pink-50">
+    <div className="min-h-screen bg-blue-50">
       <AppNavigation />
       <main className="w-full pt-20 md:pt-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

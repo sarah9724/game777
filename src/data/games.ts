@@ -24,7 +24,7 @@ export const platforms: Record<string, Platform> = {
     name: 'Y8 Games',
     url: 'https://zh.y8.com/',
     icon: '🎮',
-    description: 'Y8游戏是一个知名的在线游戏平台，提供大量免费的Flash和HTML5游戏。包括动作、冒险、益智等多种类型。',
+    description: 'Y8 Games is a well-known online gaming platform offering a large collection of free Flash and HTML5 games. It includes action, adventure, puzzle, and many other game categories.',
     image: 'https://img.y8.com/assets/y8/header_logo-8b1b7a02590aece9544ac73d523153f5c14bd9f69f6cc8e8177c09b5e895105a.png',
     rating: 4.7,
     totalRatings: 15234,
@@ -35,7 +35,7 @@ export const platforms: Record<string, Platform> = {
     name: 'Poki',
     url: 'https://poki.com/',
     icon: '🎯',
-    description: 'Poki是一个流行的在线游戏平台，专注于提供高质量的HTML5游戏。游戏种类丰富，界面清新现代。',
+    description: 'Poki is a popular online gaming platform focused on providing high-quality HTML5 games. It features a diverse range of games with a clean, modern interface.',
     image: 'https://a.poki.com/static/img/share-img.png',
     rating: 4.8,
     totalRatings: 18456,
@@ -46,7 +46,7 @@ export const platforms: Record<string, Platform> = {
     name: 'Addicting Games',
     url: 'https://www.addictinggames.com/',
     icon: '🎲',
-    description: 'Addicting Games提供大量令人上瘾的休闲游戏，是消磨时间的理想选择。游戏简单易上手但富有挑战性。',
+    description: 'Addicting Games provides a wide range of addictive casual games, making it a great choice for time-killing. Games are easy to pick up but challenging to master.',
     image: 'https://www.addictinggames.com/sites/default/files/ag-logo.png',
     rating: 4.6,
     totalRatings: 12567,
@@ -57,7 +57,7 @@ export const platforms: Record<string, Platform> = {
     name: 'Famobi',
     url: 'https://play.famobi.com/',
     icon: '🎪',
-    description: 'Famobi专注于提供高品质的HTML5游戏，游戏画面精美，运行流畅，适合各年龄段玩家。',
+    description: 'Famobi specializes in providing high-quality HTML5 games with stunning graphics, smooth performance, and suitable for players of all ages.',
     image: 'https://play.famobi.com/assets/images/famobi_share.jpg',
     rating: 4.5,
     totalRatings: 9876,
@@ -68,7 +68,7 @@ export const platforms: Record<string, Platform> = {
     name: 'Armor Games',
     url: 'https://armorgames.com/',
     icon: '🛡️',
-    description: 'Armor Games是一个老牌游戏平台，以其独特的游戏和活跃的社区而闻名。提供许多独立游戏作品。',
+    description: 'Armor Games is a veteran gaming platform known for its unique games and active community.',
     image: 'https://armorgames.com/assets/img/armor_games_700x500.jpg',
     rating: 4.9,
     totalRatings: 21345,
@@ -79,7 +79,7 @@ export const platforms: Record<string, Platform> = {
     name: 'Free Online Games',
     url: 'https://www.freeonlinegames.com/',
     icon: '🎨',
-    description: 'FOG游戏平台提供海量免费在线游戏，类型覆盖广泛，从休闲到竞技应有尽有。',
+    description: 'FOG gaming platform offers a massive collection of free online games, covering a wide range of genres from casual to competitive.',
     image: 'https://www.freeonlinegames.com/assets/fog/images/fog-logo.png',
     rating: 4.4,
     totalRatings: 8765,
@@ -90,7 +90,7 @@ export const platforms: Record<string, Platform> = {
     name: 'Kongregate',
     url: 'https://www.kongregate.com/',
     icon: '🎭',
-    description: 'Kongregate是一个著名的游戏社区，拥有大量优质Flash和HTML5游戏，社区互动性强。',
+    description: 'Kongregate is a well-known gaming community featuring a large collection of high-quality Flash and HTML5 games, with strong community interaction.',
     image: 'https://cdn1.kongcdn.com/assets/files/0002/7114/kong_share.png',
     rating: 4.7,
     totalRatings: 16789,
@@ -101,7 +101,7 @@ export const platforms: Record<string, Platform> = {
     name: 'Itch.io',
     url: 'https://itch.io/',
     icon: '🎱',
-    description: 'Itch.io是独立游戏开发者的天堂，提供大量创新独特的游戏作品，支持创作者。',
+    description: 'Itch.io is a paradise for independent game developers, offering a wide range of innovative and unique games, supporting creators.',
     image: 'https://static.itch.io/images/logo-white-new.png',
     rating: 4.8,
     totalRatings: 14567,
@@ -112,7 +112,7 @@ export const platforms: Record<string, Platform> = {
     name: '1Games',
     url: 'https://1games.io/',
     icon: '🎳',
-    description: '1Games提供精选HTML5游戏，专注于提供流畅的游戏体验和优质的游戏内容。',
+    description: '1Games provides handpicked HTML5 games, focusing on delivering smooth gameplay experiences and high-quality game content.',
     image: 'https://1games.io/images/logo.png',
     rating: 4.3,
     totalRatings: 6543,
@@ -137,15 +137,15 @@ export interface Game {
   createdAt: string; // ISO date string
 }
 
-// 从localStorage加载评论
+// Load comments from localStorage
 const loadComments = (gameId: string): Comment[] => {
   const savedComments = localStorage.getItem(`game_${gameId}_comments`);
   return savedComments ? JSON.parse(savedComments) : [];
 };
 
-// 更新游戏评分
+// Update game rating
 export const updateGameRating = async (gameId: string, newRating: number): Promise<{ newRating: number; newTotalRatings: number }> => {
-  // 计算新的平均评分
+  // Calculate new average rating
   const game = games.find(g => g.id === gameId);
   if (!game) {
     throw new Error('Game not found');
@@ -154,11 +154,11 @@ export const updateGameRating = async (gameId: string, newRating: number): Promi
   const newTotalRatings = game.totalRatings + 1;
   const newAverageRating = ((game.rating * game.totalRatings) + newRating) / newTotalRatings;
 
-  // 保存评分到 localStorage
+  // Save rating to localStorage
   localStorage.setItem(`game-rating-${gameId}`, newAverageRating.toString());
   localStorage.setItem(`game-total-ratings-${gameId}`, newTotalRatings.toString());
 
-  // 更新游戏对象
+  // Update game object
   game.rating = newAverageRating;
   game.totalRatings = newTotalRatings;
 
@@ -168,13 +168,13 @@ export const updateGameRating = async (gameId: string, newRating: number): Promi
   };
 };
 
-// 保存评论到localStorage
+// Save comment to localStorage
 export const saveComment = (gameId: string, comment: Comment) => {
   const comments = loadComments(gameId);
   comments.push(comment);
   localStorage.setItem(`game_${gameId}_comments`, JSON.stringify(comments));
   
-  // 更新游戏评论
+  // Update game comments
   const game = games.find(g => g.id === gameId);
   if (game) {
     game.comments = comments;
@@ -188,7 +188,7 @@ const loadGameData = (gameId: string) => {
   const savedComments = localStorage.getItem(`game_${gameId}_comments`);
   const savedPlays = localStorage.getItem(`game-plays-${gameId}`);
 
-  // 确保正确解析评论数据
+  // Ensure comments data is parsed correctly
   let comments = [];
   try {
     comments = savedComments ? JSON.parse(savedComments) : [];
@@ -208,10 +208,10 @@ const loadGameData = (gameId: string) => {
 
 // Initialize games with saved data
 const initializeGames = (games: Game[]): Game[] => {
-  console.log('\n=== 游戏评论数量统计 ===');
+  console.log('\n=== Games Comments Count Statistics ===');
   const initializedGames = games.map(game => {
     const savedData = loadGameData(game.id);
-    console.log(`${game.title}: ${savedData.comments.length} 条评论`);
+    console.log(`${game.title}: ${savedData.comments.length} comments`);
     return {
       ...game,
       rating: savedData.rating,
@@ -623,7 +623,7 @@ export const sortGames = (games: Game[], method: SortMethod): Game[] => {
       case 'date':
         return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
       case 'comments':
-        // 重新加载评论数据以确保准确性
+        // Reload comment data to ensure accuracy
         const aData = loadGameData(a.id);
         const bData = loadGameData(b.id);
         const aComments = aData.comments.length;
@@ -654,33 +654,33 @@ export const getGameById = (id: string): Game | undefined => {
   return games.find(game => game.id === id);
 };
 
-// 更新游戏游玩次数
+// Update game play count
 export const updateGamePlays = async (gameId: string): Promise<void> => {
   const game = games.find(g => g.id === gameId);
   if (game) {
-    // 从 localStorage 获取当前游玩次数
+    // Get current play count from localStorage
     const savedPlays = localStorage.getItem(`game-plays-${gameId}`);
     const currentPlays = savedPlays ? parseInt(savedPlays) : 0;
     
-    // 增加一次游玩次数
+    // Increment play count
     const newPlays = currentPlays + 1;
     
-    // 更新 localStorage
+    // Update localStorage
     localStorage.setItem(`game-plays-${gameId}`, newPlays.toString());
     
-    // 更新游戏对象
+    // Update game object
     game.plays = newPlays;
     
     console.log(`Game ${game.title}: ${currentPlays} -> ${newPlays} plays`);
   }
 };
 
-// 打印所有游戏的评论数量
+// Print comment count for all games
 export const printGameCommentsCount = () => {
-  console.log('\n=== 游戏评论数量统计 ===');
+  console.log('\n=== Games Comments Count Statistics ===');
   games.forEach(game => {
     const gameData = loadGameData(game.id);
-    console.log(`${game.title}: ${gameData.comments.length} 条评论`);
+    console.log(`${game.title}: ${gameData.comments.length} comments`);
   });
   console.log('========================\n');
 }; 

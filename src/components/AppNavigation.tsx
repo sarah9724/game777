@@ -29,7 +29,7 @@ const AppNavigation: React.FC = () => {
     }
   };
 
-  // 当URL中有搜索参数时，更新搜索框的值
+  // Update search box value when URL contains search parameters
   useEffect(() => {
     const params = new URLSearchParams(location.search);
     const q = params.get('q');
@@ -55,25 +55,25 @@ const AppNavigation: React.FC = () => {
             to="/" 
             className="flex items-center group"
           >
-            <span className="text-3xl mr-2 transform group-hover:scale-110 transition-transform duration-300">🎮</span>
+            <span className="text-3xl mr-2 transform group-hover:scale-110 transition-transform duration-300">🤖</span>
             <div className="flex flex-col">
               <span className="font-poppins font-semibold text-3xl gradient-text">
-                NextGGame
+                AI Grocery
               </span>
               <div className="text-xs text-gray-600">
-                A cute little game world designed for women
+                Your guide to the best AI tools online
               </div>
             </div>
           </Link>
 
-          {/* 搜索框 */}
+          {/* Search Box */}
           <form onSubmit={handleSearch} className="hidden md:flex items-center relative mx-4 flex-1 max-w-md">
             <input
               type="text"
-              placeholder="Search games..."
+              placeholder="Search AI tools..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full pl-12 pr-4 py-3 text-base border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent"
+              className="w-full pl-12 pr-4 py-3 text-base border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             />
             <svg
               className="absolute left-4 top-1/2 transform -translate-y-1/2 w-6 h-6 text-gray-400"
@@ -85,13 +85,14 @@ const AppNavigation: React.FC = () => {
             </svg>
           </form>
 
-          {/* 主导航 */}
+          {/* Main Navigation */}
           <div className="hidden md:flex items-center space-x-2">
             <NavLink href="/" active={isActive('/')}>Home</NavLink>
-            <NavLink href="/leaderboard" active={isActive('/leaderboard')}>Leaderboard</NavLink>
+            <NavLink href="/popular" active={isActive('/popular')}>Recently Visited</NavLink>
+            <NavLink href="/about" active={isActive('/about')}>About</NavLink>
           </div>
 
-          {/* 移动端菜单按钮 */}
+          {/* Mobile Menu Button */}
           <div className="md:hidden">
             <button className="p-2 rounded-full hover:bg-gray-100 transition-colors">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -117,8 +118,8 @@ const NavLink: React.FC<NavLinkProps> = ({ href, active, children }) => {
       to={href}
       className={`px-8 py-3 rounded-full text-xl font-medium transition-all duration-300 ${
         active
-          ? 'bg-primary-50 text-primary-700 shadow-sm'
-          : 'text-gray-600 hover:bg-gray-50 hover:text-primary-600'
+          ? 'bg-blue-50 text-blue-700 shadow-sm'
+          : 'text-gray-600 hover:bg-gray-50 hover:text-blue-600'
       }`}
     >
       {children}

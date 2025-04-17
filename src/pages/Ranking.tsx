@@ -15,27 +15,36 @@ const Ranking: React.FC = () => {
   }, []);
 
   // 加载所有游戏的评论数量
+  // Load all game comment counts
   useEffect(() => {
-    const comments: Record<string, number> = {};
-    games.forEach(game => {
+    // Load comments for all games
+    console.log('\n=== Games Comments Count ===');
+    const gamesWithComments = games.map(game => {
       const savedComments = localStorage.getItem(`game_${game.id}_comments`);
-      if (savedComments) {
-        try {
-          const parsedComments = JSON.parse(savedComments);
-          comments[game.id] = parsedComments.length;
-          console.log(`${game.title}: ${parsedComments.length} 条评论`);
-        } catch (error) {
-          comments[game.id] = 0;
-        }
-      } else {
-        comments[game.id] = 0;
+      let parsedComments = [];
+      
+      try {
+        parsedComments = savedComments ? JSON.parse(savedComments) : [];
+        console.log(`${game.title}: ${parsedComments.length} comments`);
+      } catch (error) {
+        console.error('Error parsing comments for game:', game.id, error);
+        parsedComments = [];
       }
+      
+      return {
+        ...game,
+        comments: parsedComments
+      };
     });
-    setGameComments(comments);
+    console.log('==============================\n');
+    
+    // Print comments count
+    setGameComments(gamesWithComments.reduce((acc, game) => ({ ...acc, [game.id]: game.comments.length }), {}));
   }, []);
 
   useEffect(() => {
     // 打印评论数量
+    // Print comment counts
     printGameCommentsCount();
   }, []);
 

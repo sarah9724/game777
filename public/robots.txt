@@ -1,3 +1,6 @@
+# Allow all web crawlers
 User-agent: *
 Allow: /
-Sitemap: https://game777.pages.dev/sitemap.xml 
+
+# Sitemap location
+Sitemap: https://aigrocery.yourwebsite.com/sitemap.xml 
