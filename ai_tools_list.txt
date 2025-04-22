@@ -1,0 +1,28 @@
+# AI工具列表
+
+## 聊天机器人 (Chatbots)
+1. **Claude** - https://claude.ai - Chatbots - US
+2. **ChatGPT** - https://chat.openai.com - Chatbots - US
+3. **DeepSeek** - https://deepseek.com - Chatbots - CN
+4. **Tongyi Qianwen** - https://qianwen.aliyun.com - Chatbots - CN
+5. **Doubao** - https://www.doubao.com - Chatbots - CN
+6. **Kimi's Dark Side** - https://kimi.moonshot.cn - Chatbots - CN
+7. **Sea Shell AI** - https://hailuoai.com - Chatbots - CN
+
+## PPT生成 (PPT Generation)
+8. **AiPPT** - https://aippt.com - PPT Generation - US
+9. **Gamma** - https://gamma.app - PPT Generation - US
+10. **Smart PPT** - https://www.designkit.com/ppt/ - PPT Generation - CN
+11. **Beautiful AI** - https://www.beautiful.ai - PPT Generation - US
+12. **Napkin** - https://www.napkin.ai - PPT Generation - US
+
+## 视频生成 (Video Generation)
+13. **Keling** - https://klingai.kuaishou.com - Video Generation - CN
+14. **Ji Meng** - https://jimeng.jianying.com/ai-tool/home - Video Generation - CN
+15. **PixVerse** - https://pixverse.ai - Video Generation - US
+16. **Runway** - https://runwayml.com - Video Generation - US
+
+## 视频编辑 (Video Editing)
+17. **CapCut Pro** - https://www.capcut.cn - Video Editing - CN
+18. **MiaoJian** - https://miaojian.weixin.qq.com/ - Video Editing - CN
+19. **BiJian** - https://bcut.bilibili.cn/ - Video Editing - CN 

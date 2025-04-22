@@ -573,6 +573,10 @@
             background: linear-gradient(135deg, #0f172a, #1e293b);
         }
         
+        .brand-wenxin {
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+        }
+        
         .brand-recraft {
             background: linear-gradient(135deg, #4f46e5, #4338ca);
         }
@@ -608,7 +612,7 @@
         .brand-canva {
             background: linear-gradient(135deg, #16a34a, #15803d);
         }
-        /* Card thumbnail decorative elements */
+        /* Card thumbnail decorative elements - using colorful gradients instead of white */
         .card-img::before {
             content: "";
             position: absolute;
@@ -618,6 +622,7 @@
             background: rgba(255, 255, 255, 0.1);
             right: -30px;
             top: -30px;
+            background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 70%);
         }
         
         .card-img::after {
@@ -629,44 +634,106 @@
             background: rgba(255, 255, 255, 0.08);
             left: -20px;
             bottom: -20px;
+            background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0) 70%);
         }
         
-        /* Card icon styles */
-        .card-img svg {
-            filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.2));
-            z-index: 2;
-            transition: transform 0.3s ease;
+        /* Card SVG element styling - replacing white with colorful elements */
+        .card-img svg circle[fill="white"],
+        .card-img svg rect[fill="white"],
+        .card-img svg path[fill="white"] {
+            fill: rgba(255, 255, 255, 0.15);
+            transition: all 0.3s ease;
         }
         
-        .card:hover .card-img svg {
-            transform: scale(1.1);
+        .card:hover .card-img svg [fill="white"] {
+            fill: rgba(255, 255, 255, 0.25);
         }
         
-        /* Category and country tag styles */
+        /* Make white rectangles and paths more interesting */
+        .card-img svg rect[fill="white"] {
+            fill: rgba(255, 255, 255, 0.15);
+            filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.3));
+        }
+        
+        /* Add subtle colorful glows to SVG elements based on card type */
+        .brand-chatgpt svg [fill="white"] {
+            fill: rgba(16, 163, 127, 0.3);
+        }
+        
+        .brand-claude svg [fill="white"] {
+            fill: rgba(123, 98, 255, 0.3);
+        }
+        
+        .brand-gemini svg [fill="white"] {
+            fill: rgba(66, 133, 244, 0.3);
+        }
+        
+        .brand-mixtral svg [fill="white"] {
+            fill: rgba(30, 144, 255, 0.3);
+        }
+        
+        .brand-qianwen svg [fill="white"] {
+            fill: rgba(255, 106, 0, 0.3);
+        }
+        
+        .brand-deepseek svg [fill="white"] {
+            fill: rgba(37, 99, 235, 0.3);
+        }
+        
+        .brand-doubao svg [fill="white"] {
+            fill: rgba(168, 85, 247, 0.3);
+        }
+        
+        .brand-kimi svg [fill="white"] {
+            fill: rgba(14, 165, 233, 0.3);
+        }
+        
+        .brand-grok svg [fill="white"] {
+            fill: rgba(239, 68, 68, 0.3);
+        }
+        
+        .brand-characterai svg [fill="white"] {
+            fill: rgba(249, 115, 22, 0.3);
+        }
+        
+        .brand-hailuo svg [fill="white"] {
+            fill: rgba(245, 158, 11, 0.3);
+        }
+        
+        .brand-wenxin svg [fill="white"] {
+            fill: rgba(59, 130, 246, 0.3);
+        }
+        
+        .brand-hunyuan svg [fill="white"] {
+            fill: rgba(236, 72, 153, 0.3);
+        }
+        
+        .brand-xinghuo svg [fill="white"] {
+            fill: rgba(132, 204, 22, 0.3);
+        }
+        
+        .brand-pi svg [fill="white"] {
+            fill: rgba(139, 92, 246, 0.3);
+        }
+        
+        /* Also update white strokes to be colorful */
+        .card-img svg [stroke="white"] {
+            stroke: rgba(255, 255, 255, 0.7);
+        }
+        
+        /* Style category and country tags to be more colorful and less white */
         .category-indicator {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            font-size: 11px;
-            padding: 4px 8px;
-            border-radius: 4px;
-            background-color: rgba(255, 255, 255, 0.2);
-            color: white;
+            background-color: rgba(255, 255, 255, 0.15);
+            color: black;
             backdrop-filter: blur(5px);
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
         }
         
         .country-tag {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            font-size: 11px;
-            padding: 4px 8px;
-            border-radius: 4px;
-            background-color: rgba(255, 255, 255, 0.15);
-            color: white;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: black;
             backdrop-filter: blur(5px);
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.15);
         }
         
         /* Hot Tag Style Optimization */
@@ -763,7 +830,7 @@
         .hero-link {
             display: inline-block;
             padding: 8px 16px;
-            background-color: white;
+            background: linear-gradient(135deg, #f8fafc, #f1f5f9);
             color: #333;
             text-decoration: none;
             border-radius: 30px;
@@ -773,7 +840,7 @@
         }
         
         .hero-link:hover {
-            background-color: #1a73e8;
+            background: linear-gradient(135deg, #1a73e8, #4285f4);
             color: white;
             box-shadow: 0 4px 8px rgba(26, 115, 232, 0.3);
         }
@@ -784,7 +851,7 @@
             top: 40px; /* Adjust position to move down */
             right: 10px;
             z-index: 5;
-            background-color: rgba(255, 255, 255, 0.7); /* Reduce opacity */
+            background-color: rgba(255, 255, 255, 0.4);
             border: none;
             width: 32px;
             height: 32px;
@@ -1063,13 +1130,13 @@
         }
 
         /* Card Icon Styles */
-        .card-img svg {
+        .card-img svg, .card-img img.card-icon {
             filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.2));
             z-index: 2;
             transition: transform 0.3s ease;
         }
 
-        .card:hover .card-img svg {
+        .card:hover .card-img svg, .card:hover .card-img img.card-icon {
             transform: scale(1.1);
         }
 
@@ -1139,9 +1206,10 @@
             font-size: 11px;
             padding: 4px 8px;
             border-radius: 4px;
-            background-color: rgba(255, 255, 255, 0.2);
-            color: white;
+            background-color: rgba(255, 255, 255, 0.15);
+            color: black;
             backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
@@ -1152,9 +1220,10 @@
             font-size: 11px;
             padding: 4px 8px;
             border-radius: 4px;
-            background-color: rgba(255, 255, 255, 0.15);
-            color: white;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: black;
             backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
@@ -1510,6 +1579,36 @@
             }
         }
     </style>
+    <style>
+        /* 添加缺失的品牌背景样式 */
+        .brand-characterai {
+            background: linear-gradient(135deg, #f97316, #c2410c);
+        }
+        
+        .brand-gemini {
+            background: linear-gradient(135deg, #4285f4, #1a73e8);
+        }
+        
+        .brand-grok {
+            background: linear-gradient(135deg, #ef4444, #b91c1c);
+        }
+        
+        .brand-mixtral {
+            background: linear-gradient(135deg, #1e90ff, #0077b6);
+        }
+        
+        .brand-hunyuan {
+            background: linear-gradient(135deg, #ec4899, #be185d);
+        }
+        
+        .brand-pi {
+            background: linear-gradient(135deg, #8b5cf6, #6d28d9);
+        }
+        
+        .brand-xinghuo {
+            background: linear-gradient(135deg, #84cc16, #4d7c0f);
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation Bar -->
@@ -1669,56 +1768,74 @@
     </section>
 <section id="chat" class="section">
             <div class="section-header" data-aos="fade-up">
-                <h2 class="section-title">Chatbots</h2>
+                <h2 class="section-title">Chatbots (15)</h2>
                 <p class="section-description">AI assistants with unique features to provide intelligent conversations and problem-solving capabilities</p>
             </div>
+            
             
             <div class="section-content">
                 <div class="cards-grid">
                     
-                    <div class="card-wrapper card-featured">
-                        <div class="hot-tag">Popular Tool</div>
-                        <div class="card" data-tags="chatbots, popular, foreign, paid">
-                        <div class="card-img brand-claude">
+                    <!-- Baidu Wenxin Yiyan -->
+                    <div class="card-wrapper">
+                        <div class="card">
+                        <div class="card-img brand-wenxin">
                                 <span class="category-indicator category-chat">Chatbots</span>
-                                <span class="country-tag country-us">USA</span>
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="70" height="70">
-                                    <circle cx="50" cy="50" r="48" fill="none" stroke="white" stroke-width="2" opacity="0.3"/>
-                                    <path d="M65,35 C65,28.3726 59.6274,23 53,23 C46.3726,23 41,28.3726 41,35 C41,41.6274 46.3726,47 53,47 L53,65 C53,71.6274 47.6274,77 41,77 C34.3726,77 29,71.6274 29,65" stroke="white" stroke-width="4" fill="none" stroke-linecap="round"/>
-                                    <circle cx="53" cy="35" r="7" fill="white"/>
-                                    <circle cx="41" cy="65" r="7" fill="white"/>
-                                </svg>
+                                <span class="country-tag country-cn">CN</span>
+                                <img src="images/icons/Baidu Wenxin Yiyan.png" width="70" height="70" alt="Baidu Wenxin Yiyan" class="card-icon">
                         </div>
                         <div class="card-content">
-                            <h3 class="card-title">Claude</h3>
-                            <p class="card-description">AI assistant developed by Anthropic, excels in natural conversation, complex analysis, and creative writing, performing well in long text processing and contextual understanding.</p>
+                            <h3 class="card-title">Baidu Wenxin Yiyan</h3>
+                            <p class="card-description">Large language model by Baidu, featuring robust Chinese language capabilities, integration with Baidu's knowledge graph, and strong performance in information retrieval and content generation.</p>
                             <div class="card-features">
-                                <div class="feature">Outstanding human understanding and ethical awareness</div>
-                                <div class="feature">Expertise in complex reasoning and long document analysis</div>
-                                <div class="feature">Supports multiple languages and text formats</div>
+                                <div class="feature">Deep integration with Baidu's search and knowledge systems</div>
+                                <div class="feature">Strong Chinese language understanding and cultural context</div>
+                                <div class="feature">Comprehensive functionality for text generation and information retrieval</div>
                             </div>
-                            <a href="https://claude.ai" target="_blank" class="card-link">Explore Claude</a>
+                            <a href="https://yiyan.baidu.com/" target="_blank" class="card-link">Explore Wenxin Yiyan</a>
                             <button class="save-button" title="Add to Favorites">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
                                 </svg>
                             </button>
-                            </div>
-                            
+                        </div>
                         </div>
                     </div>
                     
+                    <!-- Character.AI -->
+                    <div class="card-wrapper">
+                        <div class="card">
+                        <div class="card-img brand-characterai">
+                                <span class="category-indicator category-chat">Chatbots</span>
+                                <span class="country-tag country-us">US</span>
+                                <img src="images/icons/Character.AI.png" width="70" height="70" alt="Character.AI" class="card-icon">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Character.AI</h3>
+                            <p class="card-description">Platform for creating and chatting with AI characters, including fictional personalities, historical figures, and custom personas.</p>
+                            <div class="card-features">
+                                <div class="feature">Role-playing with fictional characters and historical figures</div>
+                                <div class="feature">Create and customize your own AI characters</div>
+                                <div class="feature">Community-driven character creation and sharing</div>
+                            </div>
+                            <a href="https://character.ai/" target="_blank" class="card-link">Chat with Characters</a>
+                            <button class="save-button" title="Add to Favorites">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        </div>
+                    </div>
+                    
+                    <!-- ChatGPT -->
                     <div class="card-wrapper card-featured">
                         <div class="hot-tag">Popular Tool</div>
                         <div class="card" data-tags="chatbots, popular, foreign, paid">
                         <div class="card-img brand-chatgpt">
                                 <span class="category-indicator category-chat">Chatbots</span>
-                                <span class="country-tag country-us">USA</span>
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="70" height="70">
-                                    <circle cx="50" cy="50" r="48" fill="none" stroke="white" stroke-width="2" opacity="0.3"/>
-                                    <path d="M30,40 L50,25 L70,40 L70,60 L50,75 L30,60 Z" fill="white"/>
-                                    <path d="M40,45 L50,38 L60,45 L60,55 L50,62 L40,55 Z" fill="#FF6A00" opacity="0.8"/>
-                                </svg>
+                                <span class="country-tag country-us">US</span>
+                                <img src="images/icons/chatgpt.png" width="70" height="70" alt="ChatGPT" class="card-icon">
                         </div>
                         <div class="card-content">
                             <h3 class="card-title">ChatGPT</h3>
@@ -1735,20 +1852,43 @@
                                 </svg>
                             </button>
                             </div>
-                            
                         </div>
                     </div>
                     
+                    <!-- Claude -->
+                    <div class="card-wrapper card-featured">
+                        <div class="hot-tag">Popular Tool</div>
+                        <div class="card" data-tags="chatbots, popular, foreign, paid">
+                        <div class="card-img brand-claude">
+                                <span class="category-indicator category-chat">Chatbots</span>
+                                <span class="country-tag country-us">US</span>
+                                <img src="images/icons/Claude.png" width="70" height="70" alt="Claude" class="card-icon">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Claude</h3>
+                            <p class="card-description">AI assistant developed by Anthropic, excels in natural conversation, complex analysis, and creative writing, performing well in long text processing and contextual understanding.</p>
+                            <div class="card-features">
+                                <div class="feature">Outstanding human understanding and ethical awareness</div>
+                                <div class="feature">Expertise in complex reasoning and long document analysis</div>
+                                <div class="feature">Supports multiple languages and text formats</div>
+                            </div>
+                            <a href="https://claude.ai" target="_blank" class="card-link">Explore Claude</a>
+                            <button class="save-button" title="Add to Favorites">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+                                </svg>
+                            </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- DeepSeek -->
                     <div class="card-wrapper">
                         <div class="card">
                         <div class="card-img brand-deepseek">
                                 <span class="category-indicator category-chat">Chatbots</span>
-                                <span class="country-tag country-cn">China</span>
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="60" height="60">
-                                <circle cx="50" cy="50" r="40" fill="white" opacity="0.2" />
-                                <path d="M35,35 L65,35 L65,45 L55,55 L55,65 L45,65 L45,55 L35,45 Z" fill="white" />
-                                <circle cx="50" cy="40" r="8" fill="white" opacity="0.6" />
-                            </svg>
+                                <span class="country-tag country-cn">CN</span>
+                                <img src="images/icons/deepseek.png" width="70" height="70" alt="DeepSeek" class="card-icon">
                         </div>
                         <div class="card-content">
                             <h3 class="card-title">DeepSeek</h3>
@@ -1765,20 +1905,224 @@
                                 </svg>
                             </button>
                             </div>
-                            
                         </div>
                     </div>
                     
+                    <!-- Doubao -->
+                    <div class="card-wrapper">
+                        <div class="card">
+                        <div class="card-img brand-doubao">
+                                <span class="category-indicator category-chat">Chatbots</span>
+                                <span class="country-tag country-cn">CN</span>
+                                <img src="images/icons/Doubao.png" width="70" height="70" alt="Doubao" class="card-icon">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Doubao</h3>
+                            <p class="card-description">Dialogue AI platform developed by ByteDance, with various professional functions such as text creation, course tutoring, and content inquiry, supporting personalized customization.</p>
+                            <div class="card-features">
+                                <div class="feature">Creative writing and content creation ability</div>
+                                <div class="feature">Various professional assistant customization scenarios</div>
+                                <div class="feature">Optimized experience in both Chinese and English</div>
+                            </div>
+                            <a href="https://www.doubao.com" target="_blank" class="card-link">Experience Doubao</a>
+                            <button class="save-button" title="Add to Favorites">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Gemini -->
+                    <div class="card-wrapper">
+                        <div class="card">
+                        <div class="card-img brand-gemini">
+                                <span class="category-indicator category-chat">Chatbots</span>
+                                <span class="country-tag country-us">US</span>
+                                <img src="images/icons/Gemini.png" width="70" height="70" alt="Gemini" class="card-icon">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Gemini</h3>
+                            <p class="card-description">Google's advanced AI model with multimodal capabilities, offering strong performance across text, image, and code understanding tasks.</p>
+                            <div class="card-features">
+                                <div class="feature">Powerful multimodal understanding abilities</div>
+                                <div class="feature">Integration with Google ecosystem and services</div>
+                                <div class="feature">Advanced reasoning and problem-solving capabilities</div>
+                            </div>
+                            <a href="https://gemini.google.com/" target="_blank" class="card-link">Try Gemini</a>
+                            <button class="save-button" title="Add to Favorites">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+                                </svg>
+                            </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Grok -->
+                    <div class="card-wrapper">
+                        <div class="card">
+                        <div class="card-img brand-grok">
+                                <span class="category-indicator category-chat">Chatbots</span>
+                                <span class="country-tag country-us">US</span>
+                                <img src="images/icons/grok.png" width="70" height="70" alt="Grok" class="card-icon">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Grok</h3>
+                            <p class="card-description">AI assistant from xAI with real-time internet access and a conversational style that aims to combine informative responses with a unique personality.</p>
+                            <div class="card-features">
+                                <div class="feature">Real-time internet access and knowledge</div>
+                                <div class="feature">Witty and uncensored conversation style</div>
+                                <div class="feature">Integration with X (Twitter) platform</div>
+                            </div>
+                            <a href="https://grok.com/" target="_blank" class="card-link">Try Grok</a>
+                            <button class="save-button" title="Add to Favorites">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Hailuo AI -->
+                    <div class="card-wrapper">
+                        <div class="card">
+                        <div class="card-img brand-hailuo">
+                                <span class="category-indicator category-chat">Chatbots</span>
+                                <span class="country-tag country-cn">CN</span>
+                                <img src="images/icons/hailuo AI.png" width="70" height="70" alt="Hailuo AI" class="card-icon">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Hailuo AI</h3>
+                            <p class="card-description">Leading AI assistant in China, supporting multi-language dialogue and complex problem analysis, especially excelling in understanding Chinese and document processing.</p>
+                            <div class="card-features">
+                                <div class="feature">Smooth and natural dialogue experience</div>
+                                <div class="feature">Rich understanding of Chinese context</div>
+                                <div class="feature">Broad coverage of professional domain knowledge</div>
+                            </div>
+                            <a href="https://hailuoai.com" target="_blank" class="card-link">Experience Hailuo AI</a>
+                            <button class="save-button" title="Add to Favorites">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Kimi -->
+                    <div class="card-wrapper">
+                        <div class="card">
+                        <div class="card-img brand-kimi">
+                                <span class="category-indicator category-chat">Chatbots</span>
+                                <span class="country-tag country-cn">CN</span>
+                                <img src="images/icons/kimi.png" width="70" height="70" alt="Kimi" class="card-icon">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Kimi</h3>
+                            <p class="card-description">Intelligent AI assistant based on advanced large models, focusing on knowledge retrieval and academic research, with excellent multi-language and code capabilities.</p>
+                            <div class="card-features">
+                                <div class="feature">Outstanding knowledge retrieval ability</div>
+                                <div class="feature">Support for academic research and professional fields</div>
+                                <div class="feature">Supports various documents and knowledge bases</div>
+                            </div>
+                            <a href="https://kimi.moonshot.cn" target="_blank" class="card-link">Experience Kimi</a>
+                            <button class="save-button" title="Add to Favorites">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Mixtral -->
+                    <div class="card-wrapper">
+                        <div class="card">
+                        <div class="card-img brand-mixtral">
+                                <span class="category-indicator category-chat">Chatbots</span>
+                                <span class="country-tag country-fr">FR</span>
+                                <img src="images/icons/Mixtral.png" width="70" height="70" alt="Mixtral" class="card-icon">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Mixtral</h3>
+                            <p class="card-description">Powerful open-source language model by Mistral AI that excels in reasoning, coding and multilingual tasks, with a mixture-of-experts architecture.</p>
+                            <div class="card-features">
+                                <div class="feature">Superior performance with mixture-of-experts architecture</div>
+                                <div class="feature">Excellent coding and technical capabilities</div>
+                                <div class="feature">Strong multilingual support and reasoning abilities</div>
+                            </div>
+                            <a href="https://mistral.ai/" target="_blank" class="card-link">Explore Mixtral</a>
+                            <button class="save-button" title="Add to Favorites">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Pi by Inflection -->
+                    <div class="card-wrapper">
+                        <div class="card">
+                        <div class="card-img brand-pi">
+                                <span class="category-indicator category-chat">Chatbots</span>
+                                <span class="country-tag country-us">US</span>
+                                <img src="images/icons/Pi by Inflection.png" width="70" height="70" alt="Pi by Inflection" class="card-icon">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Pi by Inflection</h3>
+                            <p class="card-description">Personal AI assistant designed for supportive, empathetic conversation and practical help with daily tasks and questions.</p>
+                            <div class="card-features">
+                                <div class="feature">Empathetic conversational style focused on emotional support</div>
+                                <div class="feature">Personal AI companion for daily assistance</div>
+                                <div class="feature">Strong contextual understanding in conversations</div>
+                            </div>
+                            <a href="https://pi.ai/" target="_blank" class="card-link">Chat with Pi</a>
+                            <button class="save-button" title="Add to Favorites">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Tencent Hunyuan -->
+                    <div class="card-wrapper">
+                        <div class="card">
+                        <div class="card-img brand-hunyuan">
+                                <span class="category-indicator category-chat">Chatbots</span>
+                                <span class="country-tag country-cn">CN</span>
+                                <img src="images/icons/Tencent Hunyuan.png" width="70" height="70" alt="Tencent Hunyuan" class="card-icon">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Tencent Hunyuan</h3>
+                            <p class="card-description">Advanced language model from Tencent, offering strong performance in Chinese language understanding, content creation, and knowledge processing with integration to Tencent's ecosystem.</p>
+                            <div class="card-features">
+                                <div class="feature">Deep integration with Tencent's product ecosystem</div>
+                                <div class="feature">Specialized capabilities in entertainment and creative content</div>
+                                <div class="feature">Advanced Chinese language processing and cultural understanding</div>
+                            </div>
+                            <a href="https://hunyuan.tencent.com/" target="_blank" class="card-link">Explore Hunyuan</a>
+                            <button class="save-button" title="Add to Favorites">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Tongyi Qianwen -->
                     <div class="card-wrapper">
                         <div class="card">
                         <div class="card-img brand-qianwen">
                                 <span class="category-indicator category-chat">Chatbots</span>
-                                <span class="country-tag country-cn">China</span>
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="70" height="70">
-                                    <circle cx="50" cy="50" r="48" fill="none" stroke="white" stroke-width="2" opacity="0.3"/>
-                                    <path d="M30,40 L50,25 L70,40 L70,60 L50,75 L30,60 Z" fill="white"/>
-                                    <path d="M40,45 L50,38 L60,45 L60,55 L50,62 L40,55 Z" fill="#FF6A00" opacity="0.8"/>
-                                </svg>
+                                <span class="country-tag country-cn">CN</span>
+                                <img src="images/icons/Tongyi Qianwen.png" width="70" height="70" alt="Tongyi Qianwen" class="card-icon">
                         </div>
                         <div class="card-content">
                             <h3 class="card-title">Tongyi Qianwen</h3>
@@ -1792,102 +2136,39 @@
                             <button class="save-button" title="Add to Favorites">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
-                            </svg>
+                                </svg>
                             </button>
                         </div>
-                        
-                    </div>
-                </div>
-                
-                <div class="card-wrapper">
-                    <div class="card">
-                    <div class="card-img brand-doubao">
-                            <span class="category-indicator category-chat">Chatbots</span>
-                            <span class="country-tag country-cn">China</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="60" height="60">
-                            <circle cx="50" cy="50" r="40" fill="white" opacity="0.2" />
-                            <circle cx="50" cy="40" r="15" fill="white" />
-                            <path d="M35,55 Q50,75 65,55" stroke="white" stroke-width="5" fill="none" />
-                        </svg>
-                    </div>
-                    <div class="card-content">
-                        <h3 class="card-title">Doubao</h3>
-                            <p class="card-description">Dialogue AI platform developed by ByteDance, with various professional functions such as text creation, course tutoring, and content inquiry, supporting personalized customization.</p>
-                        <div class="card-features">
-                                <div class="feature">Creative writing and content creation ability</div>
-                                <div class="feature">Various professional assistant customization scenarios</div>
-                                <div class="feature">Optimized experience in both Chinese and English</div>
                         </div>
-                            <a href="https://www.doubao.com" target="_blank" class="card-link">Experience Doubao</a>
+                    </div>
+                    
+                    <!-- Xinghuo Chat -->
+                    <div class="card-wrapper">
+                        <div class="card">
+                        <div class="card-img brand-xinghuo">
+                                <span class="category-indicator category-chat">Chatbots</span>
+                                <span class="country-tag country-cn">CN</span>
+                                <img src="images/icons/xinghuo.png" width="70" height="70" alt="Xinghuo Chat" class="card-icon">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Xinghuo Chat</h3>
+                            <p class="card-description">Large language model by iFlytek, featuring strong Chinese language understanding, speech recognition integration, and specialized knowledge in education and healthcare domains.</p>
+                            <div class="card-features">
+                                <div class="feature">Advanced Chinese language processing capabilities</div>
+                                <div class="feature">Integration with speech recognition technology</div>
+                                <div class="feature">Focus on education and healthcare applications</div>
+                            </div>
+                            <a href="https://xinghuo.xfyun.cn/spark" target="_blank" class="card-link">Try Xinghuo Chat</a>
                             <button class="save-button" title="Add to Favorites">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
                                 </svg>
                             </button>
                         </div>
-                        
-                    </div>
-                </div>
-                
-                <div class="card-wrapper">
-                    <div class="card">
-                    <div class="card-img brand-kimi">
-                            <span class="category-indicator category-chat">Chatbots</span>
-                            <span class="country-tag country-cn">China</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="60" height="60">
-                            <circle cx="50" cy="50" r="40" fill="white" opacity="0.2" />
-                                <rect x="30" y="30" width="40" height="40" rx="10" fill="white" opacity="0.8" />
-                                <rect x="40" y="40" width="20" height="20" rx="5" fill="#0ea5e9" />
-                        </svg>
-                    </div>
-                    <div class="card-content">
-                            <h3 class="card-title">Kimi's Dark Side</h3>
-                            <p class="card-description">Intelligent AI assistant based on advanced large models, focusing on knowledge retrieval and academic research, with excellent multi-language and code capabilities.</p>
-                        <div class="card-features">
-                                <div class="feature">Outstanding knowledge retrieval ability</div>
-                                <div class="feature">Support for academic research and professional fields</div>
-                                <div class="feature">Supports various documents and knowledge bases</div>
                         </div>
-                            <a href="https://kimi.moonshot.cn" target="_blank" class="card-link">Experience Kimi's Dark Side</a>
-                            <button class="save-button" title="Add to Favorites">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
-                                </svg>
-                            </button>
-                        </div>
-                        
                     </div>
+                    
                 </div>
-                
-                <div class="card-wrapper">
-                        <div class="card" data-tags="chatbots, popular, domestic, free">
-                    <div class="card-img brand-hailuo">
-                            <span class="category-indicator category-chat">Chatbots</span>
-                            <span class="country-tag country-cn">China</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="60" height="60">
-                            <circle cx="50" cy="50" r="40" fill="white" opacity="0.2" />
-                                    <path d="M35,45 C35,35 45,30 50,30 C55,30 65,35 65,45 C65,55 55,60 50,60 C45,60 35,55 35,45 Z" fill="white" opacity="0.7" />
-                                    <path d="M42,42 C42,42 46,45 50,45 C54,45 58,42 58,42" stroke="#3B82F6" stroke-width="2" fill="none" />
-                        </svg>
-                    </div>
-                    <div class="card-content">
-                        <h3 class="card-title">Sea Shell AI</h3>
-                                <p class="card-description">Leading AI assistant in China, supporting multi-language dialogue and complex problem analysis, especially excelling in understanding Chinese and document processing.</p>
-                        <div class="card-features">
-                                    <div class="feature">Smooth and natural dialogue experience</div>
-                                    <div class="feature">Rich understanding of Chinese context</div>
-                                    <div class="feature">Broad coverage of professional domain knowledge</div>
-                        </div>
-                                <a href="https://hailuoai.com" target="_blank" class="card-link">Experience Sea Shell AI</a>
-                                <button class="save-button" title="Add to Favorites">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
-                                    </svg>
-                                </button>
-                    </div>
-                        
-                </div>
-            </div>
             </div>
         </section>
 <section id="ppt" class="section">
@@ -1897,21 +2178,15 @@
             </div>
             
             <div class="cards-grid">
-                
-                
-                
+                <!-- AiPPT -->
                 <div class="card-wrapper card-featured">
                     <div class="hot-tag">Popular Tool</div>
-                    <div class="card" data-tags="PPT generation, efficiency, foreign, paid">
+                    <div class="card" data-tags="PPT generation, efficiency, China, paid">
                         <div class="card-img brand-aippt">
                             <span class="category-indicator category-ppt">PPT Generation</span>
-                            <span class="country-tag country-us">USA</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="60" height="60">
-                                <circle cx="50" cy="50" r="40" fill="white" opacity="0.2" />
-                                <rect x="30" y="30" width="40" height="40" rx="5" fill="white" />
-                                <path d="M40,45 L60,45 M40,55 L55,55" stroke="#FF8C00" stroke-width="3" stroke-linecap="round" />
-                            </svg>
-        </div>
+                            <span class="country-tag country-cn">CN</span>
+                            <img src="images/icons/AiPPT.png" width="70" height="70" alt="AiPPT" class="card-icon">
+                        </div>
                         <div class="card-content">
                             <h3 class="card-title">AiPPT</h3>
                             <p class="card-description">Intelligent PPT design platform that uses AI technology to automatically optimize slide layout and design, making presentation creation simpler and more efficient.</p>
@@ -1927,84 +2202,16 @@
                                 </svg>
                             </button>
                         </div>
-                        
                     </div>
                 </div>
                 
-                <div class="card-wrapper card-featured">
-                    <div class="hot-tag">Popular Tool</div>
-                    <div class="card" data-tags="PPT generation, efficiency, foreign, paid">
-                        <div class="card-img brand-gamma">
-                            <span class="category-indicator category-ppt">PPT Generation</span>
-                            <span class="country-tag country-us">USA</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="60" height="60">
-                                <circle cx="50" cy="50" r="40" fill="white" opacity="0.2" />
-                                <path d="M30,35 L70,35 L70,65 L30,65 Z" stroke="white" stroke-width="3" fill="none" />
-                                <path d="M40,45 L60,45 M40,55 L60,55" stroke="white" stroke-width="2" />
-                                <circle cx="65" cy="35" r="15" fill="#7B1FA2" opacity="0.4" />
-        </svg>
-                        </div>
-                        <div class="card-content">
-                            <h3 class="card-title">Gamma</h3>
-                            <p class="card-description">Revolutionary presentation creation platform that generates complete presentations with professional design and content just from your topic or idea.</p>
-                            <div class="card-features">
-                                <div class="feature">Generate complete PPT from text prompts</div>
-                                <div class="feature">Built-in data visualization and analysis</div>
-                                <div class="feature">Real-time collaboration and online presentation</div>
-                            </div>
-                            <a href="https://gamma.app" target="_blank" class="card-link">Experience Gamma</a>
-                            <button class="save-button" title="Add to Favorites">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
-                                </svg>
-                            </button>
-                        </div>
-                        
-                    </div>
-    </div>
-    
+                <!-- Beautiful AI -->
                 <div class="card-wrapper">
-                    <div class="card" data-tags="PPT generation, efficiency, domestic, free">
-                        <div class="card-img brand-liveppt">
-                            <span class="category-indicator category-ppt">PPT Generation</span>
-                            <span class="country-tag country-cn">China</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="60" height="60">
-                                <circle cx="50" cy="50" r="40" fill="white" opacity="0.2" />
-                                <rect x="30" y="30" width="40" height="40" fill="white" opacity="0.6" />
-                                <path d="M40,42 L60,42 M40,50 L60,50 M40,58 L60,58" stroke="#2E7D32" stroke-width="3" />
-                            </svg>
-                        </div>
-                        <div class="card-content">
-                            <h3 class="card-title">Smart PPT</h3>
-                            <p class="card-description">Leading AI presentation generation tool that creates beautiful PPTs with just an outline or topic, supporting multiple templates and styles.</p>
-                            <div class="card-features">
-                                <div class="feature">Chinese context optimization and localization</div>
-                                <div class="feature">One-click complete presentation generation</div>
-                                <div class="feature">Multiple industry templates and scenarios</div>
-                            </div>
-                            <a href="https://www.designkit.com/ppt/" target="_blank" class="card-link">Try Smart PPT</a>
-                            <button class="save-button" title="Add to Favorites">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
-                                </svg>
-                            </button>
-                        </div>
-                        
-                    </div>
-                </div>
-                
-                <div class="card-wrapper">
-                    <div class="card" data-tags="PPT generation, efficiency, domestic, free">
+                    <div class="card" data-tags="PPT generation, design, US, paid">
                         <div class="card-img brand-beautiful">
                             <span class="category-indicator category-ppt">PPT Generation</span>
-                            <span class="country-tag country-us">USA</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="60" height="60">
-                                <circle cx="50" cy="50" r="40" fill="white" opacity="0.2" />
-                                <path d="M30,35 L70,35 L70,65 L30,65 Z" fill="none" stroke="white" stroke-width="2" />
-                                <path d="M40,45 L60,45" stroke="white" stroke-width="2" />
-                                <path d="M40,55 L50,55" stroke="white" stroke-width="2" />
-                                <circle cx="65" cy="55" r="6" fill="white" opacity="0.8" />
-                            </svg>
+                            <span class="country-tag country-us">US</span>
+                            <img src="images/icons/Beautiful AI.png" width="70" height="70" alt="Beautiful AI" class="card-icon">
                         </div>
                         <div class="card-content">
                             <h3 class="card-title">Beautiful AI</h3>
@@ -2021,20 +2228,69 @@
                                 </svg>
                             </button>
                         </div>
-                        
                     </div>
                 </div>
                 
+                <!-- Gamma -->
+                <div class="card-wrapper card-featured">
+                    <div class="hot-tag">Popular Tool</div>
+                    <div class="card" data-tags="PPT generation, efficiency, US, paid">
+                        <div class="card-img brand-gamma">
+                            <span class="category-indicator category-ppt">PPT Generation</span>
+                            <span class="country-tag country-us">US</span>
+                            <img src="images/icons/Gamma.png" width="70" height="70" alt="Gamma" class="card-icon">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Gamma</h3>
+                            <p class="card-description">Revolutionary presentation creation platform that generates complete presentations with professional design and content just from your topic or idea.</p>
+                            <div class="card-features">
+                                <div class="feature">Generate complete PPT from text prompts</div>
+                                <div class="feature">Built-in data visualization and analysis</div>
+                                <div class="feature">Real-time collaboration and online presentation</div>
+                            </div>
+                            <a href="https://gamma.app" target="_blank" class="card-link">Experience Gamma</a>
+                            <button class="save-button" title="Add to Favorites">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- LivePPT -->
                 <div class="card-wrapper">
-                    <div class="card" data-tags="PPT generation, efficiency, domestic, free">
+                    <div class="card" data-tags="PPT generation, efficiency, China, free">
+                        <div class="card-img brand-liveppt">
+                            <span class="category-indicator category-ppt">PPT Generation</span>
+                            <span class="country-tag country-us">US</span>
+                            <img src="images/icons/LivePPT.png" width="70" height="70" alt="LivePPT" class="card-icon">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">LivePPT</h3>
+                            <p class="card-description">Leading AI presentation generation tool that creates beautiful PPTs with just an outline or topic, supporting multiple templates and styles.</p>
+                            <div class="card-features">
+                                <div class="feature">One-click complete presentation generation</div>
+                                <div class="feature">Multiple industry templates and scenarios</div>
+                                <div class="feature">Advanced design and animation features</div>
+                            </div>
+                            <a href="https://www.designkit.com/ppt/" target="_blank" class="card-link">Try LivePPT</a>
+                            <button class="save-button" title="Add to Favorites">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Napkin -->
+                <div class="card-wrapper">
+                    <div class="card" data-tags="PPT generation, creativity, US, free">
                         <div class="card-img brand-napkin">
                             <span class="category-indicator category-ppt">PPT Generation</span>
-                            <span class="country-tag country-us">USA</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="60" height="60">
-                                <circle cx="50" cy="50" r="40" fill="white" opacity="0.2" />
-                                <rect x="30" y="32" width="40" height="36" rx="2" fill="none" stroke="white" stroke-width="2" />
-                                <path d="M35,42 L65,42 M35,52 L55,52 M35,62 L45,62" stroke="white" stroke-width="2" />
-                            </svg>
+                            <span class="country-tag country-us">US</span>
+                            <img src="images/icons/Napkin.png" width="70" height="70" alt="Napkin" class="card-icon">
                         </div>
                         <div class="card-content">
                             <h3 class="card-title">Napkin</h3>
@@ -2044,14 +2300,13 @@
                                 <div class="feature">Creative ideation support</div>
                                 <div class="feature">Rapid prototyping capabilities</div>
                             </div>
-                            <a href="https://www.napkin.ai" target="_blank" class="card-link">Try Napkin</a>
+                            <a href="https://napkin.ai" target="_blank" class="card-link">Try Napkin</a>
                             <button class="save-button" title="Add to Favorites">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
                                 </svg>
                             </button>
                         </div>
-                        
                     </div>
                 </div>
             </div>
@@ -2063,77 +2318,93 @@
             </div>
             
             <div class="cards-grid">
-                
-                
-                
+                <!-- Jimeng -->
                 <div class="card-wrapper card-featured">
                     <div class="hot-tag">Popular Tool</div>
-                    <div class="card" data-tags="video generation, creative, foreign, paid">
-                        <div class="card-img brand-keling">
-                            <span class="category-indicator category-video-gen">Video Generation</span>
-                            <span class="country-tag country-cn">China</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="60" height="60">
-                                <circle cx="50" cy="50" r="40" fill="white" opacity="0.2" />
-                                <path d="M35,35 L65,35 L65,65 L35,65 Z" fill="none" stroke="white" stroke-width="3" />
-                                <path d="M50,42 L60,50 L50,58 Z" fill="white" />
-                            </svg>
-                        </div>
-                        <div class="card-content">
-                            <h3 class="card-title">Keling</h3>
-                            <p class="card-description">Professional AI video generation platform that automatically creates beautiful videos from text descriptions, with multiple style templates and scenarios, suitable for marketing, education, and other fields.</p>
-                            <div class="card-features">
-                                <div class="feature">One-click HD video generation from text</div>
-                                <div class="feature">Multiple scenario templates and style choices</div>
-                                <div class="feature">Support for custom brand elements</div>
-                            </div>
-                            <a href="https://klingai.kuaishou.com" target="_blank" class="card-link">Use Keling</a>
-                            
-                            
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="card-wrapper card-featured">
-                    <div class="hot-tag">Popular Tool</div>
-                    <div class="card" data-tags="video generation, creative, foreign, paid">
+                    <div class="card" data-tags="video generation, creative, CN, paid">
                         <div class="card-img brand-jimmeng">
                             <span class="category-indicator category-video-gen">Video Generation</span>
-                            <span class="country-tag country-cn">China</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="60" height="60">
-                                <circle cx="50" cy="50" r="40" fill="white" opacity="0.2" />
-                                <rect x="30" y="35" width="40" height="30" rx="3" fill="white" />
-                                <circle cx="70" cy="50" r="10" fill="#2962FF" opacity="0.5" />
-                            </svg>
+                            <span class="country-tag country-cn">CN</span>
+                            <img src="images/icons/Jimeng.png" width="70" height="70" alt="Jimeng" class="card-icon">
                         </div>
                         <div class="card-content">
-                            <h3 class="card-title">Ji Meng</h3>
+                            <h3 class="card-title">Jimeng</h3>
                             <p class="card-description">Leading AI video generation tool that creates high-quality video content from text prompts, supporting multiple styles and scene customization.</p>
                             <div class="card-features">
                                 <div class="feature">Chinese prompt optimization and localization</div>
                                 <div class="feature">Multi-style video generation</div>
                                 <div class="feature">Powerful scene and character customization</div>
                             </div>
-                            <a href="https://jimeng.jianying.com/ai-tool/home" target="_blank" class="card-link">Try Ji Meng</a>
+                            <a href="https://jimeng.jianying.com/ai-tool/home" target="_blank" class="card-link">Try Jimeng</a>
                             <button class="save-button" title="Add to Favorites">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
                                 </svg>
                             </button>
                         </div>
-                        
                     </div>
                 </div>
                 
+                <!-- Kling -->
+                <div class="card-wrapper card-featured">
+                    <div class="hot-tag">Popular Tool</div>
+                    <div class="card" data-tags="video generation, creative, CN, paid">
+                        <div class="card-img brand-keling">
+                            <span class="category-indicator category-video-gen">Video Generation</span>
+                            <span class="country-tag country-cn">CN</span>
+                            <img src="images/icons/Kling.png" width="70" height="70" alt="Kling" class="card-icon">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Kling</h3>
+                            <p class="card-description">Professional AI video generation platform that automatically creates beautiful videos from text descriptions, with multiple style templates and scenarios, suitable for marketing, education, and other fields.</p>
+                            <div class="card-features">
+                                <div class="feature">One-click HD video generation from text</div>
+                                <div class="feature">Multiple scenario templates and style choices</div>
+                                <div class="feature">Support for custom brand elements</div>
+                            </div>
+                            <a href="https://klingai.kuaishou.com" target="_blank" class="card-link">Use Kling</a>
+                            <button class="save-button" title="Add to Favorites">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Runway Gen-3 -->
                 <div class="card-wrapper">
-                    <div class="card">
+                    <div class="card" data-tags="video generation, creative, US, paid">
+                        <div class="card-img brand-runway">
+                            <span class="category-indicator category-video-gen">Video Generation</span>
+                            <span class="country-tag country-us">US</span>
+                            <img src="images/icons/Runway.png" width="70" height="70" alt="Runway Gen-3" class="card-icon">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Runway Gen-3</h3>
+                            <p class="card-description">Innovative video generation and editing platform that utilizes AI technology to implement text-to-video, image-to-video, and video expansion features, providing powerful tools for creators.</p>
+                            <div class="card-features">
+                                <div class="feature">Advanced text-to-video capabilities</div>
+                                <div class="feature">Video content expansion and extension</div>
+                                <div class="feature">Professional editing tools</div>
+                            </div>
+                            <a href="https://runwayml.com" target="_blank" class="card-link">Explore Runway</a>
+                            <button class="save-button" title="Add to Favorites">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- PixVerse -->
+                <div class="card-wrapper">
+                    <div class="card" data-tags="video generation, creative, US, paid">
                         <div class="card-img brand-pixverse">
                             <span class="category-indicator category-video-gen">Video Generation</span>
-                            <span class="country-tag country-us">USA</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="60" height="60">
-                                <circle cx="50" cy="50" r="40" fill="white" opacity="0.2" />
-                                <path d="M35,40 L65,40 L65,60 L35,60 Z" fill="white" opacity="0.6" />
-                                <path d="M50,30 L70,50 L50,70 L30,50 Z" stroke="white" stroke-width="2" fill="none" />
-                            </svg>
+                            <span class="country-tag country-us">US</span>
+                            <img src="images/icons/PixVerse.png" width="70" height="70" alt="PixVerse" class="card-icon">
                         </div>
                         <div class="card-content">
                             <h3 class="card-title">PixVerse</h3>
@@ -2150,37 +2421,6 @@
                                 </svg>
                             </button>
                         </div>
-                        
-                    </div>
-                </div>
-                
-                <div class="card-wrapper">
-                    <div class="card" data-tags="video generation, creative, foreign, paid">
-                        <div class="card-img brand-runway">
-                            <span class="category-indicator category-video-gen">Video Generation</span>
-                            <span class="country-tag country-us">USA</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="60" height="60">
-                                <circle cx="50" cy="50" r="40" fill="white" opacity="0.2" />
-                                <path d="M35,40 L65,40 L65,60 L35,60 Z" fill="white" opacity="0.4" />
-                                <path d="M40,45 L60,55 M60,45 L40,55" stroke="white" stroke-width="2" />
-                            </svg>
-                        </div>
-                        <div class="card-content">
-                            <h3 class="card-title">Runway</h3>
-                            <p class="card-description">Innovative video generation and editing platform that utilizes AI technology to implement text-to-video, image-to-video, and video expansion features, providing powerful tools for creators.</p>
-                            <div class="card-features">
-                                <div class="feature">Advanced text-to-video capabilities</div>
-                                <div class="feature">Video content expansion and extension</div>
-                                <div class="feature">Professional editing tools</div>
-                            </div>
-                            <a href="https://runwayml.com" target="_blank" class="card-link">Explore Runway</a>
-                            <button class="save-button" title="Add to Favorites">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
-                                </svg>
-                            </button>
-                        </div>
-                        
                     </div>
                 </div>
             </div>
@@ -2192,29 +2432,23 @@
             </div>
             
             <div class="cards-grid">
-                
-                
-                
+                <!-- CapCut Pro -->
                 <div class="card-wrapper card-featured">
                     <div class="hot-tag">Popular Tool</div>
-                    <div class="card" data-tags="video editing, efficiency, foreign, paid">
-                    <div class="card-img brand-jianying">
+                    <div class="card" data-tags="video editing, efficiency, CN, paid">
+                        <div class="card-img brand-jianying">
                             <span class="category-indicator category-video-edit">Video Editing</span>
-                            <span class="country-tag country-cn">China</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="60" height="60">
-                            <circle cx="50" cy="50" r="40" fill="white" opacity="0.2" />
-                                <path d="M30,40 L50,40 L50,60 L30,60 Z" fill="white" />
-                                <path d="M55,40 L70,50 L55,60 Z" fill="white" />
-                        </svg>
-                    </div>
-                    <div class="card-content">
+                            <span class="country-tag country-cn">CN</span>
+                            <img src="images/icons/CapCut Pro.png" width="70" height="70" alt="CapCut Pro" class="card-icon">
+                        </div>
+                        <div class="card-content">
                             <h3 class="card-title">CapCut Pro</h3>
                             <p class="card-description">An intelligent video editing tool developed by ByteDance, integrating various AI features such as smart editing, one-click background removal, speech-to-text, etc., simplifying the video creation process.</p>
-                        <div class="card-features">
+                            <div class="card-features">
                                 <div class="feature">Smart scene recognition and editing</div>
                                 <div class="feature">AI one-click beautification and special effects</div>
                                 <div class="feature">Multi-platform compatibility and publishing</div>
-                        </div>
+                            </div>
                             <a href="https://www.capcut.cn" target="_blank" class="card-link">Download CapCut Pro</a>
                             <button class="save-button" title="Add to Favorites">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -2222,30 +2456,26 @@
                                 </svg>
                             </button>
                         </div>
-                        
                     </div>
                 </div>
                 
+                <!-- MiaoJian -->
                 <div class="card-wrapper card-featured">
                     <div class="hot-tag">Popular Tool</div>
-                    <div class="card" data-tags="video editing, efficiency, domestic, paid">
-                    <div class="card-img brand-miaojian">
+                    <div class="card" data-tags="video editing, efficiency, CN, paid">
+                        <div class="card-img brand-miaojian">
                             <span class="category-indicator category-video-edit">Video Editing</span>
-                            <span class="country-tag country-cn">China</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="60" height="60">
-                            <circle cx="50" cy="50" r="40" fill="white" opacity="0.2" />
-                                <rect x="35" y="35" width="30" height="30" fill="white" opacity="0.7" />
-                                <path d="M42,50 L58,50 M50,42 L50,58" stroke="#FF9100" stroke-width="3" />
-                        </svg>
-                    </div>
-                    <div class="card-content">
+                            <span class="country-tag country-cn">CN</span>
+                            <img src="images/icons/Miaojian.png" width="70" height="70" alt="MiaoJian" class="card-icon">
+                        </div>
+                        <div class="card-content">
                             <h3 class="card-title">MiaoJian</h3>
                             <p class="card-description">A leading AI video editing tool in China that automatically generates highlights through intelligent content analysis, offering one-click beautification, smart background music, and other features to make creation more efficient.</p>
-                        <div class="card-features">
+                            <div class="card-features">
                                 <div class="feature">One-click Highlight Generation</div>
                                 <div class="feature">Smart Video Enhancement</div>
                                 <div class="feature">Intelligent Music Matching</div>
-                        </div>
+                            </div>
                             <a href="https://miaojian.weixin.qq.com/" target="_blank" class="card-link">Try MiaoJian</a>
                             <button class="save-button" title="Add to Favorites">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -2253,37 +2483,32 @@
                                 </svg>
                             </button>
                         </div>
-                        
                     </div>
                 </div>
                 
+                <!-- Bcut -->
                 <div class="card-wrapper">
-                    <div class="card" data-tags="video editing, efficiency, domestic, paid">
-                    <div class="card-img brand-bcut">
+                    <div class="card" data-tags="video editing, efficiency, CN, paid">
+                        <div class="card-img brand-bcut">
                             <span class="category-indicator category-video-edit">Video Editing</span>
-                            <span class="country-tag country-cn">China</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="60" height="60">
-                            <circle cx="50" cy="50" r="40" fill="white" opacity="0.2" />
-                                <path d="M30,35 L70,35 L70,65 L30,65 Z" stroke="white" stroke-width="2" fill="none" />
-                                <path d="M40,45 L40,55 M50,45 L50,55 M60,45 L60,55" stroke="white" stroke-width="3" />
-                        </svg>
-                    </div>
-                    <div class="card-content">
-                        <h3 class="card-title">BiJian</h3>
+                            <span class="country-tag country-cn">CN</span>
+                            <img src="images/icons/Bcut.png" width="70" height="70" alt="Bcut" class="card-icon">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Bcut</h3>
                             <p class="card-description">An intelligent video creation tool by Bilibili, featuring AI auto-subtitles, smart editing, one-click video mixing, and other features designed for efficient content creation.</p>
-                        <div class="card-features">
+                            <div class="card-features">
                                 <div class="feature">AI-powered Auto Subtitles</div>
                                 <div class="feature">Smart Video Editing</div>
                                 <div class="feature">Deep Bilibili Integration</div>
-                        </div>
-                            <a href="https://bcut.bilibili.cn/" target="_blank" class="card-link">Try BiJian</a>
+                            </div>
+                            <a href="https://bcut.bilibili.cn/" target="_blank" class="card-link">Try Bcut</a>
                             <button class="save-button" title="Add to Favorites">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
                                 </svg>
                             </button>
                         </div>
-                        
                     </div>
                 </div>
             </div>
@@ -2295,60 +2520,23 @@
             </div>
             
             <div class="cards-grid">
-                
-                
-                
+                <!-- GitHub Copilot -->
                 <div class="card-wrapper card-featured">
-                    <div class="hot-tag">Popular tools</div>
-                    <div class="card" data-tags="AI编程,效率,国外,付费">
-                    <div class="card-img brand-cursor">
+                    <div class="hot-tag">Popular Tool</div>
+                    <div class="card" data-tags="AI programming, efficiency, US, paid">
+                        <div class="card-img brand-copilot">
                             <span class="category-indicator category-coding">AI Programming</span>
-                            <span class="country-tag country-us">USA</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="60" height="60">
-                            <circle cx="50" cy="50" r="40" fill="white" opacity="0.2" />
-                                <path d="M40,35 L60,35 L60,65 L40,65 Z" stroke="white" stroke-width="2" fill="none" />
-                                <path d="M30,45 L40,55 M70,45 L60,55" stroke="white" stroke-width="2" />
-                        </svg>
-                    </div>
-                    <div class="card-content">
-                        <h3 class="card-title">Cursor</h3>
-                            <p class="card-description">Next-generation AI programming tool that integrates powerful code generation and understanding capabilities, can generate high-quality code based on natural language descriptions, and provides intelligent code explanations.</p>
-                        <div class="card-features">
-                                <div class="feature">Intelligent Code Generation and Completion</div>
-                                <div class="feature">Code Explanation and Refactoring</div>
-                                <div class="feature">Multi-language Support and Optimization Suggestions</div>
+                            <span class="country-tag country-us">US</span>
+                            <img src="images/icons/GitHub Copilot.png" width="70" height="70" alt="GitHub Copilot" class="card-icon">
                         </div>
-                            <a href="https://cursor.sh" target="_blank" class="card-link">Try Cursor</a>
-                            <button class="save-button" title="Add to Favorites">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
-                                </svg>
-                            </button>
-                        </div>
-                        
-                    </div>
-                </div>
-                
-                <div class="card-wrapper card-featured">
-                    <div class="hot-tag">Popular tools</div>
-                    <div class="card" data-tags="AI编程,效率,国外,付费">
-                    <div class="card-img brand-bolt">
-                            <span class="category-indicator category-coding">AI Programming</span>
-                            <span class="country-tag country-us">USA</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="60" height="60">
-                            <circle cx="50" cy="50" r="40" fill="white" opacity="0.2" />
-                                <path d="M50,30 L40,55 L55,55 L45,70" stroke="white" stroke-width="3" fill="none" />
-                                <circle cx="50" cy="50" r="15" fill="#0D47A1" opacity="0.3" />
-                        </svg>
-                    </div>
-                    <div class="card-content">
+                        <div class="card-content">
                             <h3 class="card-title">GitHub Copilot</h3>
                             <p class="card-description">An AI programming assistant developed by Microsoft in collaboration with OpenAI, providing real-time code suggestions and auto-completion, understanding developer intent and generating corresponding code snippets.</p>
-                        <div class="card-features">
+                            <div class="card-features">
                                 <div class="feature">Real-time Code Suggestions and Completion</div>
                                 <div class="feature">Multi-IDE Integration Support</div>
                                 <div class="feature">Understanding Context and Project Structure</div>
-                        </div>
+                            </div>
                             <a href="https://github.com/features/copilot" target="_blank" class="card-link">Explore Copilot</a>
                             <button class="save-button" title="Add to Favorites">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -2356,29 +2544,52 @@
                                 </svg>
                             </button>
                         </div>
-                        
                     </div>
                 </div>
                 
-                <div class="card-wrapper">
-                    <div class="card" data-tags="AI编程,效率,国内,付费">
-                    <div class="card-img brand-devv">
+                <!-- Cursor -->
+                <div class="card-wrapper card-featured">
+                    <div class="hot-tag">Popular Tool</div>
+                    <div class="card" data-tags="AI programming, efficiency, US, paid">
+                        <div class="card-img brand-cursor">
                             <span class="category-indicator category-coding">AI Programming</span>
-                            <span class="country-tag country-cn">China</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="60" height="60">
-                            <circle cx="50" cy="50" r="40" fill="white" opacity="0.2" />
-                                <path d="M35,40 L45,50 L35,60 M65,40 L55,50 L65,60" stroke="white" stroke-width="2" fill="none" />
-                                <path d="M50,35 L50,65" stroke="white" stroke-width="2" />
-                        </svg>
+                            <span class="country-tag country-us">US</span>
+                            <img src="images/icons/Cursor.png" width="70" height="70" alt="Cursor" class="card-icon">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Cursor</h3>
+                            <p class="card-description">Next-generation AI programming tool that integrates powerful code generation and understanding capabilities, can generate high-quality code based on natural language descriptions, and provides intelligent code explanations.</p>
+                            <div class="card-features">
+                                <div class="feature">Intelligent Code Generation and Completion</div>
+                                <div class="feature">Code Explanation and Refactoring</div>
+                                <div class="feature">Multi-language Support and Optimization Suggestions</div>
+                            </div>
+                            <a href="https://cursor.sh" target="_blank" class="card-link">Try Cursor</a>
+                            <button class="save-button" title="Add to Favorites">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+                                </svg>
+                            </button>
+                        </div>
                     </div>
-                    <div class="card-content">
+                </div>
+                
+                <!-- CodeGeeX -->
+                <div class="card-wrapper">
+                    <div class="card" data-tags="AI programming, efficiency, CN, paid">
+                        <div class="card-img brand-codegeex">
+                            <span class="category-indicator category-coding">AI Programming</span>
+                            <span class="country-tag country-cn">CN</span>
+                            <img src="images/icons/CodeGeeX.png" width="70" height="70" alt="CodeGeeX" class="card-icon">
+                        </div>
+                        <div class="card-content">
                             <h3 class="card-title">CodeGeeX</h3>
                             <p class="card-description">A domestic AI programming assistant developed by Zhipu AI, understanding multiple programming languages and development needs, supporting automatic code generation, problem diagnosis, and performance optimization functions.</p>
-                        <div class="card-features">
+                            <div class="card-features">
                                 <div class="feature">Chinese-English Bilingual Programming Support</div>
                                 <div class="feature">Cross-language Code Conversion</div>
                                 <div class="feature">Multi-editor Plugin Support</div>
-                        </div>
+                            </div>
                             <a href="https://codegeex.cn" target="_blank" class="card-link">Use CodeGeeX</a>
                             <button class="save-button" title="Add to Favorites">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -2386,29 +2597,25 @@
                                 </svg>
                             </button>
                         </div>
-                        
                     </div>
                 </div>
                 
+                <!-- Bolt.new -->
                 <div class="card-wrapper">
-                    <div class="card" data-tags="AI编程,效率,国外,免费">
-                    <div class="card-img brand-bolt">
+                    <div class="card" data-tags="AI programming, web development, US, free">
+                        <div class="card-img brand-bolt">
                             <span class="category-indicator category-coding">AI Programming</span>
-                            <span class="country-tag country-us">USA</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="60" height="60">
-                            <circle cx="50" cy="50" r="40" fill="white" opacity="0.2" />
-                                <path d="M45,30 L60,45 L45,60 L35,50" stroke="white" stroke-width="3" fill="none" />
-                                <circle cx="50" cy="50" r="15" fill="#FFB300" opacity="0.3" />
-                        </svg>
-                    </div>
-                    <div class="card-content">
+                            <span class="country-tag country-us">US</span>
+                            <img src="images/icons/Bolt.new.png" width="70" height="70" alt="Bolt.new" class="card-icon">
+                        </div>
+                        <div class="card-content">
                             <h3 class="card-title">Bolt.new</h3>
                             <p class="card-description">An AI programming tool for quickly creating web applications, supporting automatic generation of complete web application code from scratch, and providing instant preview and deployment functionality.</p>
-                        <div class="card-features">
+                            <div class="card-features">
                                 <div class="feature">Natural Language Web App Generation</div>
                                 <div class="feature">Real-time Code Preview and Editing</div>
                                 <div class="feature">One-click Deployment and Sharing</div>
-                        </div>
+                            </div>
                             <a href="https://bolt.new" target="_blank" class="card-link">Use Bolt.new</a>
                             <button class="save-button" title="Add to Favorites">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -2416,29 +2623,25 @@
                                 </svg>
                             </button>
                         </div>
-                        
                     </div>
                 </div>
                 
+                <!-- Devv.ai -->
                 <div class="card-wrapper">
-                    <div class="card" data-tags="AI编程,效率,国外,免费">
-                    <div class="card-img brand-devv">
+                    <div class="card" data-tags="AI programming, code search, US, free">
+                        <div class="card-img brand-devv">
                             <span class="category-indicator category-coding">AI Programming</span>
-                            <span class="country-tag country-us">USA</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="60" height="60">
-                            <circle cx="50" cy="50" r="40" fill="white" opacity="0.2" />
-                                <path d="M35,40 L45,50 L35,60 M65,40 L55,50 L65,60" stroke="white" stroke-width="2" fill="none" />
-                                <path d="M48,35 L52,65" stroke="white" stroke-width="2" />
-                        </svg>
-                    </div>
-                    <div class="card-content">
+                            <span class="country-tag country-us">US</span>
+                            <img src="images/icons/Devv.ai.png" width="70" height="70" alt="Devv.ai" class="card-icon">
+                        </div>
+                        <div class="card-content">
                             <h3 class="card-title">Devv.ai</h3>
                             <p class="card-description">A smart search engine designed specifically for developers, capable of quickly finding code solutions, providing precise answers to programming questions and technical documentation analysis.</p>
-                        <div class="card-features">
+                            <div class="card-features">
                                 <div class="feature">Intelligent solutions for code problems</div>
                                 <div class="feature">Instant retrieval of technical documentation</div>
                                 <div class="feature">Step-by-step analysis of programming challenges</div>
-                        </div>
+                            </div>
                             <a href="https://devv.ai" target="_blank" class="card-link">Try Devv.ai</a>
                             <button class="save-button" title="Add to Favorites">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -2446,72 +2649,61 @@
                                 </svg>
                             </button>
                         </div>
-                        
                     </div>
                 </div>
             </div>
         </section>
 <section id="search" class="section">
             <div class="section-header" data-aos="fade-up">
-                <h2 class="section-title">Information retrieval</h2>
-                <p class="section-description">AI-driven intelligent search tool, efficiently obtaining precise information</p>
+                <h2 class="section-title">Productivity</h2>
+                <p class="section-description">AI-powered productivity tools to enhance work efficiency and information management</p>
             </div>
             
             <div class="cards-grid">
-                
-                
-                
+                <!-- Notion AI -->
                 <div class="card-wrapper card-featured">
-                    <div class="hot-tag">Popular tools</div>
-                    <div class="card" data-tags="信息检索,效率,国内,付费">
-                    <div class="card-img brand-metaso">
-                            <span class="category-indicator category-search">Information Retrieval</span>
-                            <span class="country-tag country-cn">China</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="60" height="60">
-                            <circle cx="50" cy="50" r="40" fill="white" opacity="0.2" />
-                                <circle cx="45" cy="45" r="15" stroke="white" stroke-width="3" fill="none" />
-                                <path d="M55,55 L65,65" stroke="white" stroke-width="3" />
-                        </svg>
-                    </div>
-                    <div class="card-content">
-                            <h3 class="card-title">Meta Search</h3>
-                            <p class="card-description">Intelligent meta-search engine, integrating results from multiple search engines and analyzing and ranking them through AI, providing a more comprehensive and accurate information retrieval experience.</p>
-                        <div class="card-features">
-                            <div class="feature">Multi-source information integration and analysis</div>
-                            <div class="feature">Intelligent Q&A and knowledge extraction</div>
-                            <div class="feature">Personalized search result recommendations</div>
+                    <div class="hot-tag">Popular Tool</div>
+                    <div class="card" data-tags="productivity, note-taking, US, paid">
+                        <div class="card-img brand-notion">
+                            <span class="category-indicator category-search">Productivity</span>
+                            <span class="country-tag country-us">US</span>
+                            <img src="images/icons/Notion AI.png" width="70" height="70" alt="Notion AI" class="card-icon">
                         </div>
-                            <a href="https://metaso.cn" target="_blank" class="card-link">Goto Meta</a>
+                        <div class="card-content">
+                            <h3 class="card-title">Notion AI</h3>
+                            <p class="card-description">An intelligent writing and productivity assistant integrated with Notion's workspace platform, helping users draft content, summarize notes, brainstorm ideas, and improve existing text.</p>
+                            <div class="card-features">
+                                <div class="feature">Intelligent writing assistance</div>
+                                <div class="feature">Content summarization and organization</div>
+                                <div class="feature">Seamless integration with Notion workspace</div>
+                            </div>
+                            <a href="https://www.notion.so/product/ai" target="_blank" class="card-link">Try Notion AI</a>
                             <button class="save-button" title="Add to Favorites">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
                                 </svg>
                             </button>
                         </div>
-                        
                     </div>
                 </div>
                 
+                <!-- Perplexity AI -->
                 <div class="card-wrapper card-featured">
-                    <div class="hot-tag">Popular tools</div>
-                    <div class="card" data-tags="信息检索,效率,国外,付费">
-                    <div class="card-img brand-perplexity">
-                            <span class="category-indicator category-search">Information retrieval</span>
-                            <span class="country-tag country-us">USA</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="60" height="60">
-                            <circle cx="50" cy="50" r="40" fill="white" opacity="0.2" />
-                                <path d="M40,40 Q50,30 60,40 Q70,50 60,60 Q50,70 40,60 Q30,50 40,40" stroke="white" stroke-width="2" fill="none" />
-                            <circle cx="50" cy="50" r="5" fill="white" />
-                        </svg>
-                    </div>
-                    <div class="card-content">
-                        <h3 class="card-title">Perplexity</h3>
+                    <div class="hot-tag">Popular Tool</div>
+                    <div class="card" data-tags="productivity, search, US, freemium">
+                        <div class="card-img brand-perplexity">
+                            <span class="category-indicator category-search">Productivity</span>
+                            <span class="country-tag country-us">US</span>
+                            <img src="images/icons/Perplexity AI.png" width="70" height="70" alt="Perplexity AI" class="card-icon">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Perplexity AI</h3>
                             <p class="card-description">AI-driven intelligent search engine, providing direct answers rather than link lists through natural language processing, capable of deep analysis of network information and generation of summaries.</p>
-                        <div class="card-features">
+                            <div class="card-features">
                                 <div class="feature">Natural language question and answer search</div>
                                 <div class="feature">Real-time information collection and analysis</div>
                                 <div class="feature">Multi-round dialogue information retrieval</div>
-                        </div>
+                            </div>
                             <a href="https://perplexity.ai" target="_blank" class="card-link">Explore Perplexity</a>
                             <button class="save-button" title="Add to Favorites">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -2519,37 +2711,110 @@
                                 </svg>
                             </button>
                         </div>
-                        
                     </div>
                 </div>
                 
+                <!-- Meta Search -->
                 <div class="card-wrapper">
-                    <div class="card" data-tags="信息检索,效率,国内,付费">
-                    <div class="card-img brand-getbiji">
-                            <span class="category-indicator category-search">Information retrieval</span>
-                            <span class="country-tag country-cn">China</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="60" height="60">
-                            <circle cx="50" cy="50" r="40" fill="white" opacity="0.2" />
-                                <path d="M35,35 L65,35 L65,65 L35,65 Z" stroke="white" stroke-width="2" fill="none" />
-                                <path d="M40,45 L60,45 M40,55 L60,55" stroke="white" stroke-width="2" />
-                        </svg>
-                    </div>
-                    <div class="card-content">
-                            <h3 class="card-title">Get Notes</h3>
-                            <p class="card-description">Intelligent note-taking and information organization tool that uses AI to process and organize information, helping users build personalized knowledge bases and improve learning and work efficiency.</p>
-                        <div class="card-features">
-                                <div class="feature">AI intelligent note整理</div>
-                                <div class="feature">Knowledge graph and association construction</div>
-                                <div class="feature">Smart content retrieval and recommendation</div>
+                    <div class="card" data-tags="productivity, search, CN, paid">
+                        <div class="card-img brand-metaso">
+                            <span class="category-indicator category-search">Productivity</span>
+                            <span class="country-tag country-cn">CN</span>
+                            <img src="images/icons/Meta Search.png" width="70" height="70" alt="Meta Search" class="card-icon">
                         </div>
-                            <a href="https://www.biji.com" target="_blank" class="card-link">Go to Get Notes</a>
+                        <div class="card-content">
+                            <h3 class="card-title">Meta Search</h3>
+                            <p class="card-description">Intelligent meta-search engine, integrating results from multiple search engines and analyzing and ranking them through AI, providing a more comprehensive and accurate information retrieval experience.</p>
+                            <div class="card-features">
+                                <div class="feature">Multi-source information integration and analysis</div>
+                                <div class="feature">Intelligent Q&A and knowledge extraction</div>
+                                <div class="feature">Personalized search result recommendations</div>
+                            </div>
+                            <a href="https://metaso.cn" target="_blank" class="card-link">Go to Meta Search</a>
                             <button class="save-button" title="Add to Favorites">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
                                 </svg>
                             </button>
                         </div>
-                        
+                    </div>
+                </div>
+                
+                <!-- Get Note -->
+                <div class="card-wrapper">
+                    <div class="card" data-tags="productivity, note-taking, CN, freemium">
+                        <div class="card-img brand-getnote">
+                            <span class="category-indicator category-search">Productivity</span>
+                            <span class="country-tag country-cn">CN</span>
+                            <img src="images/icons/Get Note.png" width="70" height="70" alt="Get Note" class="card-icon">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Get Note</h3>
+                            <p class="card-description">Intelligent note-taking and information organization tool that uses AI to process and organize information, helping users build personalized knowledge bases and improve learning and work efficiency.</p>
+                            <div class="card-features">
+                                <div class="feature">AI intelligent note organization</div>
+                                <div class="feature">Knowledge graph and association construction</div>
+                                <div class="feature">Smart content retrieval and recommendation</div>
+                            </div>
+                            <a href="https://www.biji.com" target="_blank" class="card-link">Go to Get Note</a>
+                            <button class="save-button" title="Add to Favorites">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Tome -->
+                <div class="card-wrapper">
+                    <div class="card" data-tags="productivity, presentation, US, freemium">
+                        <div class="card-img brand-tome">
+                            <span class="category-indicator category-search">Productivity</span>
+                            <span class="country-tag country-us">US</span>
+                            <img src="images/icons/Tome.png" width="70" height="70" alt="Tome" class="card-icon">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Tome</h3>
+                            <p class="card-description">AI-powered storytelling and presentation platform that helps create compelling visual narratives from simple prompts, with auto-generated content, layout suggestions, and built-in design elements.</p>
+                            <div class="card-features">
+                                <div class="feature">AI-generated narrative structures</div>
+                                <div class="feature">Dynamic, responsive presentations</div>
+                                <div class="feature">Integrated visuals and content generation</div>
+                            </div>
+                            <a href="https://tome.app/" target="_blank" class="card-link">Create with Tome</a>
+                            <button class="save-button" title="Add to Favorites">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Superhuman -->
+                <div class="card-wrapper">
+                    <div class="card" data-tags="productivity, email, US, paid">
+                        <div class="card-img brand-superhuman">
+                            <span class="category-indicator category-search">Productivity</span>
+                            <span class="country-tag country-us">US</span>
+                            <img src="images/icons/Superhuman.png" width="70" height="70" alt="Superhuman" class="card-icon">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Superhuman</h3>
+                            <p class="card-description">AI-enhanced email client designed for speed and efficiency, featuring intelligent email triage, scheduled sending, AI-powered writing assistance, and advanced keyboard shortcuts.</p>
+                            <div class="card-features">
+                                <div class="feature">AI email summarization and prioritization</div>
+                                <div class="feature">Smart response suggestions</div>
+                                <div class="feature">Optimized workflow with keyboard shortcuts</div>
+                            </div>
+                            <a href="https://superhuman.com/" target="_blank" class="card-link">Try Superhuman</a>
+                            <button class="save-button" title="Add to Favorites">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+                                </svg>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -2557,33 +2822,27 @@
 <section id="music" class="section">
             <div class="section-header" data-aos="fade-up">
                 <h2 class="section-title">AI Music</h2>
-                <p class="section-description">AI composition and music generation tool, releasing creative music potential</p>
+                <p class="section-description">AI composition and music generation tools for creating original music and soundtracks</p>
             </div>
             
             <div class="cards-grid">
-                
-                
-                
+                <!-- Suno -->
                 <div class="card-wrapper card-featured">
-                    <div class="hot-tag">Popular tools</div>
-                    <div class="card" data-tags="AI音乐,效率,国外,付费">
-                    <div class="card-img brand-suno">
+                    <div class="hot-tag">Popular Tool</div>
+                    <div class="card" data-tags="AI music, composition, US, paid">
+                        <div class="card-img brand-suno">
                             <span class="category-indicator category-music">AI Music</span>
-                            <span class="country-tag country-us">USA</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="70" height="70">
-                                <circle cx="50" cy="50" r="48" fill="none" stroke="white" stroke-width="2" opacity="0.3"/>
-                                <path d="M60,40 L60,70 M60,40 C60,35 55,30 50,30 C45,30 40,35 40,40 C40,45 45,50 50,50" stroke="white" stroke-width="3" fill="none" />
-                                <circle cx="40" cy="70" r="10" stroke="white" stroke-width="2" fill="none" />
-                        </svg>
-                    </div>
-                    <div class="card-content">
-                        <h3 class="card-title">Suno</h3>
+                            <span class="country-tag country-us">US</span>
+                            <img src="images/icons/Suno.png" width="70" height="70" alt="Suno" class="card-icon">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Suno</h3>
                             <p class="card-description">Revolutionary AI music creation platform that generates complete songs through simple text descriptions, including vocals, instruments, and professional mixing, suitable for all music enthusiasts.</p>
-                        <div class="card-features">
+                            <div class="card-features">
                                 <div class="feature">Text generation of complete songs</div>
                                 <div class="feature">Multiple music styles supported</div>
                                 <div class="feature">AI vocal and instrument synthesis</div>
-                        </div>
+                            </div>
                             <a href="https://suno.ai" target="_blank" class="card-link">Explore Suno</a>
                             <button class="save-button" title="Add to Favorites">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -2591,71 +2850,137 @@
                                 </svg>
                             </button>
                         </div>
-                        
                     </div>
                 </div>
                 
+                <!-- Mubert -->
                 <div class="card-wrapper card-featured">
-                    <div class="hot-tag">Popular tools</div>
-                    <div class="card" data-tags="AI音乐,效率,国内,付费">
-                    <div class="card-img brand-haimian">
+                    <div class="hot-tag">Popular Tool</div>
+                    <div class="card" data-tags="AI music, ambient, US, freemium">
+                        <div class="card-img brand-mubert">
                             <span class="category-indicator category-music">AI Music</span>
-                            <span class="country-tag country-cn">China</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="60" height="60">
-                            <circle cx="50" cy="50" r="40" fill="white" opacity="0.2" />
-                                <path d="M40,35 Q45,30 50,35 Q55,40 60,35" stroke="white" stroke-width="2" fill="none" />
-                                <path d="M35,50 Q45,45 55,50 Q65,55 70,45" stroke="white" stroke-width="2" fill="none" />
-                                <path d="M35,65 Q45,60 55,65 Q65,70 70,60" stroke="white" stroke-width="2" fill="none" />
-                        </svg>
+                            <span class="country-tag country-us">US</span>
+                            <img src="images/icons/Mubert.png" width="70" height="70" alt="Mubert" class="card-icon">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Mubert</h3>
+                            <p class="card-description">AI-powered music generation platform creating royalty-free tracks for various use cases, offering continuous streams of music that adapt to your needs and preferences.</p>
+                            <div class="card-features">
+                                <div class="feature">Royalty-free adaptive music</div>
+                                <div class="feature">Text-to-music generation</div>
+                                <div class="feature">Customizable mood and style settings</div>
+                            </div>
+                            <a href="https://mubert.com/" target="_blank" class="card-link">Try Mubert</a>
+                            <button class="save-button" title="Add to Favorites">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+                                </svg>
+                            </button>
+                        </div>
                     </div>
-                    <div class="card-content">
-                            <h3 class="card-title">Haimian Music</h3>
+                </div>
+                
+                <!-- AIVA -->
+                <div class="card-wrapper">
+                    <div class="card" data-tags="AI music, composition, LU, paid">
+                        <div class="card-img brand-aiva">
+                            <span class="category-indicator category-music">AI Music</span>
+                            <span class="country-tag country-lu">LU</span>
+                            <img src="images/icons/AIVA.png" width="70" height="70" alt="AIVA" class="card-icon">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">AIVA</h3>
+                            <p class="card-description">AI composer focused on creating emotional soundtrack music for films, games, and commercials, with options to customize arrangements and export to professional music formats.</p>
+                            <div class="card-features">
+                                <div class="feature">Emotional soundtrack composition</div>
+                                <div class="feature">Professional arrangement tools</div>
+                                <div class="feature">Commercial licensing options</div>
+                            </div>
+                            <a href="https://www.aiva.ai/" target="_blank" class="card-link">Create with AIVA</a>
+                            <button class="save-button" title="Add to Favorites">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Haimian -->
+                <div class="card-wrapper">
+                    <div class="card" data-tags="AI music, composition, CN, paid">
+                        <div class="card-img brand-haimian">
+                            <span class="category-indicator category-music">AI Music</span>
+                            <span class="country-tag country-cn">CN</span>
+                            <img src="images/icons/Haimian.png" width="70" height="70" alt="Haimian" class="card-icon">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Haimian</h3>
                             <p class="card-description">China's leading AI music generation platform, offering intelligent composition, arrangement, and mixing functions, allowing ordinary users to create professional-level music works.</p>
-                        <div class="card-features">
+                            <div class="card-features">
                                 <div class="feature">Chinese-optimized music generation</div>
                                 <div class="feature">Multi-scenario music templates</div>
                                 <div class="feature">One-click music generation</div>
-                        </div>
-                            <a href="https://haimian.com" target="_blank" class="card-link">Go to Haimian Music</a>
+                            </div>
+                            <a href="https://haimian.com" target="_blank" class="card-link">Go to Haimian</a>
                             <button class="save-button" title="Add to Favorites">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
                                 </svg>
                             </button>
                         </div>
-                        
                     </div>
                 </div>
                 
-                <div class="card-wrapper card-featured">
-                    <div class="hot-tag">Popular tools</div>
-                    <div class="card" data-tags="AI音乐,效率,国内,付费">
-                    <div class="card-img brand-hechordpai">
+                <!-- ChordMate -->
+                <div class="card-wrapper">
+                    <div class="card" data-tags="AI music, composition, US, free">
+                        <div class="card-img brand-chordmate">
                             <span class="category-indicator category-music">AI Music</span>
-                            <span class="country-tag country-cn">China</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="60" height="60">
-                            <circle cx="50" cy="50" r="40" fill="white" opacity="0.2" />
-                                <rect x="35" y="35" width="10" height="30" fill="white" opacity="0.6" />
-                                <rect x="50" y="30" width="10" height="40" fill="white" opacity="0.8" />
-                                <rect x="65" y="40" width="10" height="20" fill="white" opacity="0.7" />
-                        </svg>
-                    </div>
-                    <div class="card-content">
-                        <h3 class="card-title">Chord School</h3>
+                            <span class="country-tag country-us">US</span>
+                            <img src="images/icons/ChordMate.png" width="70" height="70" alt="ChordMate" class="card-icon">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">ChordMate</h3>
                             <p class="card-description">Professional AI chord progression and composition assistant, providing chord recommendations, composition suggestions, and musical theory analysis to help musicians enhance their creative efficiency.</p>
-                        <div class="card-features">
+                            <div class="card-features">
                                 <div class="feature">Smart chord progression recommendation</div>
                                 <div class="feature">Melody composition and variation suggestions</div>
                                 <div class="feature">Musical theory assistance for creative</div>
-                        </div>
-                            <a href="https://chordmate.lazycomposer.com/" target="_blank" class="card-link">Go to Chord School</a>
+                            </div>
+                            <a href="https://chordmate.lazycomposer.com/" target="_blank" class="card-link">Try ChordMate</a>
                             <button class="save-button" title="Add to Favorites">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
                                 </svg>
                             </button>
                         </div>
-                        
+                    </div>
+                </div>
+                
+                <!-- Soundraw -->
+                <div class="card-wrapper">
+                    <div class="card" data-tags="AI music, composition, JP, paid">
+                        <div class="card-img brand-soundraw">
+                            <span class="category-indicator category-music">AI Music</span>
+                            <span class="country-tag country-jp">JP</span>
+                            <img src="images/icons/Soundraw.png" width="70" height="70" alt="Soundraw" class="card-icon">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Soundraw</h3>
+                            <p class="card-description">AI music generator that creates original, royalty-free tracks based on your mood, genre, and length preferences, ideal for creators needing custom soundtracks for videos and content.</p>
+                            <div class="card-features">
+                                <div class="feature">Mood-based music generation</div>
+                                <div class="feature">Precise length and structure control</div>
+                                <div class="feature">Royalty-free licensing for creators</div>
+                            </div>
+                            <a href="https://soundraw.io/" target="_blank" class="card-link">Create with Soundraw</a>
+                            <button class="save-button" title="Add to Favorites">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+                                </svg>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -2663,34 +2988,27 @@
 <section id="data" class="section">
             <div class="section-header" data-aos="fade-up">
                 <h2 class="section-title">Data Processing</h2>
-                <p class="section-description">Intelligent data analysis and processing tool, simplifying data workflows</p>
+                <p class="section-description">Intelligent data analysis and processing tools to simplify data workflows</p>
             </div>
             
             <div class="cards-grid">
-                
-                
-                
+                <!-- DataChat -->
                 <div class="card-wrapper card-featured">
-                    <div class="hot-tag">Popular tools</div>
-                    <div class="card" data-tags="数据处理,效率,国外,付费">
-                        <div class="card-img brand-metaso">
+                    <div class="hot-tag">Popular Tool</div>
+                    <div class="card" data-tags="data processing, analysis, US, paid">
+                        <div class="card-img brand-datachat">
                             <span class="category-indicator category-data">Data Processing</span>
-                            <span class="country-tag country-us">USA</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="60" height="60">
-                            <circle cx="50" cy="50" r="40" fill="white" opacity="0.2" />
-                                <rect x="30" y="40" width="40" height="20" fill="white" opacity="0.6" />
-                                <path d="M35,35 C40,25 60,25 65,35" stroke="white" stroke-width="2" fill="none" />
-                                <path d="M35,65 C40,75 60,75 65,65" stroke="white" stroke-width="2" fill="none" />
-                        </svg>
-                    </div>
-                    <div class="card-content">
+                            <span class="country-tag country-us">US</span>
+                            <img src="images/icons/DataChat.png" width="70" height="70" alt="DataChat" class="card-icon">
+                        </div>
+                        <div class="card-content">
                             <h3 class="card-title">DataChat</h3>
                             <p class="card-description">Dialogue-based data analysis tool, allowing users to operate and analyze data through natural language dialogue, without programming knowledge, suitable for data analysis needs in various industries.</p>
-                        <div class="card-features">
+                            <div class="card-features">
                                 <div class="feature">Natural language data querying</div>
                                 <div class="feature">Smart data insight generation</div>
                                 <div class="feature">Interactive data exploration</div>
-                        </div>
+                            </div>
                             <a href="https://datachat.ai" target="_blank" class="card-link">Explore DataChat</a>
                             <button class="save-button" title="Add to Favorites">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -2698,320 +3016,253 @@
                                 </svg>
                             </button>
                         </div>
-                        
                     </div>
                 </div>
                 
+                <!-- Xiaohuanxiong -->
                 <div class="card-wrapper card-featured">
-                    <div class="hot-tag">Popular tools</div>
-                    <div class="card" data-tags="数据处理,效率,国内,免费">
+                    <div class="hot-tag">Popular Tool</div>
+                    <div class="card" data-tags="data processing, office, CN, free">
                         <div class="card-img brand-xiaohuanxiong">
                             <span class="category-indicator category-data">Data Processing</span>
-                            <span class="country-tag country-cn">China</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="60" height="60">
-                            <circle cx="50" cy="50" r="40" fill="white" opacity="0.2" />
-                                <path d="M35,35 L65,35 L65,65 L35,65 Z" stroke="white" stroke-width="2" fill="none" />
-                                <path d="M40,45 L60,45 M40,55 L60,55" stroke="white" stroke-width="2" />
-                                <path d="M35,35 L65,65 M35,65 L65,35" stroke="white" stroke-width="1" stroke-dasharray="2,2" />
-                            </svg>
+                            <span class="country-tag country-cn">CN</span>
+                            <img src="images/icons/Xiaohuanxiong.png" width="70" height="70" alt="Xiaohuanxiong" class="card-icon">
                         </div>
                         <div class="card-content">
-                            <h3 class="card-title">Office Raccoon</h3>
+                            <h3 class="card-title">Xiaohuanxiong</h3>
                             <p class="card-description">Intelligent office data processing assistant that simplifies document processing, data organization, and analysis workflows through AI technology, improving office efficiency.</p>
                             <div class="card-features">
                                 <div class="feature">Smart document processing</div>
                                 <div class="feature">Data automation</div>
                                 <div class="feature">Office efficiency improvement</div>
                             </div>
-                            <a href="https://xiaohuanxiong.com/" target="_blank" class="card-link">Go to Office Raccoon</a>
+                            <a href="https://xiaohuanxiong.com/" target="_blank" class="card-link">Try Xiaohuanxiong</a>
                             <button class="save-button" title="Add to Favorites">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
                                 </svg>
                             </button>
                         </div>
-                        
                     </div>
                 </div>
-            </div>
-        </section>
-<section id="image" class="section">
-            <div class="section-header" data-aos="fade-up">
-                <h2 class="section-title">AI Drawing</h2>
-                <p class="section-description">AI image generation tool, transforming text descriptions into exquisite images</p>
-            </div>
-            
-            <div class="cards-grid">
-                
-                
-                
-                <div class="card-wrapper card-featured">
-                    <div class="hot-tag">Popular tools</div>
-                    <div class="card" data-tags="AI drawing, efficiency, overseas, paid">
-                        <div class="card-img brand-midjourney">
-                            <span class="category-indicator category-image">AI Drawing</span>
-                            <span class="country-tag country-us">USA</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="70" height="70">
-                                <circle cx="50" cy="50" r="48" fill="none" stroke="white" stroke-width="2" opacity="0.3"/>
-                                <path d="M30,30 L70,30 L70,70 L30,70 Z" fill="none" stroke="white" stroke-width="3"/>
-                                <path d="M35,50 L45,40 L55,40 L65,50 L55,60 L45,60 Z" fill="white"/>
-                                <circle cx="50" cy="50" r="5" fill="white" opacity="0.8"/>
-                            </svg>
-                        </div>
-                        <div class="card-content">
-                            <h3 class="card-title">Midjourney</h3>
-                            <p class="card-description">Leading AI image generation tool that creates stunning artwork through simple text prompts, with exceptional aesthetic expressiveness and detail handling capabilities.</p>
-                        <div class="card-features">
-                                <div class="feature">High-quality artistic style image generation</div>
-                                <div class="feature">Precise prompt control system</div>
-                                <div class="feature">Diverse artistic styles and effects</div>
-                        </div>
-                            <a href="https://midjourney.com" target="_blank" class="card-link">Explore Midjourney</a>
-                            <button class="save-button" title="Add to Favorites">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
-                                </svg>
-                            </button>
-                    </div>
-                        <div class="card-hover-info">
-                            <div class="hover-detail">
-                                <div class="hover-detail-title">User Rating</div>
-                                <div class="hover-detail-rating">
-                                    <span class="star">★</span>
-                                    <span class="star">★</span>
-                                    <span class="star">★</span>
-                                    <span class="star">★</span>
-                                    <span class="star">★</span>
-                                    <span>(4.9)</span>
-                </div>
-                    </div>
-                            <div class="hover-detail">
-                                <div class="hover-detail-title">Key Features</div>
-                                <div class="hover-detail-content">Leading AI image generation tool that creates stunning artwork through simple text prompts, with exceptional aesthetic expressiveness and detail handling capabilities.</div>
-                        </div>
-                            <div class="hover-detail">
-                                <div class="hover-detail-title">Related Tags</div>
-                                <div class="hover-tags">
-                                    <span class="hover-tag">High-quality image generation</span>
-                                    <span class="hover-tag">Precise prompt control</span>
-                                    <span class="hover-tag">Diverse artistic styles</span>
-                                    <span class="hover-tag">Detail processing</span>
-                    </div>
-                </div>
-            </div>
-                    </div>
-            </div>
-            
-                <div class="card-wrapper card-featured">
-                    <div class="hot-tag">Popular tools</div>
-                    <div class="card" data-tags="AI drawing, creativity, domestic, free">
-                        <div class="card-img brand-recraft">
-                            <span class="category-indicator category-image">AI Drawing</span>
-                            <span class="country-tag country-cn">China</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="70" height="70">
-                                <circle cx="50" cy="50" r="48" fill="none" stroke="white" stroke-width="2" opacity="0.3"/>
-                                <path d="M30,30 C30,30 40,25 50,30 C60,35 70,30 70,30 L70,60 C70,60 60,65 50,60 C40,55 30,60 30,60 Z" fill="none" stroke="white" stroke-width="3"/>
-                                <path d="M50,30 L50,60" stroke="white" stroke-width="2"/>
-                                <circle cx="40" cy="40" r="5" fill="white" opacity="0.8"/>
-                                <circle cx="60" cy="50" r="5" fill="white" opacity="0.8"/>
-                            </svg>
-                        </div>
-                        <div class="card-content">
-                            <h3 class="card-title">Recraft</h3>
-                            <p class="card-description">Professional AI design tool supporting image generation, editing, and optimization, providing rich design templates and creative inspiration, suitable for designers and marketers.</p>
-                        <div class="card-features">
-                                <div class="feature">High-quality image generation and editing</div>
-                                <div class="feature">Smart design template system</div>
-                                <div class="feature">Business optimization</div>
-                        </div>
-                            <a href="https://recraft.ai" target="_blank" class="card-link">Go to Recraft</a>
-                            <button class="save-button" title="Add to Favorites">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
-                                </svg>
-                            </button>
-                    </div>
-                        
-                    </div>
-                </div>
-                
-           
-                
-                
             </div>
         </section>
         
-        <!-- AI Design Module -->
         <section id="ai-design" class="section">
             <div class="section-header" data-aos="fade-up">
                 <h2 class="section-title">AI Design</h2>
-                <p class="section-description">Smart design tools, simplifying creative design processes</p>
+                <p class="section-description">AI-powered design tools for creating professional visual content and designs</p>
             </div>
             
             <div class="cards-grid">
-                <!-- Chuangkit -->
-                <div class="card-wrapper card-featured">
-                    <div class="hot-tag">Popular tools</div>
-                    <div class="card" data-tags="AI design, creativity, domestic, paid">
-                        <div class="card-img brand-chuangkit">
-                            <span class="category-indicator category-design">AI Design</span>
-                            <span class="country-tag country-cn">China</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="70" height="70">
-                                <circle cx="50" cy="50" r="48" fill="none" stroke="white" stroke-width="2" opacity="0.3"/>
-                                <path d="M35,35 Q50,25 65,35 Q75,50 65,65 Q50,75 35,65 Q25,50 35,35" stroke="white" stroke-width="2" fill="none" />
-                                <circle cx="50" cy="50" r="10" fill="white" opacity="0.3" />
-                            </svg>
-                        </div>
-                        <div class="card-content">
-                            <h3 class="card-title">Chuangkit</h3>
-                            <p class="card-description">All-in-one AI design platform, providing intelligent creation for various design scenarios such as posters, business cards, and PPT, allowing users with zero foundation to easily complete professional designs.</p>
-                        <div class="card-features">
-                                <div class="feature">One-click smart design generation</div>
-                                <div class="feature">Rich template and material library</div>
-                                <div class="feature">Multi-scenario design solutions</div>
-                        </div>
-                            <a href="https://www.chuangkit.com" target="_blank" class="card-link">Go to Chuangkit</a>
-                            <button class="save-button" title="Add to Favorites">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
-                                </svg>
-                            </button>
-                    </div>
-                        
-                    </div>
-                </div>
-                
-                <!-- JS Design -->
-                <div class="card-wrapper card-featured">
-                    <div class="hot-tag">Popular tools</div>
-                    <div class="card" data-tags="AI design, efficiency, domestic, paid">
-                        <div class="card-img brand-jsdesign">
-                            <span class="category-indicator category-design">AI Design</span>
-                            <span class="country-tag country-cn">China</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="70" height="70">
-                                <circle cx="50" cy="50" r="48" fill="none" stroke="white" stroke-width="2" opacity="0.3"/>
-                                <rect x="30" y="30" width="40" height="40" rx="5" fill="none" stroke="white" stroke-width="2"/>
-                                <line x1="30" y1="45" x2="70" y2="45" stroke="white" stroke-width="2"/>
-                                <circle cx="40" cy="38" r="3" fill="white"/>
-                                <path d="M35,55 H65 M35,62 H55" stroke="white" stroke-width="2"/>
-                            </svg>
-                        </div>
-                        <div class="card-content">
-                            <h3 class="card-title">JS Design</h3>
-                            <p class="card-description">A professional online design tool, integrating AI generation and editing functions, supporting team collaboration, providing a large number of templates and materials, suitable for various design needs.</p>
-                        <div class="card-features">
-                                <div class="feature">Smart design assistant</div>
-                                <div class="feature">Team collaboration features</div>
-                                <div class="feature">Rich template library</div>
-                        </div>
-                            <a href="https://js.design" target="_blank" class="card-link">Go to JS Design</a>
-                            <button class="save-button" title="Add to Favorites">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
-                                </svg>
-                            </button>
-                    </div>
-                        
-                    </div>
-                </div>
-                
                 <!-- Canva AI -->
                 <div class="card-wrapper card-featured">
-                    <div class="hot-tag">Popular tools</div>
-                    <div class="card" data-tags="AI design, creativity, overseas, paid">
+                    <div class="hot-tag">Popular Tool</div>
+                    <div class="card" data-tags="AI design, creativity, US, paid">
                         <div class="card-img brand-canva">
                             <span class="category-indicator category-design">AI Design</span>
-                            <span class="country-tag country-us">USA</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="70" height="70">
-                                <circle cx="50" cy="50" r="48" fill="none" stroke="white" stroke-width="2" opacity="0.3"/>
-                                <path d="M37,37 L63,37 L63,63 L37,63 Z" fill="none" stroke="white" stroke-width="2"/>
-                                <path d="M30,30 L45,45 M55,45 L70,30 M30,70 L45,55 M55,55 L70,70" stroke="white" stroke-width="2"/>
-                                <circle cx="50" cy="50" r="8" fill="none" stroke="white" stroke-width="2"/>
-                            </svg>
+                            <span class="country-tag country-us">US</span>
+                            <img src="images/icons/Canva AI.png" width="70" height="70" alt="Canva AI" class="card-icon">
                         </div>
                         <div class="card-content">
                             <h3 class="card-title">Canva AI</h3>
                             <p class="card-description">A leading online design platform, integrating powerful AI features, including Magic Design and Magic Studio tools, suitable for various creative design needs.</p>
-                        <div class="card-features">
+                            <div class="card-features">
                                 <div class="feature">AI magic design assistant</div>
                                 <div class="feature">Large template and material library</div>
                                 <div class="feature">Multi-language and multi-platform support</div>
-                        </div>
+                            </div>
                             <a href="https://www.canva.com" target="_blank" class="card-link">Go to Canva AI</a>
                             <button class="save-button" title="Add to Favorites">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
                                 </svg>
                             </button>
+                        </div>
                     </div>
-                        
+                </div>
+                
+                <!-- Voice123 -->
+                <div class="card-wrapper card-featured">
+                    <div class="hot-tag">Popular Tool</div>
+                    <div class="card" data-tags="voice generation, marketplace, US, paid">
+                        <div class="card-img brand-voice123">
+                            <span class="category-indicator category-voice">Voice Generation</span>
+                            <span class="country-tag country-us">US</span>
+                            <img src="images/icons/Voice123.png" width="70" height="70" alt="Voice123" class="card-icon">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Voice123</h3>
+                            <p class="card-description">A voice actor marketplace with AI voice matching technology that connects clients with professional voice talent, offering both human and AI-generated voice options for various audio projects.</p>
+                            <div class="card-features">
+                                <div class="feature">Professional voice talent network</div>
+                                <div class="feature">AI voice matching and casting</div>
+                                <div class="feature">Diverse voice styles and languages</div>
+                            </div>
+                            <a href="https://voice123.com/" target="_blank" class="card-link">Explore Voice123</a>
+                            <button class="save-button" title="Add to Favorites">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- BeyondWords -->
+                <div class="card-wrapper">
+                    <div class="card" data-tags="voice generation, content creation, UK, paid">
+                        <div class="card-img brand-beyondwords">
+                            <span class="category-indicator category-voice">Voice Generation</span>
+                            <span class="country-tag country-uk">UK</span>
+                            <img src="images/icons/BeyondWords.png" width="70" height="70" alt="BeyondWords" class="card-icon">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">BeyondWords</h3>
+                            <p class="card-description">Audio content platform that converts text into professional-sounding audio with natural voices, integrating with publishing workflows to create audio versions of written content automatically.</p>
+                            <div class="card-features">
+                                <div class="feature">Automated audio article creation</div>
+                                <div class="feature">Publisher-focused workflows</div>
+                                <div class="feature">Content management system integration</div>
+                            </div>
+                            <a href="https://beyondwords.io/" target="_blank" class="card-link">Try BeyondWords</a>
+                            <button class="save-button" title="Add to Favorites">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Voice.ai -->
+                <div class="card-wrapper">
+                    <div class="card" data-tags="voice generation, voice changer, US, freemium">
+                        <div class="card-img brand-voiceai">
+                            <span class="category-indicator category-voice">Voice Generation</span>
+                            <span class="country-tag country-us">US</span>
+                            <img src="images/icons/Voice.ai.png" width="70" height="70" alt="Voice.ai" class="card-icon">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Voice.ai</h3>
+                            <p class="card-description">Real-time voice changing and generation technology that transforms your voice into different characters, celebrities, or custom voices for gaming, content creation, and communication.</p>
+                            <div class="card-features">
+                                <div class="feature">Real-time voice transformation</div>
+                                <div class="feature">Multiple voice styles and characters</div>
+                                <div class="feature">Integration with popular applications</div>
+                            </div>
+                            <a href="https://voice.ai/" target="_blank" class="card-link">Try Voice.ai</a>
+                            <button class="save-button" title="Add to Favorites">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Chuangkit -->
+                <div class="card-wrapper card-featured">
+                    <div class="hot-tag">Popular Tool</div>
+                    <div class="card" data-tags="AI design, creativity, CN, paid">
+                        <div class="card-img brand-chuangkit">
+                            <span class="category-indicator category-design">AI Design</span>
+                            <span class="country-tag country-cn">CN</span>
+                            <img src="images/icons/Chuangkit.png" width="70" height="70" alt="Chuangkit" class="card-icon">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Chuangkit</h3>
+                            <p class="card-description">A comprehensive AI design platform that offers templates and tools for various design scenarios, including AI generation of posters, social media graphics, and marketing materials.</p>
+                            <div class="card-features">
+                                <div class="feature">Extensive template library</div>
+                                <div class="feature">AI image and text enhancement</div>
+                                <div class="feature">One-click design generation</div>
+                            </div>
+                            <a href="https://www.chuangkit.com" target="_blank" class="card-link">Try Chuangkit</a>
+                            <button class="save-button" title="Add to Favorites">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- JiShuDesign -->
+                <div class="card-wrapper">
+                    <div class="card" data-tags="AI design, UI/UX, US, paid">
+                        <div class="card-img brand-jishudesign">
+                            <span class="category-indicator category-design">AI Design</span>
+                            <span class="country-tag country-us">US</span>
+                            <img src="images/icons/JiShuDesign.png" width="70" height="70" alt="JiShuDesign" class="card-icon">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">JiShuDesign</h3>
+                            <p class="card-description">A specialized AI UI/UX design tool that helps create modern interface designs with AI assistance, offering intelligent layout suggestions and component generation.</p>
+                            <div class="card-features">
+                                <div class="feature">AI-powered UI component generation</div>
+                                <div class="feature">Smart layout optimization</div>
+                                <div class="feature">Design system management</div>
+                            </div>
+                            <a href="https://js.design" target="_blank" class="card-link">Go to JiShuDesign</a>
+                            <button class="save-button" title="Add to Favorites">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+                                </svg>
+                            </button>
+                        </div>
                     </div>
                 </div>
                 
                 <!-- LibLibAI -->
-                <div class="card-wrapper card-featured">
-                    <div class="hot-tag">Popular tools</div>
-                    <div class="card" data-tags="AI design, illustration, domestic, free">
+                <div class="card-wrapper">
+                    <div class="card" data-tags="AI design, illustration, US, free">
                         <div class="card-img brand-liblib">
                             <span class="category-indicator category-design">AI Design</span>
-                            <span class="country-tag country-cn">China</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="70" height="70">
-                                <circle cx="50" cy="50" r="48" fill="none" stroke="white" stroke-width="2" opacity="0.3"/>
-                                <path d="M30,40 C30,30 45,25 50,35 C55,25 70,30 70,40 C70,60 50,75 50,75 C50,75 30,60 30,40 Z" fill="none" stroke="white" stroke-width="2"/>
-                                <circle cx="40" cy="40" r="5" fill="white" opacity="0.6"/>
-                                <circle cx="60" cy="40" r="5" fill="white" opacity="0.6"/>
-                            </svg>
+                            <span class="country-tag country-us">US</span>
+                            <img src="images/icons/LibLibAI.png" width="70" height="70" alt="LibLibAI" class="card-icon">
                         </div>
                         <div class="card-content">
                             <h3 class="card-title">LibLibAI</h3>
                             <p class="card-description">A platform dedicated to AI painting and illustration creation, offering various artistic styles and creation modes, suitable for designers, illustrators, and content creators.</p>
-                        <div class="card-features">
+                            <div class="card-features">
                                 <div class="feature">Diverse illustration styles</div>
                                 <div class="feature">Characteristic of anime style</div>
                                 <div class="feature">Simple and easy-to-use creation interface</div>
-                        </div>
+                            </div>
                             <a href="https://liblib.ai" target="_blank" class="card-link">Go to LibLibAI</a>
                             <button class="save-button" title="Add to Favorites">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
                                 </svg>
                             </button>
-                    </div>
-                        
+                        </div>
                     </div>
                 </div>
                 
                 <!-- Gaoding AI -->
-                <div class="card-wrapper card-featured">
-                    <div class="hot-tag">Popular tools</div>
-                    <div class="card" data-tags="AI design, creativity, domestic, paid">
-                        <div class="card-img brand-chuangkit">
+                <div class="card-wrapper">
+                    <div class="card" data-tags="AI design, creativity, CN, paid">
+                        <div class="card-img brand-gaoding">
                             <span class="category-indicator category-design">AI Design</span>
-                            <span class="country-tag country-cn">China</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="70" height="70">
-                                <circle cx="50" cy="50" r="48" fill="none" stroke="white" stroke-width="2" opacity="0.3"/>
-                                <rect x="30" y="30" width="40" height="40" rx="8" fill="none" stroke="white" stroke-width="3"/>
-                                <circle cx="50" cy="40" r="5" fill="white"/>
-                                <path d="M40,60 L60,60" stroke="white" stroke-width="3" stroke-linecap="round"/>
-                                <path d="M35,50 L65,50" stroke="white" stroke-width="2" stroke-linecap="round" stroke-dasharray="2 2"/>
-                            </svg>
+                            <span class="country-tag country-cn">CN</span>
+                            <img src="images/icons/Gaoding AI.png" width="70" height="70" alt="Gaoding AI" class="card-icon">
                         </div>
                         <div class="card-content">
                             <h3 class="card-title">Gaoding AI</h3>
                             <p class="card-description">A professional AI creative design platform in China, integrating image generation, design element creation, and smart image editing functions to create a one-stop design and creation experience.</p>
-                        <div class="card-features">
+                            <div class="card-features">
                                 <div class="feature">Professional design scenario optimization</div>
                                 <div class="feature">Template and material intelligent generation</div>
                                 <div class="feature">One-click smart image removal and editing</div>
-                        </div>
+                            </div>
                             <a href="https://www.gaoding.com" target="_blank" class="card-link">Experience Gaoding AI</a>
                             <button class="save-button" title="Add to Favorites">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
                                 </svg>
                             </button>
-                    </div>
-                        
+                        </div>
                     </div>
                 </div>
             </div>
@@ -3226,7 +3477,7 @@
             try {
                 // 检测是否为移动设备
                 const isMobile = window.innerWidth <= 768;
-                
+                                
                 // 先移除可能存在的旧模态窗口
                 const oldModal = document.getElementById('savedToolsModalNew');
                 if (oldModal) {
@@ -4045,3 +4296,4 @@
     </footer>
 </body>
 </html>
+

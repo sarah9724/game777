@@ -1,0 +1,71 @@
+# AI Tools Directory
+
+## Tools with Names, URLs, Categories and Countries
+
+1. **ChatGPT** - https://chat.openai.com/ - Chatbots - US
+2. **DALL-E 3** - https://openai.com/dall-e-3 - AI Drawing - US
+3. **Claude** - https://claude.ai/ - Chatbots - US
+4. **Midjourney** - https://www.midjourney.com/ - AI Drawing - US
+5. **GitHub Copilot** - https://github.com/features/copilot - AI Programming - US
+6. **Notion AI** - https://www.notion.so/product/ai - Productivity - US
+7. **Voice123** - https://voice123.com/ - Audio Generation - US
+8. **Perplexity AI** - https://www.perplexity.ai/ - Productivity - US
+9. **DeepSeek** - https://deepseek.com/ - Chatbots - CN
+10. **Tongyi Qianwen** - https://qianwen.aliyun.com - Chatbots - CN
+11. **Doubao** - https://www.doubao.com - Chatbots - CN
+12. **Kimi** - https://kimi.moonshot.cn - Chatbots - CN
+13. **Hailuo AI** - https://hailuoai.com - Chatbots - CN
+14. **AiPPT** - https://aippt.com - PPT Generation - CN
+15. **Beautiful AI** - https://www.beautiful.ai - PPT Generation - US
+16. **Xinghuo Chat** - https://xinghuo.xfyun.cn/spark - Chatbots - CN
+17. **Baidu Wenxin Yiyan** - https://yiyan.baidu.com/ - Chatbots - CN
+18. **Jimeng** - https://jimeng.jianying.com/ai-tool/home - Video Generation - CN
+19. **Kling** - https://klingai.kuaishou.com - Video Generation - CN
+20. **Tencent Hunyuan** - https://hunyuan.tencent.com/ - Chatbots - CN
+21. **CapCut Pro** - https://www.capcut.cn - Video Editing - CN
+22. **Miaojian** - https://miaojian.weixin.qq.com/ - Video Editing - CN
+23. **Bcut** - https://bcut.bilibili.cn/ - Video Editing - CN
+24. **Cursor** - https://cursor.sh - AI Programming - US
+25. **CodeGeeX** - https://codegeex.cn - AI Programming - CN
+26. **Bolt.new** - https://bolt.new - AI Programming - US
+27. **Devv.ai** - https://devv.ai - AI Programming - US
+28. **Meta Search/Secret AI Search** - https://metaso.cn - Productivity - CN
+29. **Get Note** - https://www.biji.com - Productivity - CN
+30. **Suno** - https://suno.ai/ - Music - US
+31. **Mubert** - https://mubert.com/ - Music - US
+32. **ElevenLabs** - https://elevenlabs.io/ - Voice - US
+33. **BeyondWords** - https://beyondwords.io/ - Voice - UK
+34. **Voice.ai** - https://voice.ai/ - Voice - US
+35. **Recraft** - https://recraft.ai - AI Drawing - US
+36. **Chuangkit** - https://www.chuangkit.com - AI Design - CN
+37. **JiShuDesign** - https://js.design - AI Design - US
+38. **Canva AI** - https://www.canva.com - AI Design - US
+39. **LibLibAI** - https://liblib.ai - AI Design - US
+40. **Gaoding AI** - https://www.gaoding.com - AI Design - CN
+41. **AIVA** - https://www.aiva.ai/ - Music - LU
+42. **Musicfy** - https://musicfy.lol/ - Music - US
+43. **Soundraw** - https://soundraw.io/ - Music - JP
+44. **Gemini** - https://gemini.google.com/ - Chatbots - US
+45. **Stable Diffusion** - https://stablediffusionweb.com/ - AI Drawing - UK
+46. **Adobe Firefly** - https://firefly.adobe.com/ - AI Drawing - US
+47. **Anthropic Claude 3** - https://claude.ai/ - Chatbots - US
+48. **Jasper AI** - https://www.jasper.ai/ - Productivity - US
+49. **Runway Gen-3** - https://runwayml.com/ - Video Generation - US
+50. **Mixtral** - https://mistral.ai/ - Chatbots - FR
+51. **Pi by Inflection** - https://pi.ai/ - Chatbots - US
+52. **Character.AI** - https://character.ai/ - Chatbots - US
+53. **Tome** - https://tome.app/ - Productivity - US
+54. **Xiaohuanxiong** - https://xiaohuanxiong.com/ - Data Processing - CN
+55. **DataChat** - https://datachat.ai - Data Processing - US
+56. **Haimian** - https://haimian.com - AI Music - CN
+57. **ChordMate** - https://chordmate.lazycomposer.com/ - AI Music - US
+58. **PixVerse** - https://pixverse.ai - Video Generation - US
+59. **Gamma** - https://gamma.app - PPT Generation - US
+60. **LivePPT** - https://www.designkit.com/ppt/ - PPT Generation - US
+61. **Napkin** - https://napkin.ai - PPT Generation - US
+62. **Lovable** - https://lovable.dev/ - AI Programming - US
+63. **Linear** - https://linear.app/ - AI Programming - US
+64. **Replit** - https://replit.com/ - AI Programming - US
+65. **Superhuman** - https://superhuman.com/ - Productivity - US
+66. **Granola** - https://www.granola.ai/ - Productivity - US
+67. **Grok** - https://grok.com/ - Chatbots - US 
